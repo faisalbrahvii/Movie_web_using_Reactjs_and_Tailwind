@@ -29,8 +29,8 @@ const Movies = () => {
   };
 
   return (
-    <div>
-       <div className='container mx-auto mt-10' >
+    <div className='bg-black'>
+       <div className='container mx-auto ' >
       <div className='w-full grid grid-cols-3 gap-16 sm:grid-cols-1 lg:grid-cols-4 md:grid-cols-4  md:p-14'>
         <div className='flex justify-center items-center gap-2'>
           <BiSolidMoviePlay className='text-white text-2xl' />
@@ -50,7 +50,7 @@ const Movies = () => {
         </div>
       </div>
       <hr className='bg-gray-600' />
-      <div className='flex gap-10 overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide mt-9'>
+      <div className='flex gap-10 overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hidden mt-9'>
       <button className='bg-red-600 px-8 py-2 font-sans rounded-3xl text-white' onClick={() => random_movies(28)}>Action</button>
             <button className='bg-gray-900 px-8 py-2 font-sans rounded-3xl text-white' onClick={() => random_movies(12)}>Adventure</button>
             <button className='bg-gray-900 px-8 py-2 font-sans rounded-3xl text-white' onClick={() => random_movies(16)}>Animation</button>

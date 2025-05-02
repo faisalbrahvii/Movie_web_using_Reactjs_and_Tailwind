@@ -6,7 +6,10 @@ import ModalPage from "./Components/model/ModelPage";
 import Details from "./pages/Details";
 import Footer from "./Components/Footer";
 import Movies from "./Components/Movies"
-import AddToCard from "./Components/AddToCard";
+import Trends from "./Components/Trends";
+import Live from "./Components/Live";
+import AddToCard from "./Components/AddToCard"
+import News from "./Components/News";
 function App() {
   return (
     <Router>
@@ -21,7 +24,11 @@ function App() {
 
           </Routes>
         </main>
-        {/* <Movies /> */}
+        <Trends/>
+        <Movies />
+        <Live />
+        <AddToCard />
+        <News />
         <Footer/>
         
       </div>

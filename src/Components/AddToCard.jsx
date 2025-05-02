@@ -4,7 +4,7 @@ import { FaHeart, FaEye, FaStar, FaPlus } from "react-icons/fa";
 import {display} from '../Data/Data.js'
 const AddToCard = () => {
   return (
-    <div className='p-4 mt-12'>
+    <div className='p-4  bg-black'>
   <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 justify-items-center sm:justify-items-start'>
     {display.map((items, index) => (
       <div key={index} className='justify-self-center'>

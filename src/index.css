@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* Custom utility class to hide scrollbars across all browsers */
 .scrollbar-hidden {
   -ms-overflow-style: none;      /* IE and Edge */

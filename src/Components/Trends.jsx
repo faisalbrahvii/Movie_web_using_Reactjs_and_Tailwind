@@ -26,7 +26,7 @@ const Trends = () => {
 
 
   return (
-    <div>
+    <div className='bg-black'>
       <div className='container mx-auto'>
         <div className='grid grid-cols-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 hero lg:p-14 md:p-14 gap-16'>
           <div className='flex justify-center gap-4'>
@@ -47,7 +47,7 @@ const Trends = () => {
           </div>
         </div>
         <hr className='bg-gray-600 ' />
-        <div className='flex gap-10 overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide mt-9'>
+        <div className='flex gap-10  overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide mt-9 scrollbar-hidden'>
         <button className='bg-red-600 px-8 py-2 font-sans rounded-3xl text-white' onClick={() => random_movies(28)}>Action</button>
             <button className='bg-gray-900 px-8 py-2 font-sans rounded-3xl text-white' onClick={() => random_movies(12)}>Adventure</button>
             <button className='bg-gray-900 px-8 py-2 font-sans rounded-3xl text-white' onClick={() => random_movies(16)}>Animation</button>
@@ -64,7 +64,7 @@ const Trends = () => {
         </div>
       </div>
       <div className='mt-9'>
-        <div className='flex items-center gap-5 overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
+        <div className='flex items-center gap-5 overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hidden'>
           <div>
             <FaLessThan className='text-white text-5xl absolute p-2 left-0' />
           </div>

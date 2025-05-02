@@ -11,7 +11,7 @@ import { TbArrowsMaximize } from "react-icons/tb";
 
 const Live = () => {
   return (
-    <div>
+    <div className='bg-black'>
       <div className='container mx-auto relative'>
   <img className='w-full h-auto rounded-2xl' src={MainImage} alt='' />
   <div className='absolute top-0 left-0 w-full p-6 md:p-6 text-white'>

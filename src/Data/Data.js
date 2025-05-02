@@ -43,14 +43,14 @@ export const display = [
      ];
 
 
-export const trends = [
-    {
-        id: 1,
-        name: 'Pirates',
-        year: '2012',
-        rate: '7.6',
-        image: image1, 
-    },
+// export const trends = [
+//     {
+//         id: 1,
+//         name: 'Pirates',
+//         year: '2012',
+//         rate: '7.6',
+//         image: image1, 
+//     },
 //     {
 //         id: 2,
 //         name: 'Fundations',
@@ -226,30 +226,30 @@ export const trends = [
 
 
 
-// export const news = [
-//     {
-//         id: 1,
-//         des: 'You know in some ways, an engagement shoot is sort of like the preview before the movies. ',
-//         image: require('../assests/News/1.jpeg'), 
-//     },
-//     {
-//         id: 1,
-//         des: 'Enjoy reclining chairs and pale ale with your popcorn at the capital’s coolest venues.',
-//         image: require('../assests/News/2.jpeg'), 
-//     },
-//     {
-//         id: 1,
-//         des: 'Customers go to Owatch showroom to experience our new product VR Chair 3.',
-//         image: require('../assests/News/3.jpeg'), 
-//     },
-//     {
-//         id: 1,
-//         des: 'Virtual Reality engagement marketing allows you to immerse stand visitors with your products.',
-//         image: require('../assests/News/4.jpeg'), 
-//     },
-//     {
-//         id: 1,
-//         des: 'Stay in touch with the news, events, happenings and interesting people',
-//         image: require('../assests/News/5.jpeg'), 
-//     },
+ export const news = [
+     {
+         id: 1,
+         des: 'You know in some ways, an engagement shoot is sort of like the preview before the movies. ',
+         image: image1 
+     },
+     {
+         id: 1,
+         des: 'Enjoy reclining chairs and pale ale with your popcorn at the capital’s coolest venues.',
+         image: image1
+     },
+     {
+         id: 1,
+         des: 'Customers go to Owatch showroom to experience our new product VR Chair 3.',
+         image: image1
+     },
+     {
+         id: 1,
+         des: 'Virtual Reality engagement marketing allows you to immerse stand visitors with your products.',
+         image: image1 
+     },
+     {
+         id: 1,
+         des: 'Stay in touch with the news, events, happenings and interesting people',
+         image: image1 
+     },
 ]
