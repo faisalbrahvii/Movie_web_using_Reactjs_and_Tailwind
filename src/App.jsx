@@ -13,7 +13,7 @@ import News from "./Components/News";
 function App() {
   return (
     <Router>
-      <div>
+      <div> 
         <Navbar />
         {/* <Hero /> */}
         <main>
