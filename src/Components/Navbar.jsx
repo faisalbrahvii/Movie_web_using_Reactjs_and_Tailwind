@@ -26,7 +26,7 @@ const Navbar = () => {
           
           {/* Left: Logo & Category Button */}
           <div className="flex items-center gap-8">
-            <h1 className="text-3xl font-extrabold text-red-600 tracking-wide">still in operation not finished yet</h1>
+            <h1 className="text-sm font-extrabold text-red-600 tracking-wide">still in operation not finished yet</h1>
 
             <div className="relative">
               <button
