@@ -1,113 +1,199 @@
 import React, { useEffect, useState } from 'react';
-import { FaArrowTrendUp, FaPlus, FaStar, FaFire, FaHeart, FaEye, FaCheck } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
+import { FaSearch, FaStar, FaHeart, FaEye, FaCheck, FaChevronDown } from "react-icons/fa";
+import { FaArrowTrendUp, FaPlus, FaFire } from "react-icons/fa6";
 import { RiMovie2Line } from "react-icons/ri";
 import { BiSolidMoviePlay } from "react-icons/bi";
-import { FaSearch } from "react-icons/fa";
-import { FaChevronUp, FaChevronDown } from "react-icons/fa6";
 
 const Movies = () => {
   const [movieList, setMovieList] = useState([]);
+  const [selectedYear, setSelectedYear] = useState(null);
 
   useEffect(() => {
-    // Fetch some movies when the component mounts
     getMovies();
   }, []);
 
   const getMovies = () => {
-    const randomPage = Math.floor(Math.random() * 1000) + 1;
-
+    const randomPage = Math.floor(Math.random() * 500) + 1;
     fetch(`https://api.themoviedb.org/3/discover/movie?api_key=afcaa692aad9ee3412271fa7b8d4fba1&page=${randomPage}`)
       .then(res => res.json())
-      .then(json => setMovieList(json.results));
+      .then(json => {
+        if (json?.results && Array.isArray(json.results)) {
+          setMovieList(json.results);
+        } else {
+          setMovieList([]);
+        }
+      })
+      .catch(() => setMovieList([]));
   };
 
   const random_movies = (genreId) => {
-    // Fetch movies based on the selected genre
     fetch(`https://api.themoviedb.org/3/discover/movie?api_key=afcaa692aad9ee3412271fa7b8d4fba1&with_genres=${genreId}`)
       .then(res => res.json())
-      .then(json => setMovieList(json.results));
+      .then(json => {
+        if (json?.results && Array.isArray(json.results)) {
+          setMovieList(json.results);
+        } else {
+          setMovieList([]);
+        }
+      })
+      .catch(() => setMovieList([]));
   };
 
-  return (
-    <div className='bg-black'>
-       <div className='container mx-auto ' >
-      <div className='w-full grid grid-cols-3 gap-16 sm:grid-cols-1 lg:grid-cols-4 md:grid-cols-4  md:p-14'>
-        <div className='flex justify-center items-center gap-2'>
-          <BiSolidMoviePlay className='text-white text-2xl' />
-          <p className='text-slate-100 font-sans text-[16px]'>Movies</p>
-        </div>
-        <div className='flex justify-center items-center gap-2'>
-          <RiMovie2Line className='text-slate-600' />
-          <p className='text-slate-500 font-sans text-[16px]'>Series</p>
-        </div>
-        <div className='flex justify-center items-center gap-2'>
-          <FaCheck className='text-slate-600' />
-          <p className='text-slate-500 font-sans text-[16px]'>Original Series</p>
-        </div>
-        <div className='flex justify-center items-center gap-2'>
-          <FaSearch className='text-slate-600' />
-          <p className='text-slate-500 font-sans text-[16px]'>Search</p>
-        </div>
-      </div>
-      <hr className='bg-gray-600' />
-      <div className='flex gap-10 overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hidden mt-9'>
-      <button className='bg-red-600 px-8 py-2 font-sans rounded-3xl text-white' onClick={() => random_movies(28)}>Action</button>
-            <button className='bg-gray-900 px-8 py-2 font-sans rounded-3xl text-white' onClick={() => random_movies(12)}>Adventure</button>
-            <button className='bg-gray-900 px-8 py-2 font-sans rounded-3xl text-white' onClick={() => random_movies(16)}>Animation</button>
-            <button className='bg-red-600 px-8 py-2 font-sans rounded-3xl text-white' onClick={() => random_movies(35)}>Comedy</button>
-            <button className='bg-red-600 px-8 py-2 font-sans rounded-3xl text-white' onClick={() => random_movies(80)}>Crime</button>
-            <button className='bg-gray-900 px-8 py-2 font-sans rounded-3xl text-white' onClick={() => random_movies(99)}>Documentary</button>
-            <button className='bg-red-600 px-8 py-2 font-sans rounded-3xl text-white' onClick={() => random_movies(18)}>Drama</button>
-            <button className='bg-gray-900 px-8 py-2 font-sans rounded-3xl text-white' onClick={() => random_movies(27)}>Horror</button>
-            <button className='bg-gray-900 px-8 py-2 font-sans rounded-3xl text-white' onClick={() => random_movies(10749)}>Romance</button>
-            <button className='bg-gray-900 px-8 py-2 font-sans rounded-3xl text-white' onClick={() => random_movies(878)}>Sci-Fi</button>
-            <button className='bg-red-600 px-8 py-2 font-sans rounded-3xl text-white' onClick={() => random_movies(10770)}>TV Movie</button>
-            <button className='bg-gray-900 px-8 py-2 font-sans rounded-3xl text-white' onClick={() => random_movies(53)}>Thriller</button>
-            <button className='bg-gray-900 px-8 py-2 font-sans rounded-3xl text-white' onClick={() => random_movies(37)}>Western</button>
-        </div>
-        <div className='grid sm:grid-cols-1 items-center mt-9'>
-  <div className='flex items-center gap-3 p-4'>
-    <p className='text-slate-400'>Sort by:</p>
-    <button className='bg-red-600 px-6 py-2 font-sans rounded-3xl text-white'>Latest</button>
-    <button className='bg-gray-900 px-6 py-2 font-sans rounded-3xl text-white flex items-center gap-2'>Year <FaChevronDown /></button>
-    <button className='bg-gray-900 px-6 py-2 font-sans rounded-3xl text-white flex items-center gap-2'>News <FaChevronDown /></button>
-  </div>
-</div>
+  const sortByLatest = () => {
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=afcaa692aad9ee3412271fa7b8d4fba1&sort_by=popularity.desc`)
+      .then(res => res.json())
+      .then(json => {
+        if (json?.results && Array.isArray(json.results)) {
+          setMovieList(json.results);
+        } else {
+          setMovieList([]);
+        }
+      })
+      .catch(() => setMovieList([]));
+  };
 
-    </div>
-      <div className='m-3 p-4 mt-10 flex justify-center items-center'>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-7 lg:grid-cols-7 gap-5'>
-          {/* Movie list */}
-          {movieList && movieList.slice(0, 14).map((movie, index) => (
-            <div key={index} className="">
-              <div>
-                <img
-                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                  alt=""
-                  className="rounded-lg"
-                />
-              </div>
-              <div className="mt-4">
-                <p className="text-white text-[16px] font-bold overflow-hidden whitespace-nowrap">
-                  {movie.title.length > 12 ? movie.title.slice(0, 12) + '...' : movie.title}
-                </p>
-                <div className="text-white grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-between gap-2">
-                  <p className="text-[14px] sm:text-[12px] md:text-[14px] lg:text-[14px]">{movie.release_date}</p>
-                  <div className="flex items-center gap-2">
-                    <FaHeart className="text-[12px] sm:text-[10px] md:text-[12px] lg:text-[12px]" />
-                    <FaEye className="text-[12px] sm:text-[10px] md:text-[12px] lg:text-[12px]" />
-                    <FaStar className="text-[12px] sm:text-[10px] md:text-[12px] lg:text-[12px]" />
-                    <p className="text-[12px] sm:text-[10px] md:text-[12px] lg:text-[12px]">{movie.vote_average}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+  const getMoviesByYear = (year) => {
+    setSelectedYear(year);
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=afcaa692aad9ee3412271fa7b8d4fba1&primary_release_year=${year}&sort_by=popularity.desc`)
+      .then(res => res.json())
+      .then(json => {
+        if (json?.results && Array.isArray(json.results)) {
+          setMovieList(json.results);
+        } else {
+          setMovieList([]);
+        }
+      })
+      .catch(() => setMovieList([]));
+  };
+
+  const genreButtons = [
+    { id: 28, label: "Action" },
+    { id: 12, label: "Adventure" },
+    { id: 16, label: "Animation" },
+    { id: 35, label: "Comedy" },
+    { id: 80, label: "Crime" },
+    { id: 99, label: "Documentary" },
+    { id: 18, label: "Drama" },
+    { id: 27, label: "Horror" },
+    { id: 10749, label: "Romance" },
+    { id: 878, label: "Sci-Fi" },
+    { id: 10770, label: "TV Movie" },
+    { id: 53, label: "Thriller" },
+    { id: 37, label: "Western" },
+  ];
+
+  const years = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018];
+
+  return (
+    <div className='bg-black min-h-screen'>
+      <div className='max-w-screen-xl mx-auto px-4'>
+
+        {/* Top Navigation */}
+        <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 py-6 text-center'>
+          <div className='flex justify-center items-center gap-2'>
+            <BiSolidMoviePlay className='text-white text-xl' />
+            <p className='text-slate-100 text-xs sm:text-sm'>Movies</p>
+          </div>
+          <div className='flex justify-center items-center gap-2'>
+            <RiMovie2Line className='text-slate-600 text-xl' />
+            <p className='text-slate-500 text-xs sm:text-sm'>Series</p>
+          </div>
+          <div className='flex justify-center items-center gap-2'>
+            <FaCheck className='text-slate-600 text-xl' />
+            <p className='text-slate-500 text-xs sm:text-sm'>Original</p>
+          </div>
+          <div className='flex justify-center items-center gap-2'>
+            <FaSearch className='text-slate-600 text-xl' />
+            <p className='text-slate-500 text-xs sm:text-sm'>Search</p>
+          </div>
+        </div>
+
+        <hr className='border-gray-700 mb-6' />
+
+        {/* Genre Buttons */}
+        <div className='flex overflow-x-auto gap-3 pb-4 scrollbar-hidden no-scrollbar'>
+          {genreButtons.map((genre, idx) => (
+            <button
+              key={genre.id}
+              onClick={() => random_movies(genre.id)}
+              className={`px-4 sm:px-5 py-2 whitespace-nowrap rounded-full text-xs sm:text-sm font-medium ${
+                idx % 2 === 0 ? 'bg-red-600 hover:bg-red-700' : 'bg-gray-800 hover:bg-gray-700'
+              } text-white transition`}
+            >
+              {genre.label}
+            </button>
           ))}
+        </div>
+
+        {/* Sort Buttons */}
+        <div className='flex flex-wrap gap-3 items-center mt-6 mb-10 text-xs sm:text-sm'>
+          <p className='text-slate-400'>Sort by:</p>
+          <button
+            onClick={sortByLatest}
+            className='bg-red-600 hover:bg-red-700 px-4 py-1.5 rounded-full text-white'
+          >
+            Latest
+          </button>
+
+          <div className='relative'>
+            <select
+              onChange={(e) => getMoviesByYear(e.target.value)}
+              value={selectedYear || ''}
+              className='bg-gray-800 hover:bg-gray-700 px-4 py-1.5 rounded-full text-white appearance-none pr-6'
+            >
+              <option value="">Year</option>
+              {years.map((year) => (
+                <option key={year} value={year}>
+                  {year}
+                </option>
+              ))}
+            </select>
+            <FaChevronDown className="absolute right-2 top-2.5 text-white text-xs pointer-events-none" />
+          </div>
+
+          <button className='bg-gray-800 hover:bg-gray-700 px-4 py-1.5 rounded-full text-white flex items-center gap-1'>
+            New <FaChevronDown />
+          </button>
+        </div>
+
+        {/* Movie Grid */}
+        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4'>
+          {Array.isArray(movieList) && movieList.length > 0 ? (
+            movieList.slice(0, 18).map((movie, index) => (
+              movie.poster_path && (
+                <Link
+                  to={`/details/${movie.id}`}
+                  key={index}
+                  className="bg-gray-900 p-2 rounded-lg hover:scale-105 transition-transform duration-300"
+                >
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                    alt={movie.title}
+                    className="rounded-md w-full object-cover h-60 sm:h-64"
+                  />
+                  <p className="text-white mt-2 text-xs sm:text-sm font-semibold truncate">{movie.title}</p>
+                  <div className="flex justify-between items-center text-slate-300 text-[10px] sm:text-xs mt-1">
+                    <span>{movie.release_date}</span>
+                    <div className="flex items-center gap-1">
+                      <FaHeart className="text-xs" />
+                      <FaEye className="text-xs" />
+                      <FaStar className="text-yellow-400 text-xs" />
+                      <span>{movie.vote_average}</span>
+                    </div>
+                  </div>
+                </Link>
+              )
+            ))
+          ) : (
+            <div className='text-white text-center col-span-full mt-10'>
+              No movies found. Try again.
+            </div>
+          )}
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Movies;
-

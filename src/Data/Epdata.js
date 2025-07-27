@@ -56,7 +56,7 @@ export const series = [
           { id: 3, name: "Episode 3", description: "The beginning of the battle for the Iron Throne." },
         ]
       },
-      // ... other seasons
+      
     ],
   },
   // ... other series

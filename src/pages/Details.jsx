@@ -1,122 +1,145 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { FaArrowAltCircleRight } from "react-icons/fa";
-import { IoIosNotifications } from "react-icons/io";
-import { BsTrophy } from "react-icons/bs";
 import { AiFillLike, AiFillDislike } from "react-icons/ai";
-import { GoDot, GoDotFill } from "react-icons/go";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 import { FaRegCirclePlay } from "react-icons/fa6";
-import { series } from '../Data/Epdata'; // adjust the path if needed
+import { BsTrophy } from "react-icons/bs";
+import { GoDot, GoDotFill } from "react-icons/go";
 
 const Details = () => {
   const { id } = useParams();
+  const [movie, setMovie] = useState(null);
+  const [trailerKey, setTrailerKey] = useState(null);
   const [showModal, setShowModal] = useState(false);
-  const webseries = series.find(item => item.id === Number(id));
 
-  if (!webseries) {
-    return <div className="text-white text-center mt-20">Series not found.</div>;
+  // Fetch movie data
+  useEffect(() => {
+    const fetchMovie = async () => {
+      try {
+        const res = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=afcaa692aad9ee3412271fa7b8d4fba1&language=en-US&append_to_response=videos`);
+        const data = await res.json();
+        setMovie(data);
+
+        // Try to find official trailer
+        const trailer = data.videos?.results.find(
+          vid => vid.type === "Trailer" && vid.site === "YouTube"
+        );
+        setTrailerKey(trailer?.key || null);
+      } catch (err) {
+        console.error("Error fetching movie:", err);
+      }
+    };
+    fetchMovie();
+  }, [id]);
+
+  if (!movie) {
+    return <div className="text-white text-center mt-20">Loading movie...</div>;
   }
 
   return (
-    <div className="flex items-center bg-black min-h-screen text-white p-8">
-      <div className="grid md:grid-cols-2 gap-8 w-full max-w-6xl mx-auto items-start">
-        {/* Left side - Main Poster */}
-        <div className="relative w-full max-w-md">
-          <img src={webseries.image} alt={webseries.name} className="rounded-xl w-full object-cover shadow-lg" />
-          <div className="absolute inset-0 flex items-center justify-center hover:scale-110 transition duration-300 cursor-pointer">
+    <div className="bg-black text-white px-4 sm:px-8 pt-20 pb-10 min-h-screen relative">
+      <div className="max-w-3xl mx-auto grid lg:grid-cols-2 gap-10">
+        {/* Poster */}
+        <div className="relative">
+          <img
+            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+            alt={movie.title}
+            className="rounded-xl w-full object-cover shadow-lg"
+          />
+          <div
+            className="absolute inset-0 flex items-center justify-center transition hover:scale-110 duration-300 cursor-pointer"
+            onClick={() => trailerKey && setShowModal(true)}
+          >
             <FaRegCirclePlay size={60} className="text-white bg-black/50 rounded-full p-2" />
           </div>
         </div>
 
-        {/* Right side - Info */}
+        {/* Info */}
         <div className="flex flex-col justify-between">
-          <h1 className="text-4xl font-bold mb-4">{webseries.name}</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-4">{movie.title}</h1>
 
-          <div className="flex flex-wrap gap-3 text-gray-400 text-sm mb-2">
-            {webseries.genres.map((genre, index) => (
-              <p key={index}>{genre}</p>
+          <div className="flex flex-wrap gap-2 text-gray-400 text-sm mb-2">
+            {movie.genres?.map((genre) => (
+              <span key={genre.id}>{genre.name}</span>
             ))}
           </div>
 
           <div className="flex gap-4 text-gray-400 text-sm mb-4">
-            <p>{webseries.year}</p>
-            <p>{webseries.rate}⭐</p>
-            <p>{webseries.Duration}</p>
+            <p>{movie.release_date?.slice(0, 4)}</p>
+            <p>{movie.vote_average}⭐</p>
+            <p>{movie.runtime} min</p>
           </div>
 
-          <p className="text-gray-400 mb-6 leading-relaxed">
-            {webseries.description}
+          <p className="text-gray-300 mb-6 leading-relaxed text-sm sm:text-base">
+            {movie.overview}
           </p>
 
           <div className="flex items-center gap-4 bg-gray-800 p-4 rounded-lg mb-6">
             <BsTrophy size={24} className="text-yellow-500" />
-            <p className="text-gray-300 text-sm">
-              Award-winning, critically acclaimed masterpiece.
+            <p className="text-sm text-gray-300">
+              Critically acclaimed on TMDB with a rating of {movie.vote_average}.
             </p>
           </div>
 
-          <div className="flex gap-4 mb-6">
-            <button onClick={() => setShowModal(true)} className="flex items-center gap-2 bg-red-600 hover:bg-red-700 transition px-6 py-3 rounded-lg text-white">
-              <FaRegCirclePlay size={18} /> Play Trailer
-            </button>
-            <button className="flex items-center gap-2 border border-gray-600 hover:bg-gray-800 transition px-6 py-3 rounded-lg">
+          <div className="flex flex-wrap gap-4 mb-6">
+            {trailerKey && (
+              <button
+                onClick={() => setShowModal(true)}
+                className="flex items-center gap-2 bg-red-600 hover:bg-red-700 transition px-5 py-2 rounded-lg text-sm"
+              >
+                <FaRegCirclePlay size={18} /> Watch Trailer
+              </button>
+            )}
+            <button className="flex items-center gap-2 border border-gray-600 hover:bg-gray-800 transition px-5 py-2 rounded-lg text-sm">
               <FaArrowAltCircleRight size={18} /> Add to List
             </button>
           </div>
-          {showModal && (
-        <div className="fixed inset-0  bg-black bg-opacity-20 flex items-center justify-center">
-          <div className="bg-white p-4 rounded-lg max-w-4xl w-full relative">
-            <button
-              onClick={() => setShowModal(false)}
-              className="absolute top-2 right-5 text-white font-bold text-2xl"
-            >
-              &times;
-            </button>
-            <div className="aspect-video">
-              <iframe
-                width="100%"
-                height="100%"
-                src={`${webseries.trailer}&autoplay=1`}
-                // title={`${selectedSeries.name} Trailer`}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      )}
 
           <div className="flex gap-4">
-            <button className="flex items-center justify-center w-12 h-12 rounded-full border border-green-500 hover:bg-green-600 transition">
+            <button className="flex items-center justify-center w-10 h-10 rounded-full border border-green-500 hover:bg-green-600 transition">
               <AiFillLike size={20} />
             </button>
-            <button className="flex items-center justify-center w-12 h-12 rounded-full border border-red-500 hover:bg-red-600 transition">
+            <button className="flex items-center justify-center w-10 h-10 rounded-full border border-red-500 hover:bg-red-600 transition">
               <AiFillDislike size={20} />
             </button>
           </div>
         </div>
       </div>
 
-      {/* Seasons */}
-      {/* <div className="mt-16 max-w-6xl mx-auto">
-        <h2 className="text-2xl font-semibold mb-6">Seasons</h2>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {webseries.seasons.map(season => (
-            <div key={season.id} className="bg-gray-900 p-4 rounded-lg shadow-lg">
-              <img src={season.image} alt={season.name} className="rounded-md mb-3" />
-              <h3 className="text-lg font-bold mb-1">{season.name}</h3>
-              <p className="text-gray-400 text-sm">{season.description}</p>
-            </div>
-          ))}
+      {/* Modal */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 px-4">
+          <div className="bg-white rounded-lg overflow-hidden max-w-3xl w-full relative">
+            <button
+              onClick={() => setShowModal(false)}
+              className="absolute top-2 right-3 text-black font-bold text-2xl z-10"
+            >
+              &times;
+            </button>
+            {trailerKey ? (
+              <div className="aspect-video">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${trailerKey}?autoplay=1`}
+                  frameBorder="0"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                  title="Trailer"
+                ></iframe>
+              </div>
+            ) : (
+              <div className="p-6 text-black text-center">
+                <p>Trailer not available.</p>
+              </div>
+            )}
+          </div>
         </div>
-      </div> */}
+      )}
 
-      {/* Dots indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex gap-2 text-gray-500">
+      {/* Dot Indicator (Optional) */}
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2 text-gray-500">
         <GoDotFill className="text-white" />
-        <GoDot />
-        <GoDot />
         <GoDot />
         <GoDot />
       </div>

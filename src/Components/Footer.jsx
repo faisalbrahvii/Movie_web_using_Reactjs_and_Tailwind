@@ -1,53 +1,51 @@
-import React from 'react'
-import Logo from '../assests/logo/netflix.png'
-import { FaFacebook ,FaInstagram ,FaTwitter } from "react-icons/fa";
+import React from 'react';
+import Logo from '../assests/logo/netflix.png';
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className='bg-slate-400   w-full  mt-10 '>
+    <footer className='bg-black text-white px-6 py-10'>
+      <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10'>
+        {/* Logo Section */}
+        <div className='flex flex-col items-center md:items-start'>
+          <img src={Logo} alt="Logo" className='h-16 mb-4' />
+          <p className='text-gray-400 text-sm text-center md:text-left'>
+            Imagine Cinema — Your gateway to the latest blockbusters and entertainment.
+          </p>
+        </div>
 
-    <div className='container mx-auto pl-5 '>
-        <div className='grid sm:grid-cols-1 gap-4 md:grid-cols-2 items-center    '>
-          <div className=''>
-          <img src={Logo} alt="" className='h-24' />  
+        {/* Navigation */}
+        <div className='flex flex-col items-center'>
+          {/* <h2 className='font-semibold text-lg mb-2'>Navigation</h2> */}
+          {/* <ul className='space-y-1 text-gray-300'>
+            <li className='hover:text-white cursor-pointer'>Home</li>
+            <li className='hover:text-white cursor-pointer'>Upcoming</li>
+            <li className='hover:text-white cursor-pointer'>Movies</li>
+            <li className='hover:text-white cursor-pointer'>Contact</li>
+          </ul> */}
+        </div>
+
+        {/* Contact + Social */}
+        <div className='flex flex-col items-center md:items-end'>
+          <h2 className='font-semibold text-lg mb-2'>Follow Us</h2>
+          <div className='flex space-x-4 mb-4'>
+            <FaFacebook className='hover:text-blue-500 cursor-pointer' />
+            <FaInstagram className='hover:text-pink-500 cursor-pointer' />
+            <FaTwitter className='hover:text-blue-400 cursor-pointer' />
           </div>
-          <div className='flex '>
-          <p className=' text-black text-[15px] mb-4 '>@ imagine Cinema all right reserved </p>
-
-            
-          </div>
-      
-         
-        </div>
-    </div>
-    </div>
-  )
-}
-
-export default Footer
-
-{/* <div className='flex justify-between items-center'>
-        <div>
-            <img src={Logo} alt="" className='h-24' />
-        </div>
-        <div className=''>
-            <ul className='flex gap-14 text-white'>
-                <li>Home</li>
-                <li>Schedule</li>
-                <li>Movies</li>
-                <li>News</li>
-            </ul>
-            <div className='text-center mt-14'>
-            <h1 className='text-white font-bold'>faysalbrahvii43.com</h1>
-            <p className='text-white font-sans'>03227075828</p>
-            </div> 
-        </div>
-        <div className='flex gap-7 text-white '>
-        <FaFacebook />
-        <FaTwitter />
-        <FaInstagram />
+          <p className='text-gray-400 text-sm text-center md:text-right'>
+            📞 0322 7075828 <br />
+            ✉️ faysalbrahvii43@gmail.com
+          </p>
         </div>
       </div>
-        <div className='flex justify-end'>
-            <p className='text-slate-300'>@ imagine Cinema all right reserved</p>
-        </div> */}
+
+      {/* Footer Bottom */}
+      <div className='border-t border-gray-700 mt-10 pt-5 text-center text-gray-500 text-sm'>
+        © {new Date().getFullYear()} Imagine Cinema. All rights reserved.
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

@@ -14,33 +14,37 @@ const Hero = () => {
   };
 
   useEffect(() => {
-    const scrollContainer = scrollRef.current;
-    if (!scrollContainer) return;
+  const scrollContainer = scrollRef.current;
+  if (!scrollContainer) return;
 
-    let currentIndex = 0;
+  let currentIndex = 0;
 
-    const scrollNext = () => {
-      const items = scrollContainer.children;
-      if (currentIndex >= items.length) {
-        currentIndex = 0;
-      }
+  const scrollNext = () => {
+    // ✅ Only scroll if user hasn't scrolled away from top
+    if (window.scrollY > 100) return;
 
-      setCurrentItem(series[currentIndex]);
+    const items = scrollContainer.children;
+    if (currentIndex >= items.length) {
+      currentIndex = 0;
+    }
 
-      items[currentIndex].scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-        inline: "start",
-      });
+    setCurrentItem(series[currentIndex]);
 
-      currentIndex++;
-    };
+    items[currentIndex].scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start",
+    });
 
-    scrollNext(); // show first
-    const interval = setInterval(scrollNext, 20000);
+    currentIndex++;
+  };
 
-    return () => clearInterval(interval);
-  }, []);
+  scrollNext(); // show first
+  const interval = setInterval(scrollNext, 2000);
+
+  return () => clearInterval(interval);
+}, []);
+
 
   return (
     <div
