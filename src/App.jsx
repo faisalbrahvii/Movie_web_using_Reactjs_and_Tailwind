@@ -10,12 +10,14 @@ import Trends from "./Components/Trends";
 import Live from "./Components/Live";
 import AddToCard from "./Components/AddToCard";
 import News from "./Components/News";
+import MobileScreenNav from "./Components/MobileScreen/MobileScreenNav";
 
 function App() {
   return (
     <Router>
       <div>
-        <Navbar />
+        {/* <Navbar /> */}
+        <MobileScreenNav />
         <main>
           <Routes>
             {/* ✅ Homepage route */}

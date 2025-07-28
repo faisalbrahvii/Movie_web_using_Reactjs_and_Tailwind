@@ -144,7 +144,7 @@ const Trends = () => {
             onClick={scrollRight}
             className="absolute h-full flex items-center right-0 top-1/2 transform -translate-y-1/2 z-10 bg-black/70 hover:bg-black/85 p-2 "
           >
-            <FaGreaterThan className="text-white " />
+            <FaGreaterThan  className="text-white " />
           </div>
         </div>
       </div>
