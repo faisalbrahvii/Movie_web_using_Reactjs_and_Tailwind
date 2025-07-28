@@ -48,11 +48,11 @@ const MobileScreenNav = () => {
       {showModal && (
         <div className="fixed inset-0 z-[999] bg-black text-white flex flex-col">
           {/* Top bar with close */}
-          <div className="flex justify-between items-center px-4 py-3 border-b border-white/10">
-            <h2 className="text-lg font-semibold">Categories</h2>
+          <div className="flex justify-center items-center px-4 py-3 border-b border-white/10">
+            
             <button
               onClick={() => setShowModal(false)}
-              className="text-white text-2xl"
+              className="text-white text-4xl border rounded-full "
             >
               <IoClose />
             </button>
