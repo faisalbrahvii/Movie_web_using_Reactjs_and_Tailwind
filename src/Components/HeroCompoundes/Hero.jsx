@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { MdErrorOutline } from "react-icons/md";
-import { series } from "../Data/Epdata";
+import { series } from "../../Data/Epdata";
 import { HiDotsVertical } from "react-icons/hi";
 import { Link } from "react-router-dom";
 const Hero = () => {

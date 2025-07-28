@@ -5,7 +5,7 @@ import { HiDownload } from "react-icons/hi";
 import { IoMdMenu } from "react-icons/io";
 import { RiMenu3Fill } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
-import userLogo from '../assests/logo/userlogo.jpeg';
+import userLogo from '../../assests/logo/userlogo.jpeg';
 
 const categories = [
   "Action", "Comedy", "Drama", "Sci-Fi", "Horror",

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import userLogo from '../../assests/logo/userlogo.jpeg';
+import userLogo from '../../assests/Display/images.jpeg';
 import { MdDownloadDone, MdSearch } from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoClose } from "react-icons/io5"; // Close icon
@@ -11,11 +11,11 @@ const categories = [
 
 const MobileScreenNav = () => {
   const [showModal, setShowModal] = useState(false);
-
+  
   return (
     <>
       {/* Top Navbar */}
-      <div className='w-full z-50 p-4 bg-black/90'>
+      <div className='w-full z-50 p-4 bg-black/85'>
         <div className='flex items-center justify-between'>
           <img
             src={userLogo}

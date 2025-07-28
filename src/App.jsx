@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import Hero from "./Components/Hero";
+import Hero from "./Components/HeroCompoundes/Hero";
 import ModalPage from "./Components/model/ModelPage";
 import Details from "./pages/Details";
 import Footer from "./Components/Footer";
@@ -11,12 +10,14 @@ import Live from "./Components/Live";
 import AddToCard from "./Components/AddToCard";
 import News from "./Components/News";
 import MobileScreenNav from "./Components/MobileScreen/MobileScreenNav";
+import Navbar from "./Components/MobileScreen/Navbar";
+import MobileScreen from "./Components/HeroCompoundes/MobileScreen";
 
 function App() {
   return (
     <Router>
       <div>
-        {/* <Navbar /> */}
+        {/* <Navbar/> */}
         <MobileScreenNav />
         <main>
           <Routes>
@@ -25,7 +26,8 @@ function App() {
               path="/"
               element={
                 <>
-                  <Hero />
+                  {/* <Hero /> */}
+                  <MobileScreen/>
                   <Trends />
                   <Movies />
                   <Live />
