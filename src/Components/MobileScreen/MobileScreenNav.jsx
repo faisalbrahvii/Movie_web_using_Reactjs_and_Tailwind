@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import userLogo from '../../assests/Display/images.jpeg';
+import userLogo from '../../assests/logo/userlogo.jpeg';
 import { MdDownloadDone, MdSearch } from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoClose } from "react-icons/io5"; // Close icon
@@ -11,7 +11,7 @@ const categories = [
 
 const MobileScreenNav = () => {
   const [showModal, setShowModal] = useState(false);
-  
+
   return (
     <>
       {/* Top Navbar */}
