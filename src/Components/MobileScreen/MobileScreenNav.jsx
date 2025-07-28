@@ -58,12 +58,12 @@ const MobileScreenNav = () => {
             </button>
           </div>
 
-          {/* Categories List */}
-          <div className="flex-1 overflow-y-auto px-6 py-4 space-y-4">
+          {/* Categories List - Centered and Scrollbar Hidden */}
+          <div className="flex-1 overflow-y-auto no-scrollbar flex flex-col justify-center items-center space-y-4 px-4 py-6">
             {categories.map((category, index) => (
               <div
                 key={index}
-                className="text-lg px-4 py-2 bg-white/10 hover:bg-white/20 rounded-md cursor-pointer"
+                className="text-lg w-full text-center py-2 bg-white/10 hover:bg-white/20 rounded-md cursor-pointer"
               >
                 {category}
               </div>
