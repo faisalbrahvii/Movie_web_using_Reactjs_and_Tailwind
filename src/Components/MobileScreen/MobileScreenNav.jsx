@@ -16,7 +16,7 @@ const MobileScreenNav = () => {
 
   return (
     <>
-      {/* Top Navbar */}
+     
       <div className='fixed w-full z-50 bg-black/35 backdrop-blur-sm  p-4   top-0 left-0'>
         <div className='flex items-center justify-between'>
           <img
