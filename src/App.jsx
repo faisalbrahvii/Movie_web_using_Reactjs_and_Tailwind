@@ -25,18 +25,17 @@ function App() {
 
 function MainLayout() {
   const location = useLocation();
-
   const isSearchPage = location.pathname === "/search";
 
   return (
     <div>
-      {/* ✅ Show Navbars on all pages except search */}
+      {/* ✅ Show Navbar only if not on search page */}
       {!isSearchPage && (
         <>
-          <div className="block md:block">
+          <div className="block md:hidden">
             <MobileScreenNav />
           </div>
-          <div className="hidden md:hidden">
+          <div className="hidden md:block">
             <Navbar />
           </div>
         </>
@@ -48,7 +47,17 @@ function MainLayout() {
             path="/"
             element={
               <>
-                <MobileScreen />
+                {/* ✅ Only show MobileScreen on small screens */}
+                <div className="block md:hidden">
+                  <MobileScreen />
+                </div>
+
+                {/* ✅ Only show Hero on medium+ screens */}
+                <div className="hidden md:block">
+                  <Hero />
+                </div>
+
+                {/* ✅ Shared content for all screen sizes */}
                 <Trends />
                 <Movies />
                 <Live />
@@ -63,11 +72,10 @@ function MainLayout() {
         </Routes>
       </main>
 
-      {/* ✅ Optionally hide footer on search too */}
+      {/* ✅ Show footer only if not on search page */}
       {!isSearchPage && <Footer />}
     </div>
   );
 }
-
 
 export default App;
