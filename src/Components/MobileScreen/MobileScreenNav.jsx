@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import userLogo from '../../assests/logo/userlogo.jpeg';
+import userLogo from '../../assests/logo/logoos.png';
 import { MdDownloadDone, MdSearch } from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoArrowBackSharp } from "react-icons/io5"; // <-- left arrow
