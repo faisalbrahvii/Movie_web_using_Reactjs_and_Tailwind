@@ -40,7 +40,7 @@ const MobileScreen = () => {
   const currentMovie = movies[current];
 
   return (
-    <div className=" w-full h-[430px] sm:h-[460px] md:h-[500px] overflow-hidden bg-black">
+    <div className="relative w-full h-[430px] sm:h-[460px] md:h-[500px] overflow-hidden bg-black">
       {/* Background Image */}
       {currentMovie && (
         <img
