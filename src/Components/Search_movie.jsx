@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaSearch } from "react-icons/fa";
-
+import { IoArrowBackSharp } from "react-icons/io5";
 const Search_movie = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [movieList, setMovieList] = useState([]);
@@ -27,7 +27,12 @@ const Search_movie = () => {
     <div className="min-h-screen bg-black text-white px-4 pt-6 pb-10">
       {/* Search Input */}
       <div className="flex justify-center items-center mb-6">
-        <div className="relative w-full max-w-md">
+        <div className=" flex relative w-full max-w-md">
+            <button onClick={() => navigate(-1)}
+s                          className="text-white text-2xl p-2 rounded-full hover:bg-white/10"
+                        >
+                          <IoArrowBackSharp />
+                        </button>
           <input
             type="text"
             placeholder="Search movies..."
