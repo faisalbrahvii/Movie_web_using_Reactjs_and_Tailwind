@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import userLogo from '../../assests/logo/userlogo.jpeg';
 import { MdDownloadDone, MdSearch } from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { IoClose } from "react-icons/io5";
+import { IoArrowBackSharp } from "react-icons/io5"; // <-- left arrow
 import { useNavigate } from 'react-router-dom';
 
 const categories = [
@@ -49,26 +49,29 @@ const MobileScreenNav = () => {
       {/* Fullscreen Modal */}
       {showModal && (
         <div className="fixed inset-0 z-[999] bg-black flex flex-col">
-          {/* Top bar with close button */}
-          <div className="flex justify-end px-4 py-3 border-b border-white/10">
+          {/* Top bar with back button */}
+          <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10">
             <button
               onClick={() => setShowModal(false)}
-              className="text-white text-3xl p-2 rounded-full hover:bg-white/10"
+              className="text-white text-2xl p-2 rounded-full hover:bg-white/10"
             >
-              <IoClose />
+              <IoArrowBackSharp />
             </button>
+            <span className="text-white text-lg font-medium">All Categories</span>
           </div>
 
           {/* Category list */}
-          <div className="flex-1 overflow-y-auto no-scrollbar flex flex-col justify-center items-center space-y-4 px-4 py-6">
-            {categories.map((category, index) => (
-              <div
-                key={index}
-                className="text-lg w-full text-center py-3 bg-white/10 hover:bg-white/20 rounded-md cursor-pointer font-medium"
-              >
-                {category}
-              </div>
-            ))}
+          <div className="flex-1 overflow-y-auto no-scrollbar px-4 py-6">
+            <div className="grid grid-cols-1 gap-4">
+              {categories.map((category, index) => (
+                <div
+                  key={index}
+                  className="text-base text-white text-center py-3 bg-white/10 hover:bg-white/20 rounded-md cursor-pointer font-medium transition"
+                >
+                  {category}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       )}
