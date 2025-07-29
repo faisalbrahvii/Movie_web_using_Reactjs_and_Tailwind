@@ -29,7 +29,7 @@ const MobileScreen = () => {
   useEffect(() => {
     getMovies();
   }, []);
-
+  // go
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent(prev => (prev + 1) % movies.length);
