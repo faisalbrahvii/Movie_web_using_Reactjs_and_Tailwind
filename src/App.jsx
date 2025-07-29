@@ -33,10 +33,10 @@ function MainLayout() {
       {/* ✅ Show Navbars on all pages except search */}
       {!isSearchPage && (
         <>
-          <div className="block md:hidden">
+          <div className="block md:block">
             <MobileScreenNav />
           </div>
-          <div className="hidden md:block">
+          <div className="hidden md:hidden">
             <Navbar />
           </div>
         </>

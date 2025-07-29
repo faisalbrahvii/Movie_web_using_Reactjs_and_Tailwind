@@ -33,7 +33,7 @@ const MobileScreen = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent(prev => (prev + 1) % movies.length);
-    }, 3000);
+    }, 4000);
     return () => clearInterval(interval);
   }, [movies]);
 
