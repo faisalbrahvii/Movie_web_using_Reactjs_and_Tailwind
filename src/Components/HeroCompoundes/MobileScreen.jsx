@@ -40,36 +40,34 @@ const MobileScreen = () => {
   const currentMovie = movies[current];
 
   return (
-    <div className="relative w-full h-[430px] sm:h-[460px] md:h-[500px] overflow-hidden bg-black">
+    <div className="relative w-full aspect-[3/4] sm:aspect-[16/9] bg-black overflow-hidden">
       {/* Background Image */}
       {currentMovie && (
         <img
           src={`https://image.tmdb.org/t/p/original${currentMovie.backdrop_path || currentMovie.poster_path}`}
           alt={currentMovie.title}
-          className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out"
+          className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-1000 ease-in-out"
         />
       )}
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent z-10" />
 
-      {/* Movie Content */}
+      {/* Content */}
       {currentMovie && (
         <div className="absolute bottom-6 left-0 right-0 z-20 px-4 flex flex-col items-center text-white text-center">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold mb-1">{currentMovie.title}</h2>
+          <h2 className="text-lg sm:text-2xl font-bold mb-1 line-clamp-2">
+            {currentMovie.title}
+          </h2>
+          <p className="text-xs sm:text-sm text-white/70 mb-4">{getGenreNames(currentMovie.genre_ids)}</p>
 
-          {/* Genre / Category */}
-          <p className="text-sm sm:text-base text-white/70 mb-3">
-            {getGenreNames(currentMovie.genre_ids)}
-          </p>
-
-          {/* Action Buttons */}
-          <div className="flex gap-3 sm:gap-4 flex-wrap justify-center">
-            <button className="flex items-center gap-2 bg-white text-black px-4 py-[6px] sm:px-6 sm:py-2 rounded-md font-semibold hover:bg-gray-200 transition text-sm sm:text-base">
-              <FaPlay /> Play
+          {/* Buttons */}
+          <div className="flex gap-3 flex-wrap justify-center">
+            <button className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded font-semibold text-xs sm:text-sm hover:bg-gray-300 transition">
+              <FaPlay className="text-sm" /> Play
             </button>
-            <button className="flex items-center gap-2 bg-white/20 text-white px-4 py-[6px] sm:px-6 sm:py-2 rounded-md font-semibold border border-white hover:bg-white/30 transition text-sm sm:text-base">
-              <FaPlus /> My List
+            <button className="flex items-center gap-2 bg-white/20 text-white px-4 py-2 rounded font-semibold text-xs sm:text-sm border border-white hover:bg-white/30 transition">
+              <FaPlus className="text-sm" /> My List
             </button>
           </div>
         </div>
