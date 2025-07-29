@@ -39,7 +39,7 @@ const MobileScreenNav = () => {
           </button>
           <button
             onClick={() => setShowModal(true)}
-            className="flex-shrink-0 flex items-center gap-1 border border-white/30 hover:bg-white/20 px-4 py-1.5 rounded-full text-white text-sm font-medium transition"
+            className="flex-shrink-0 flex items-center gap-1 border border-white/30 hover:bg-white/20 px-4 py-1 rounded-full text-white text-sm font-medium transition"
           >
             All Categories <RiArrowDropDownLine className="text-2xl" />
           </button>
