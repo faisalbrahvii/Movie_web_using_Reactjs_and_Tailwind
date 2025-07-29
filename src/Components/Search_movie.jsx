@@ -1,88 +1,78 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FaSearch } from "react-icons/fa";
-import { IoIosNotifications } from "react-icons/io";
-import { FaAngleDown } from "react-icons/fa6";
-import Logo from '../assests/netflix.png';
-import Logo2 from '../assests/gbb.png';
 
 const Search_movie = () => {
-    const [isInputVisible, setInputVisible] = useState(false);
-    const [inputValue, setInputValue] = useState('');
-    const [movieList, setMovieList] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [movieList, setMovieList] = useState([]);
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        getMovies();
-    }, []);
+  useEffect(() => {
+    getMovies();
+  }, []);
 
-    const getMovies = () => {
-        const randomPage = Math.floor(Math.random() * 1000) + 1;
+  const getMovies = () => {
+    const randomPage = Math.floor(Math.random() * 500) + 1;
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=afcaa692aad9ee3412271fa7b8d4fba1&page=${randomPage}`)
+      .then(res => res.json())
+      .then(json => setMovieList(json.results || []))
+      .catch(() => setMovieList([]));
+  };
 
-        fetch(`https://api.themoviedb.org/3/discover/movie?api_key=afcaa692aad9ee3412271fa7b8d4fba1&page=${randomPage}`)
-            .then(res => res.json())
-            .then(json => setMovieList(json.results));
-    };
+  const filteredMovies = movieList.filter(movie =>
+    movie?.title?.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
-    const show_input = () => {  
-        setInputVisible(!isInputVisible);
-    };
+  return (
+    <div className="min-h-screen bg-black text-white px-4 pt-6 pb-10">
+      {/* Search Input */}
+      <div className="flex justify-center items-center mb-6">
+        <div className="relative w-full max-w-md">
+          <input
+            type="text"
+            placeholder="Search movies..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            onFocus={() => navigate('/search')}
+            className={`w-full px-5 py-2 rounded-full text-white placeholder-white/70 bg-white/10 backdrop-blur-lg border border-white/10 shadow-md focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300`}
+          />
+          <FaSearch className="absolute right-4 top-2.5 text-white/70" size={18} />
+        </div>
+      </div>
 
-    const handleInputChange = (event) => {
-        setInputValue(event.target.value);
-    };
-
-    const filteredMovies = movieList.filter(movie =>
-        movie.title.toLowerCase().includes(inputValue.toLowerCase())
-    );
-
-    return (
-        <>
-            <div className='flex justify-between items-center h-24 w-full mx-auto px-4 bg-transparent text-white'>
-                <div>
-                    <img src={Logo} alt="" className=" h-32 relative left-12 hero" />
-                </div>
-                <ul className='hidden  md:flex gap-16 items-center text-gray-200 text-[16px] hero'>
-                    <li className='text-white p-4'>Home</li>
-                    <li className='p-4'>Movies</li>
-                    <li className='p-4'>Series</li>
-                    <li className='flex items-center gap-1'>My list <FaAngleDown /></li>
-                    <div className='flex items-center gap-2'>
-                        {isInputVisible && (
-                            <li>
-                                <input type="text" placeholder='Search' className='px-4 py-1 rounded text-black' value={inputValue} onChange={handleInputChange} />
-                            </li>
-                        )}
-                        <button type='button' onClick={show_input}>
-                            <FaSearch size={21} className='text-white' />
-                        </button>
-                    </div>
-                    <li><IoIosNotifications size={23} className='text-white' /></li>
-                    <li><img src={Logo2} alt="" className="h-12 text-white " /></li>
-                </ul>
+      {/* Movie List */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        {filteredMovies.length > 0 ? (
+          filteredMovies.map((movie, index) => (
+            <div key={index} className="w-full overflow-hidden rounded-lg">
+              <img
+                src={
+                  movie.poster_path
+                    ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+                    : 'https://via.placeholder.com/500x750?text=No+Image'
+                }
+                alt={movie.title}
+                className="w-full h-full object-cover rounded-lg hover:scale-105 transition duration-300"
+              />
             </div>
-            <div className='h-24 w-full mob hidden   text-white'>
-                <center>
-                    <img src={Logo} alt="" className=" h-32 relative " />
-                </center>
-            </div>
-            <div>
-                <div className='w-full h-[500px] bg-black '>
-                    <div className='grid grid-cols-5 gap-5 p-8'>
-                        {filteredMovies.map((movie, index) => (
-                            <div key={index} className="w-[70%]">
-                                <div>
-                                    <img
-                                        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                                        alt=""
-                                        className="rounded-lg"
-                                    />
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-        </>
-    );
-}
+          ))
+        ) : (
+          <p className="text-center text-white col-span-full text-lg">No movies found</p>
+        )}
+      </div>
+
+      {/* Hide scrollbar */}
+      <style>{`
+        ::-webkit-scrollbar {
+          display: none;
+        }
+        body {
+          overflow-x: hidden;
+          background-color: black;
+        }
+      `}</style>
+    </div>
+  );
+};
 
 export default Search_movie;

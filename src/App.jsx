@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+
 import Hero from "./Components/HeroCompoundes/Hero";
 import ModalPage from "./Components/model/ModelPage";
 import Details from "./pages/Details";
@@ -12,39 +13,61 @@ import News from "./Components/News";
 import MobileScreenNav from "./Components/MobileScreen/MobileScreenNav";
 import Navbar from "./Components/MobileScreen/Navbar";
 import MobileScreen from "./Components/HeroCompoundes/MobileScreen";
+import Search_movie from "./Components/Search_movie";
 
 function App() {
   return (
     <Router>
-      <div>
-        {/* <Navbar/> */}
-        <MobileScreenNav />
-        <main>
-          <Routes>
-            {/* ✅ Homepage route */}
-            <Route
-              path="/"
-              element={
-                <>
-                  {/* <Hero /> */}
-                  <MobileScreen/>
-                  <Trends />
-                  <Movies />
-                  <Live />
-                  <AddToCard />
-                  <News />
-                </>
-              }
-            />
-            {/* ✅ Other Routes */}
-            <Route path="/modalpage" element={<ModalPage />} />
-            <Route path="/details/:id" element={<Details />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <MainLayout />
     </Router>
   );
 }
+
+function MainLayout() {
+  const location = useLocation();
+
+  const isSearchPage = location.pathname === "/search";
+
+  return (
+    <div>
+      {/* ✅ Show Navbars on all pages except search */}
+      {!isSearchPage && (
+        <>
+          <div className="block md:hidden">
+            <MobileScreenNav />
+          </div>
+          <div className="hidden md:block">
+            <Navbar />
+          </div>
+        </>
+      )}
+
+      <main>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <MobileScreen />
+                <Trends />
+                <Movies />
+                <Live />
+                <AddToCard />
+                <News />
+              </>
+            }
+          />
+          <Route path="/modalpage" element={<ModalPage />} />
+          <Route path="/details/:id" element={<Details />} />
+          <Route path="/search" element={<Search_movie />} />
+        </Routes>
+      </main>
+
+      {/* ✅ Optionally hide footer on search too */}
+      {!isSearchPage && <Footer />}
+    </div>
+  );
+}
+
 
 export default App;
