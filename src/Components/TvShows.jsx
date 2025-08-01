@@ -39,7 +39,7 @@ const TvShows = () => {
               <img
                 src={userLogo}
                 alt="User"
-                className="w-7 h-7 absolute top-2 left-2 rounded-full border border-white"
+                className="w-7 h-7 absolute top-2 left-2 rounded  border-white"
               />
 
               {/* Clickable Play Icon */}
