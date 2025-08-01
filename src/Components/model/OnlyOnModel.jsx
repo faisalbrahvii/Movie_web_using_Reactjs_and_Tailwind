@@ -8,7 +8,7 @@
   import { FaAd } from "react-icons/fa";
   import { MdMessage } from "react-icons/md";
   import { GoPlus } from "react-icons/go";
-const ModelPage = () => {
+const OnlyOnModel = () => {
  
   
     const sectionRef = useRef(null);
@@ -199,4 +199,4 @@ const ModelPage = () => {
   
 
 
-export default ModelPage
+export default OnlyOnModel

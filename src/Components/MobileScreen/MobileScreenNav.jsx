@@ -13,7 +13,7 @@ const categories = [
 const MobileScreenNav = () => {
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
-
+  
   return (
     <>
      

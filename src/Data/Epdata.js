@@ -1,6 +1,6 @@
 import got from '../assests/hero/ep/ep1.jpeg';
-import season2 from '../assests/hero/ep/ep2.jpeg';
-import season3 from '../assests/hero/ep/ep3.jpeg';
+import Movie1 from '../assests/OnlyOn/MovieOne.jpeg';
+import season2 from '../assests/hero/ep/ep3.jpeg';
 import season4 from '../assests/hero/ep/ep4.jpeg';
 import season5 from '../assests/hero/ep/ep5.jpeg';
 import season6 from '../assests/hero/ep/ep6.jpeg';
@@ -59,6 +59,88 @@ export const series = [
       
     ],
   },
-  // ... other series
+  
 ];
+export const OnlyOnMovieSite = [
+  {
+    id: 1,
+    image : Movie1,
+    name: "Sayyara",
+    description: "The popular TV series.",
+    year: "2021",
+    Duration: "2 Seasons",
+    rate: "9.4",
+    genres: ["Action", "Adventure", "Sss"],
+  },
+  {
+    id: 1,
+    image : Movie1,
+    name: "Sayyara",
+    description: "The popular TV series.",
+    year: "2021",
+    Duration: "2 Seasons",
+    rate: "9.4",
+    genres: ["Action", "Adventure", "Sss"],
+  },
+  {
+    id: 1,
+    image : Movie1,
+    name: "Sayyara",
+    description: "The popular TV series.",
+    year: "2021",
+    Duration: "2 Seasons",
+    rate: "9.4",
+    genres: ["Action", "Adventure", "Sss"],
+  },
+  {
+    id: 1,
+    image : Movie1,
+    name: "Sayyara",
+    description: "The popular TV series.",
+    year: "2021",
+    Duration: "2 Seasons",
+    rate: "9.4",
+    genres: ["Action", "Adventure", "Sss"],
+  },
+  {
+    id: 1,
+    image : Movie1,
+    name: "Sayyara",
+    description: "The popular TV series.",
+    year: "2021",
+    Duration: "2 Seasons",
+    rate: "9.4",
+    genres: ["Action", "Adventure", "Sss"],
+  },
+  {
+    id: 1,
+    image : Movie1,
+    name: "Sayyara",
+    description: "The popular TV series.",
+    year: "2021",
+    Duration: "2 Seasons",
+    rate: "9.4",
+    genres: ["Action", "Adventure", "Sss"],
+  },
+  {
+    id: 1,
+    image : Movie1,
+    name: "Sayyara",
+    description: "The popular TV series.",
+    year: "2021",
+    Duration: "2 Seasons",
+    rate: "9.4",
+    genres: ["Action", "Adventure", "Sss"],
+  },
+  {
+    id: 1,
+    image : Movie1,
+    name: "Sayyara",
+    description: "The popular TV series.",
+    year: "2021",
+    Duration: "2 Seasons",
+    rate: "9.4",
+    genres: ["Action", "Adventure", "Sss"],
+  },
+]
 

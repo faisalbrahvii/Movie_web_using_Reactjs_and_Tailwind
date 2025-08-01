@@ -14,6 +14,8 @@ import MobileScreenNav from "./Components/MobileScreen/MobileScreenNav";
 import Navbar from "./Components/MobileScreen/Navbar";
 import MobileScreen from "./Components/HeroCompoundes/MobileScreen";
 import Search_movie from "./Components/Search_movie";
+import TvShows from "./Components/TvShows";
+import OnlyOnModel from "./Components/model/OnlyOnModel";
 
 function App() {
   return (
@@ -47,17 +49,17 @@ function MainLayout() {
             path="/"
             element={
               <>
-                {/* ✅ Only show MobileScreen on small screens */}
+                
                 <div className="block md:hidden">
                   <MobileScreen />
                 </div>
 
-                {/* ✅ Only show Hero on medium+ screens */}
+                
                 <div className="hidden md:block">
                   <Hero />
                 </div>
 
-                {/* ✅ Shared content for all screen sizes */}
+                <TvShows/>
                 <Trends />
                 <Movies />
                 <Live />
@@ -66,6 +68,7 @@ function MainLayout() {
               </>
             }
           />
+          <Route path="/OnlyOnModel" element={<OnlyOnModel />} />
           <Route path="/modalpage" element={<ModalPage />} />
           <Route path="/details/:id" element={<Details />} />
           <Route path="/search" element={<Search_movie />} />
