@@ -28,24 +28,21 @@ const TvShows = () => {
               key={index}
               className="relative flex-shrink-0 w-48 sm:w-56 md:w-60 group rounded overflow-hidden"
             >
-              {/* Movie Thumbnail */}
               <img
                 src={movie.image}
                 alt={`Movie ${index}`}
                 className="w-full h-32 sm:h-36 md:h-40 object-cover transition-transform duration-300 group-hover:scale-105"
               />
 
-              {/* User Logo */}
               <img
                 src={userLogo}
                 alt="User"
                 className="w-7 h-7 absolute top-2 left-2 rounded  border-white"
               />
 
-              {/* Clickable Play Icon */}
               <div
                 className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 cursor-pointer"
-                onClick={() => openModal(movie)} // ⬅️ onClick handler
+                onClick={() => openModal(movie)} 
               >
                 <FaPlayCircle className="text-white text-4xl" />
               </div>

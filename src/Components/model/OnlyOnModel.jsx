@@ -101,25 +101,22 @@ const OnlyOnModel = () => {
                   <span className="bg-gray-300 text-black px-3 py-1 text-sm rounded-full font-semibold flex items-center">
                     18 <GoPlus className="ml-1" />
                   </span>
-                  <p className="text-white text-sm">Lorem ipsum, dolor sit aut! Voluptate, cumque.</p>
+                  <p className="text-white text-sm">{currentData.description}</p>
                 </div>
               </div>
               <div className="text-sm space-y-2">
                 <div className="flex gap-2">
                   <span className="text-gray-400 font-semibold">Cast:</span>
-                  <p className="text-white">Lorem, ipsum dolor.</p>
+                  <p className="text-white">{currentData.Cast}.</p>
                 </div>
-                <div className="flex gap-2">
-                  <span className="text-gray-400 font-semibold">Cast:</span>
-                  <p className="text-white">Lorem, ipsum dolor.</p>
-                </div>
+                
               </div>
             </div>
   
             {/* Description */}
             <div className="text-white">
-              <h1 className="text-base font-bold text-gray-400">Total: <span className="text-white">{currentData.Duration}</span></h1>
               <p className="mt-2 text-sm text-gray-300">{currentData.description}</p>
+              <h1 className="text-base font-bold text-gray-400">Total: <span className="text-white">{currentData.Duration}</span></h1>
             </div>
           </div>
   

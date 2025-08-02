@@ -143,6 +143,8 @@ const Navbar = () => {
           <li className="hover:text-red-500 cursor-pointer">Settings</li>
           <hr className="border-white/10" />
           <li className="hover:text-red-500 cursor-pointer">Help Center</li>
+          <hr className="border-white/10" />
+          <li className="hover:text-red-500 cursor-pointer">Login </li>
         </ul>
       </div>
     </>
