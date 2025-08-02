@@ -60,7 +60,7 @@ const ModelPage = () => {
           {/* Header */}
           <div
             className="relative bg-cover bg-center h-[500px] rounded-t-2xl"
-            style={{ backgroundImage: `url(${currentData.image})` }}
+            style={{ backgroundImage: `url(${currentData.backgroundimage})` }}
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
             <div className="absolute bottom-10 left-6 md:left-12 text-white z-20">
@@ -107,12 +107,9 @@ const ModelPage = () => {
               <div className="text-sm space-y-2">
                 <div className="flex gap-2">
                   <span className="text-gray-400 font-semibold">Cast:</span>
-                  <p className="text-white">Lorem, ipsum dolor.</p>
+                  <p className="text-white">{currentData.Cast}</p>
                 </div>
-                <div className="flex gap-2">
-                  <span className="text-gray-400 font-semibold">Cast:</span>
-                  <p className="text-white">Lorem, ipsum dolor.</p>
-                </div>
+                
               </div>
             </div>
   
@@ -144,7 +141,7 @@ const ModelPage = () => {
                   <div className="grid grid-cols-3 items-center gap-5">
                     <div className="flex items-center col-span-1">
                       <p className="text-white text-xl font-bold">{season.id}</p>
-                      <img src={season.image || NLogo} className="w-20 ml-4 rounded-md" />
+                      <img src={season.image || NLogo} className="w-20 ml-4  rounded-md" />
                     </div>
                     <div className="col-span-2 space-y-2">
                       <div className="flex justify-between text-white font-semibold">
@@ -181,7 +178,7 @@ const ModelPage = () => {
                     <div className="col-span-2 space-y-1">
                       <div className="flex justify-between text-white font-semibold">
                         <h2>{episode.name}</h2>
-                        <p>{episode.duration}</p>
+                        <h2>{episode.duration}</h2>
                       </div>
                       <p className="text-sm text-gray-300">{episode.description}</p>
                     </div>
