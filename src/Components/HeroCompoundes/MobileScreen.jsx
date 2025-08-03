@@ -48,7 +48,7 @@ const MobileScreen = () => {
   const currentMovie = movies[current];
 
   return (
-    <div className="relative w-full h-screen bg-black overflow-hidden">
+    <div className="relative w-full h-[650px] bg-black overflow-hidden">
       {/* Top Buttons */}
       <div className="absolute top-4 left-4 z-30 flex items-center gap-3 overflow-x-auto">
         <button className="flex-shrink-0 flex items-center gap-2 border border-white/30 hover:bg-white/20 px-4 py-1.5 rounded-full text-white text-sm font-medium transition">
@@ -91,11 +91,11 @@ const MobileScreen = () => {
 
       {/* Background Image */}
       {currentMovie && (
-        <img
-          src={`https://image.tmdb.org/t/p/original${currentMovie.backdrop_path || currentMovie.poster_path}`}
-          alt={currentMovie.title}
-          className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-1000 ease-in-out"
-        />
+         <img
+    src={`https://image.tmdb.org/t/p/original${currentMovie.poster_path}`} // ✅ Only portrait used
+    alt={currentMovie.title}
+    className="absolute inset-0 w-full h-full object-cover object-center transition-all duration-1000 ease-in-out"
+  />
       )}
 
       {/* Top Shadow */}
