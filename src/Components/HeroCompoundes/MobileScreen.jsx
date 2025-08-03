@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FaPlay, FaPlus } from "react-icons/fa6";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { IoArrowBackSharp } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 const MobileScreen = () => {
   const [movies, setMovies] = useState([]);
@@ -116,9 +117,15 @@ const MobileScreen = () => {
 
           {/* Buttons */}
           <div className="flex gap-3 flex-wrap justify-center w-full max-w-xs">
+            <Link
+                          key={currentMovie.id}
+                          to={`/details/${currentMovie.id}`}
+                          
+                        >
             <button className="flex items-center justify-center gap-2 bg-white text-black px-5 py-2 rounded-full font-semibold text-xs sm:text-sm hover:bg-gray-300 transition">
               <FaPlay className="text-sm" /> Play
             </button>
+            </Link>
             <button className="flex items-center justify-center gap-2 bg-white/20 text-white px-5 py-2 rounded-full font-semibold text-xs sm:text-sm border border-white hover:bg-white/30 transition">
               <FaPlus className="text-sm" /> My List
             </button>

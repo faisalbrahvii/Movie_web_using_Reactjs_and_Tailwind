@@ -12,7 +12,6 @@ const Details = () => {
   const [trailerKey, setTrailerKey] = useState(null);
   const [showModal, setShowModal] = useState(false);
 
-  // Fetch movie data
   useEffect(() => {
     const fetchMovie = async () => {
       try {
@@ -20,7 +19,6 @@ const Details = () => {
         const data = await res.json();
         setMovie(data);
 
-        // Try to find official trailer
         const trailer = data.videos?.results.find(
           vid => vid.type === "Trailer" && vid.site === "YouTube"
         );
@@ -37,69 +35,78 @@ const Details = () => {
   }
 
   return (
-    <div className="bg-black text-white px-4 sm:px-8 pt-20 pb-10 min-h-screen relative">
-      <div className="max-w-3xl mx-auto grid lg:grid-cols-2 gap-10">
+    <div className="bg-black text-white px-4 sm:px-6 pt-16 pb-10 min-h-screen">
+      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+
         {/* Poster */}
         <div className="relative">
           <img
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
             alt={movie.title}
-            className="rounded-xl w-full object-cover shadow-lg"
+            className="rounded-xl w-full object-cover shadow-md"
           />
-          <div
-            className="absolute inset-0 flex items-center justify-center transition hover:scale-110 duration-300 cursor-pointer"
-            onClick={() => trailerKey && setShowModal(true)}
-          >
-            <FaRegCirclePlay size={60} className="text-white bg-black/50 rounded-full p-2" />
-          </div>
+          {trailerKey && (
+            <div
+              className="absolute inset-0 flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-110"
+              onClick={() => setShowModal(true)}
+            >
+              <FaRegCirclePlay size={56} className="text-white bg-black/60 rounded-full p-2" />
+            </div>
+          )}
         </div>
 
         {/* Info */}
-        <div className="flex flex-col justify-between">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4">{movie.title}</h1>
+        <div className="flex flex-col justify-start">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-3">{movie.title}</h1>
 
+          {/* Genres */}
           <div className="flex flex-wrap gap-2 text-gray-400 text-sm mb-2">
             {movie.genres?.map((genre) => (
               <span key={genre.id}>{genre.name}</span>
             ))}
           </div>
 
-          <div className="flex gap-4 text-gray-400 text-sm mb-4">
+          {/* Metadata */}
+          <div className="flex gap-4 flex-wrap text-gray-400 text-sm mb-4">
             <p>{movie.release_date?.slice(0, 4)}</p>
             <p>{movie.vote_average}⭐</p>
             <p>{movie.runtime} min</p>
           </div>
 
-          <p className="text-gray-300 mb-6 leading-relaxed text-sm sm:text-base">
+          {/* Overview */}
+          <p className="text-gray-300 mb-5 text-sm leading-relaxed sm:text-base">
             {movie.overview}
           </p>
 
-          <div className="flex items-center gap-4 bg-gray-800 p-4 rounded-lg mb-6">
-            <BsTrophy size={24} className="text-yellow-500" />
+          {/* TMDB Rating Info */}
+          <div className="flex items-center gap-3 bg-gray-800 p-3 rounded-md mb-5">
+            <BsTrophy size={22} className="text-yellow-400" />
             <p className="text-sm text-gray-300">
               Critically acclaimed on TMDB with a rating of {movie.vote_average}.
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-4 mb-6">
+          {/* Buttons */}
+          <div className="flex flex-wrap gap-3 mb-6">
             {trailerKey && (
               <button
                 onClick={() => setShowModal(true)}
-                className="flex items-center gap-2 bg-red-600 hover:bg-red-700 transition px-5 py-2 rounded-lg text-sm"
+                className="flex items-center gap-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded-md text-sm"
               >
-                <FaRegCirclePlay size={18} /> Watch Trailer
+                <FaRegCirclePlay size={16} /> Trailer
               </button>
             )}
-            <button className="flex items-center gap-2 border border-gray-600 hover:bg-gray-800 transition px-5 py-2 rounded-lg text-sm">
-              <FaArrowAltCircleRight size={18} /> Add to List
+            <button className="flex items-center gap-2 border border-gray-600 hover:bg-gray-800 px-4 py-2 rounded-md text-sm">
+              <FaArrowAltCircleRight size={16} /> Add to List
             </button>
           </div>
 
+          {/* Like/Dislike */}
           <div className="flex gap-4">
-            <button className="flex items-center justify-center w-10 h-10 rounded-full border border-green-500 hover:bg-green-600 transition">
+            <button className="w-10 h-10 rounded-full flex items-center justify-center border border-green-500 hover:bg-green-600 transition">
               <AiFillLike size={20} />
             </button>
-            <button className="flex items-center justify-center w-10 h-10 rounded-full border border-red-500 hover:bg-red-600 transition">
+            <button className="w-10 h-10 rounded-full flex items-center justify-center border border-red-500 hover:bg-red-600 transition">
               <AiFillDislike size={20} />
             </button>
           </div>
@@ -108,8 +115,8 @@ const Details = () => {
 
       {/* Modal */}
       {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 px-4">
-          <div className="bg-white rounded-lg overflow-hidden max-w-3xl w-full relative">
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 px-3">
+          <div className="bg-white rounded-lg overflow-hidden w-full max-w-2xl relative">
             <button
               onClick={() => setShowModal(false)}
               className="absolute top-2 right-3 text-black font-bold text-2xl z-10"
@@ -137,8 +144,8 @@ const Details = () => {
         </div>
       )}
 
-      {/* Dot Indicator (Optional) */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2 text-gray-500">
+      {/* Optional Dot Indicator */}
+      <div className="mt-10 flex justify-center gap-2 text-gray-600">
         <GoDotFill className="text-white" />
         <GoDot />
         <GoDot />
