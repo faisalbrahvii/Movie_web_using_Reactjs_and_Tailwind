@@ -34,10 +34,10 @@ function MainLayout() {
       {/* ✅ Show Navbar only if not on search page */}
       {!isSearchPage && (
         <>
-          <div className="block md:block">
+          <div className="block md:hidden">
             <MobileScreenNav />
           </div>
-          <div className="hidden md:hidden">
+          <div className="hidden md:block">
             <Navbar />
           </div>
         </>
@@ -50,12 +50,12 @@ function MainLayout() {
             element={
               <>
                 
-                <div className="block md:block">
+                <div className="block md:hidden">
                   <MobileScreen />
                 </div>
 
                 
-                <div className="hidden md:hidden">
+                <div className="hidden md:block">
                   <Hero />
                 </div>
 
