@@ -179,7 +179,7 @@ const OnlyOnModel = () => {
                   <div className="col-span-2 space-y-1">
                     <div className="flex justify-between text-white font-semibold text-sm">
                       <h2>{episode.name}</h2>
-                      <p>{episode.duration}</p>
+                      <p className="md:text-sm sm:text-[8px]">{episode.duration}</p>
                     </div>
                     <p className="text-xs text-gray-300">{episode.description}</p>
                   </div>
