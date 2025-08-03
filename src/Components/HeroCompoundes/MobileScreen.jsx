@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { FaPlay, FaPlus } from "react-icons/fa6";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import { IoArrowBackSharp } from "react-icons/io5";
 
 const MobileScreen = () => {
   const [movies, setMovies] = useState([]);
   const [current, setCurrent] = useState(0);
+  const [showModal, setShowModal] = useState(false);
 
   const getMovies = async () => {
     try {
@@ -15,6 +18,11 @@ const MobileScreen = () => {
       console.error("Failed to fetch movies", err);
     }
   };
+
+  const categories = [
+    "Action", "Adventure", "Comedy", "Crime", "Drama", "Fantasy",
+    "Horror", "Mystery", "Romance", "Sci-Fi", "Thriller", "Animation"
+  ];
 
   const getGenreNames = (genre_ids = []) => {
     const allGenres = {
@@ -29,7 +37,7 @@ const MobileScreen = () => {
   useEffect(() => {
     getMovies();
   }, []);
-  // go
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent(prev => (prev + 1) % movies.length);
@@ -40,7 +48,47 @@ const MobileScreen = () => {
   const currentMovie = movies[current];
 
   return (
-    <div className="relative w-full aspect-[3/4] sm:aspect-[16/9] bg-black overflow-hidden">
+    <div className="relative w-full h-screen bg-black overflow-hidden">
+      {/* Top Buttons */}
+      <div className="absolute top-4 left-4 z-30 flex items-center gap-3 overflow-x-auto">
+        <button className="flex-shrink-0 flex items-center gap-2 border border-white/30 hover:bg-white/20 px-4 py-1.5 rounded-full text-white text-sm font-medium transition">
+          TV Shows
+        </button>
+        <button
+          onClick={() => setShowModal(true)}
+          className="flex-shrink-0 flex items-center gap-1 border border-white/30 hover:bg-white/20 px-4 py-1.5 rounded-full text-white text-sm font-medium transition"
+        >
+          All Categories <RiArrowDropDownLine className="text-xl" />
+        </button>
+      </div>
+
+      {/* Modal */}
+      {showModal && (
+        <div className="fixed inset-0 z-[999] bg-black flex flex-col">
+          <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10">
+            <button
+              onClick={() => setShowModal(false)}
+              className="text-white text-2xl p-2 rounded-full hover:bg-white/10"
+            >
+              <IoArrowBackSharp />
+            </button>
+            <span className="text-white text-lg font-medium">All Categories</span>
+          </div>
+          <div className="flex-1 overflow-y-auto no-scrollbar px-4 py-6">
+            <div className="grid grid-cols-1 gap-4">
+              {categories.map((category, index) => (
+                <div
+                  key={index}
+                  className="text-base text-white text-center py-3 bg-white/10 hover:bg-white/20 rounded-md cursor-pointer font-medium transition"
+                >
+                  {category}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Background Image */}
       {currentMovie && (
         <img
@@ -50,23 +98,28 @@ const MobileScreen = () => {
         />
       )}
 
-      {/* Dark overlay */}
+      {/* Top Shadow */}
+      <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-black/90 to-transparent z-20" />
+
+      {/* Bottom Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent z-10" />
 
       {/* Content */}
       {currentMovie && (
-        <div className="absolute bottom-6 left-0 right-0 z-20 px-4 flex flex-col items-center text-white text-center">
-          <h2 className="text-lg sm:text-2xl font-bold mb-1 line-clamp-2">
+        <div className="absolute bottom-6 left-0 right-0 z-30 px-5 sm:px-6 flex flex-col items-center text-white text-center">
+          <h2 className="text-lg sm:text-2xl font-bold mb-1 line-clamp-2 drop-shadow-lg">
             {currentMovie.title}
           </h2>
-          <p className="text-xs sm:text-sm text-white/70 mb-4">{getGenreNames(currentMovie.genre_ids)}</p>
+          <p className="text-xs sm:text-sm text-white/70 mb-4 drop-shadow-md">
+            {getGenreNames(currentMovie.genre_ids)}
+          </p>
 
           {/* Buttons */}
-          <div className="flex gap-3 flex-wrap justify-center">
-            <button className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded font-semibold text-xs sm:text-sm hover:bg-gray-300 transition">
+          <div className="flex gap-3 flex-wrap justify-center w-full max-w-xs">
+            <button className="flex items-center justify-center gap-2 bg-white text-black px-5 py-2 rounded-full font-semibold text-xs sm:text-sm hover:bg-gray-300 transition">
               <FaPlay className="text-sm" /> Play
             </button>
-            <button className="flex items-center gap-2 bg-white/20 text-white px-4 py-2 rounded font-semibold text-xs sm:text-sm border border-white hover:bg-white/30 transition">
+            <button className="flex items-center justify-center gap-2 bg-white/20 text-white px-5 py-2 rounded-full font-semibold text-xs sm:text-sm border border-white hover:bg-white/30 transition">
               <FaPlus className="text-sm" /> My List
             </button>
           </div>

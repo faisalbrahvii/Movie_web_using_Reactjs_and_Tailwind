@@ -859,6 +859,66 @@ export const OnlyOnMovieSite = [
     rate: "–",
     Cast: ["Ahaan Panday", "Aneet Padda", "Geeta Agarwal Sharma", "Varun Badola"],
     genres: ["Drama", "Romance"],
+    seasons: [
+    {
+      id: 1,
+      name: "Season 1",
+      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
+      description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Glorious Purpose",
+          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
+          description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
+          duration: "52 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – The Variant",
+          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
+          description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
+          duration: "54 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – Lamentis",
+          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
+          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
+          duration: "42 minutes"
+        }
+      ]
+    },
+    {
+      id: 2,
+      name: "Season 2",
+      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
+      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Ouroboros",
+          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
+          description: "Loki time-slips and seeks help from TVA technician OB.",
+          duration: "51 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – Breaking Brad",
+          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
+          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
+          duration: "47 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – 1893",
+          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
+          description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
+          duration: "49 minutes"
+        }
+      ]
+    }
+  ]
   },
   {
     id: 2,
@@ -870,6 +930,66 @@ export const OnlyOnMovieSite = [
     rate: "PG",
     Cast: ["Nicolas Cage","Emma Stone","Ryan Reynolds","Catherine Keener","Cloris Leachman"],
     genres: ["Animation","Adventure","Comedy"],
+    seasons: [
+    {
+      id: 1,
+      name: "Season 1",
+      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
+      description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Glorious Purpose",
+          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
+          description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
+          duration: "52 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – The Variant",
+          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
+          description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
+          duration: "54 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – Lamentis",
+          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
+          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
+          duration: "42 minutes"
+        }
+      ]
+    },
+    {
+      id: 2,
+      name: "Season 2",
+      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
+      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Ouroboros",
+          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
+          description: "Loki time-slips and seeks help from TVA technician OB.",
+          duration: "51 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – Breaking Brad",
+          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
+          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
+          duration: "47 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – 1893",
+          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
+          description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
+          duration: "49 minutes"
+        }
+      ]
+    }
+  ]
   },
   {
     id: 3,
@@ -881,6 +1001,66 @@ export const OnlyOnMovieSite = [
     rate: "PG‑13",
     Cast: ["Jim Carrey","Cameron Diaz"],
     genres: ["Action","Comedy","Fantasy"],
+    seasons: [
+    {
+      id: 1,
+      name: "Season 1",
+      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
+      description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Glorious Purpose",
+          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
+          description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
+          duration: "52 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – The Variant",
+          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
+          description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
+          duration: "54 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – Lamentis",
+          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
+          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
+          duration: "42 minutes"
+        }
+      ]
+    },
+    {
+      id: 2,
+      name: "Season 2",
+      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
+      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Ouroboros",
+          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
+          description: "Loki time-slips and seeks help from TVA technician OB.",
+          duration: "51 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – Breaking Brad",
+          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
+          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
+          duration: "47 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – 1893",
+          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
+          description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
+          duration: "49 minutes"
+        }
+      ]
+    }
+  ]
   },
   {
     id: 4,
@@ -892,6 +1072,66 @@ export const OnlyOnMovieSite = [
     rate: "G",
     Cast: ["Helen Reddy","Jim Dale","Bryce Dallas Howard","Oakes Fegley"],
     genres: ["Family","Fantasy","Adventure"],
+    seasons: [
+    {
+      id: 1,
+      name: "Season 1",
+      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
+      description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Glorious Purpose",
+          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
+          description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
+          duration: "52 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – The Variant",
+          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
+          description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
+          duration: "54 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – Lamentis",
+          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
+          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
+          duration: "42 minutes"
+        }
+      ]
+    },
+    {
+      id: 2,
+      name: "Season 2",
+      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
+      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Ouroboros",
+          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
+          description: "Loki time-slips and seeks help from TVA technician OB.",
+          duration: "51 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – Breaking Brad",
+          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
+          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
+          duration: "47 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – 1893",
+          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
+          description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
+          duration: "49 minutes"
+        }
+      ]
+    }
+  ]
   },
   {
     id: 5,
@@ -903,6 +1143,66 @@ export const OnlyOnMovieSite = [
     rate: "U / PG",
     Cast: ["Julie Andrews","Dick Van Dyke"],
     genres: ["Musical","Fantasy","Comedy"],
+    seasons: [
+    {
+      id: 1,
+      name: "Season 1",
+      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
+      description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Glorious Purpose",
+          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
+          description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
+          duration: "52 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – The Variant",
+          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
+          description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
+          duration: "54 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – Lamentis",
+          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
+          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
+          duration: "42 minutes"
+        }
+      ]
+    },
+    {
+      id: 2,
+      name: "Season 2",
+      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
+      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Ouroboros",
+          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
+          description: "Loki time-slips and seeks help from TVA technician OB.",
+          duration: "51 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – Breaking Brad",
+          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
+          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
+          duration: "47 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – 1893",
+          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
+          description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
+          duration: "49 minutes"
+        }
+      ]
+    }
+  ]
   },
   {
     id: 6,
@@ -914,6 +1214,66 @@ export const OnlyOnMovieSite = [
     rate: "PG‑13",
     Cast: ["Robin Williams","Sally Field","Pierce Brosnan"],
     genres: ["Comedy","Drama","Family"],
+    seasons: [
+    {
+      id: 1,
+      name: "Season 1",
+      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
+      description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Glorious Purpose",
+          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
+          description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
+          duration: "52 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – The Variant",
+          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
+          description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
+          duration: "54 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – Lamentis",
+          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
+          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
+          duration: "42 minutes"
+        }
+      ]
+    },
+    {
+      id: 2,
+      name: "Season 2",
+      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
+      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Ouroboros",
+          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
+          description: "Loki time-slips and seeks help from TVA technician OB.",
+          duration: "51 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – Breaking Brad",
+          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
+          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
+          duration: "47 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – 1893",
+          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
+          description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
+          duration: "49 minutes"
+        }
+      ]
+    }
+  ]
   },
   {
     id: 7,
@@ -925,6 +1285,66 @@ export const OnlyOnMovieSite = [
     rate: "PG",
     Cast: ["Rick Moranis","Marcia Strassman"],
     genres: ["Comedy","Family","Sci‑Fi"],
+    seasons: [
+    {
+      id: 1,
+      name: "Season 1",
+      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
+      description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Glorious Purpose",
+          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
+          description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
+          duration: "52 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – The Variant",
+          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
+          description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
+          duration: "54 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – Lamentis",
+          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
+          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
+          duration: "42 minutes"
+        }
+      ]
+    },
+    {
+      id: 2,
+      name: "Season 2",
+      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
+      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Ouroboros",
+          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
+          description: "Loki time-slips and seeks help from TVA technician OB.",
+          duration: "51 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – Breaking Brad",
+          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
+          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
+          duration: "47 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – 1893",
+          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
+          description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
+          duration: "49 minutes"
+        }
+      ]
+    }
+  ]
   },
   {
     id: 9,
@@ -936,6 +1356,66 @@ export const OnlyOnMovieSite = [
     rate: "PG‑13",
     Cast: ["Devin France","Yashua Mack"],
     genres: ["Adventure","Fantasy","Drama"],
+    seasons: [
+    {
+      id: 1,
+      name: "Season 1",
+      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
+      description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Glorious Purpose",
+          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
+          description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
+          duration: "52 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – The Variant",
+          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
+          description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
+          duration: "54 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – Lamentis",
+          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
+          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
+          duration: "42 minutes"
+        }
+      ]
+    },
+    {
+      id: 2,
+      name: "Season 2",
+      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
+      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Ouroboros",
+          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
+          description: "Loki time-slips and seeks help from TVA technician OB.",
+          duration: "51 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – Breaking Brad",
+          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
+          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
+          duration: "47 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – 1893",
+          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
+          description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
+          duration: "49 minutes"
+        }
+      ]
+    }
+  ]
   },
   {
     id: 10,
@@ -947,6 +1427,66 @@ export const OnlyOnMovieSite = [
     rate: "PG",
     Cast: ["Alexander Molony","Ever Anderson"],
     genres: ["Family","Fantasy","Adventure"],
+    seasons: [
+    {
+      id: 1,
+      name: "Season 1",
+      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
+      description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Glorious Purpose",
+          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
+          description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
+          duration: "52 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – The Variant",
+          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
+          description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
+          duration: "54 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – Lamentis",
+          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
+          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
+          duration: "42 minutes"
+        }
+      ]
+    },
+    {
+      id: 2,
+      name: "Season 2",
+      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
+      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Ouroboros",
+          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
+          description: "Loki time-slips and seeks help from TVA technician OB.",
+          duration: "51 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – Breaking Brad",
+          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
+          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
+          duration: "47 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – 1893",
+          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
+          description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
+          duration: "49 minutes"
+        }
+      ]
+    }
+  ]
   },
   {
     id: 11,
@@ -958,6 +1498,66 @@ export const OnlyOnMovieSite = [
     rate: "Family Comedy",
     Cast: ["Rick Moranis"],
     genres: ["Comedy","Family","Sci‑Fi"],
+    seasons: [
+    {
+      id: 1,
+      name: "Season 1",
+      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
+      description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Glorious Purpose",
+          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
+          description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
+          duration: "52 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – The Variant",
+          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
+          description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
+          duration: "54 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – Lamentis",
+          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
+          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
+          duration: "42 minutes"
+        }
+      ]
+    },
+    {
+      id: 2,
+      name: "Season 2",
+      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
+      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Ouroboros",
+          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
+          description: "Loki time-slips and seeks help from TVA technician OB.",
+          duration: "51 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – Breaking Brad",
+          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
+          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
+          duration: "47 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – 1893",
+          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
+          description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
+          duration: "49 minutes"
+        }
+      ]
+    }
+  ]
   },
   {
     id: 12,
@@ -969,6 +1569,66 @@ export const OnlyOnMovieSite = [
     rate: "N/A",
     Cast: [],
     genres: [],
+    seasons: [
+    {
+      id: 1,
+      name: "Season 1",
+      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
+      description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Glorious Purpose",
+          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
+          description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
+          duration: "52 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – The Variant",
+          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
+          description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
+          duration: "54 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – Lamentis",
+          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
+          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
+          duration: "42 minutes"
+        }
+      ]
+    },
+    {
+      id: 2,
+      name: "Season 2",
+      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
+      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Ouroboros",
+          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
+          description: "Loki time-slips and seeks help from TVA technician OB.",
+          duration: "51 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – Breaking Brad",
+          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
+          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
+          duration: "47 minutes"
+        },
+        {
+          id: 3,
+          name: "Episode 3 – 1893",
+          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
+          description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
+          duration: "49 minutes"
+        }
+      ]
+    }
+  ]
   },
 ];
 
