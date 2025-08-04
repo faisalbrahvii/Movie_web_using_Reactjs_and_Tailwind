@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaSearch } from "react-icons/fa";
 import { IoArrowBackSharp } from "react-icons/io5";
+import { Link } from 'react-router-dom';
+
 const Search_movie = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [movieList, setMovieList] = useState([]);
@@ -46,10 +48,16 @@ s                          className="text-white text-2xl p-2 rounded-full hover
       </div>
 
       {/* Movie List */}
+      
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {filteredMovies.length > 0 ? (
           filteredMovies.map((movie, index) => (
             <div key={index} className="w-full overflow-hidden rounded-lg">
+              <Link
+                    key={movie.id}
+                    to={`/details/${movie.id}`}
+                    className="min-w-[130px] sm:min-w-[150px] md:min-w-[180px] lg:min-w-[200px] flex-shrink-0"
+                  >
               <img
                 src={
                   movie.poster_path
@@ -59,12 +67,14 @@ s                          className="text-white text-2xl p-2 rounded-full hover
                 alt={movie.title}
                 className="w-full h-full object-cover rounded-lg hover:scale-105 transition duration-300"
               />
+              </Link>
             </div>
           ))
         ) : (
           <p className="text-center text-white col-span-full text-lg">No movies found</p>
         )}
       </div>
+       
 
       {/* Hide scrollbar */}
       <style>{`
