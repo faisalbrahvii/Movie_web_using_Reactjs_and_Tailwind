@@ -1,23 +1,3 @@
-// import got from '';
-// // Got Season
-// import season1 from '';
-// // GOT season1 eps
-// import S1E1Ing from '';
-// import S1E2Ing from '';
-// import S1E3Ing from '';
-// // GOT season2 eps
-// import S2E1Ing from '';
-// import S2E2Ing from '';
-// import S2E3Ing from '';
-// // GOT season3 eps
-// import S3E1Ing from '';
-// import S3E2Ing from '';
-// import S3E3Ing from '';
-
-
-
-
-
 import OnlyOnMovie1 from '../assests/OnlyOn/MovieOne.jpeg';
 import OnlyOnMovie2 from '../assests/OnlyOn/THE CROODS.jpeg';
 import OnlyOnMovie3 from '../assests/OnlyOn/The Mask.jpeg';
@@ -30,7 +10,25 @@ import OnlyOnMovie11 from '../assests/OnlyOn/down3.jpeg';
 import OnlyOnMovie12 from '../assests/OnlyOn/down4.jpeg';
 import OnlyOnMovie13 from '../assests/OnlyOn/down5.jpeg';
 
+import CroodsS1 from '../assests/OnlyOn/OnlyMovieOne/Movie.jpeg';
+import CroodsS2 from '../assests/OnlyOn/OnlyMovieOne/Movie2.jpeg';
+import CroodsS3 from '../assests/OnlyOn/OnlyMovieOne/Movie3.jpeg';
+import CroodsS4 from '../assests/OnlyOn/OnlyMovieOne/Movie4.jpeg';
+import CroodsS5 from '../assests/OnlyOn/OnlyMovieOne/Movie5.jpeg';
+import CroodsS6 from '../assests/OnlyOn/OnlyMovieOne/Movie6.jpeg';
+import CroodsS7 from '../assests/OnlyOn/OnlyMovieOne/Movie7.jpg';
 
+// Attact On Titan 
+import Aot1 from '../assests/OnlyOn/OnlyMovieTwo/Movie1.jpeg';
+import Aot2 from '../assests/OnlyOn/OnlyMovieTwo/Movie2.jpeg';
+import Aot3 from '../assests/OnlyOn/OnlyMovieTwo/Movie3.jpg';
+import Aot4 from '../assests/OnlyOn/OnlyMovieTwo/Movie4.jpg';
+import Aot5 from '../assests/OnlyOn/OnlyMovieTwo/Movie5.jpeg';
+import Aot6 from '../assests/OnlyOn/OnlyMovieTwo/Movie6.jpeg';
+import Aot7 from '../assests/OnlyOn/OnlyMovieTwo/Movie7.jpeg';
+import Aot8 from '../assests/OnlyOn/OnlyMovieTwo/Movie8.jpg';
+import Aot9 from '../assests/OnlyOn/OnlyMovieTwo/Movie9.jpg';
+import Aot10 from '../assests/OnlyOn/OnlyMovieTwo/Movie10.jpeg';
 
 
 export const series = [
@@ -849,80 +847,10 @@ export const series = [
 
 
 export const OnlyOnMovieSite = [
+  
   {
     id: 1,
-    image: OnlyOnMovie1,
-    name: "Saiyaara",
-    description: "A romantic drama about heartbreak and hope.",
-    year: "2025",
-    Duration: "–", 
-    rate: "–",
-    Cast: ["Ahaan Panday", "Aneet Padda", "Geeta Agarwal Sharma", "Varun Badola"],
-    genres: ["Drama", "Romance"],
-    seasons: [
-    {
-      id: 1,
-      name: "Season 1",
-      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
-      description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
-      episodes: [
-        {
-          id: 1,
-          name: "Episode 1 – Glorious Purpose",
-          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
-          description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
-          duration: "52 minutes"
-        },
-        {
-          id: 2,
-          name: "Episode 2 – The Variant",
-          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
-          description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
-          duration: "54 minutes"
-        },
-        {
-          id: 3,
-          name: "Episode 3 – Lamentis",
-          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
-          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
-          duration: "42 minutes"
-        }
-      ]
-    },
-    {
-      id: 2,
-      name: "Season 2",
-      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
-      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
-      episodes: [
-        {
-          id: 1,
-          name: "Episode 1 – Ouroboros",
-          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
-          description: "Loki time-slips and seeks help from TVA technician OB.",
-          duration: "51 minutes"
-        },
-        {
-          id: 2,
-          name: "Episode 2 – Breaking Brad",
-          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
-          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
-          duration: "47 minutes"
-        },
-        {
-          id: 3,
-          name: "Episode 3 – 1893",
-          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
-          description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
-          duration: "49 minutes"
-        }
-      ]
-    }
-  ]
-  },
-  {
-    id: 2,
-    image: OnlyOnMovie2,
+    image: CroodsS7,
     name: "The Croods",
     description: "A prehistoric family's journey in a changing world.",
     year: "2013",
@@ -934,27 +862,27 @@ export const OnlyOnMovieSite = [
     {
       id: 1,
       name: "Season 1",
-      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
+      image: OnlyOnMovie2,
       description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – Glorious Purpose",
-          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
+          image: CroodsS2,
           description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
           duration: "52 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – The Variant",
-          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
+          image: CroodsS3,
           description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
           duration: "54 minutes"
         },
         {
           id: 3,
           name: "Episode 3 – Lamentis",
-          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
+          image: CroodsS4,
           description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
           duration: "42 minutes"
         }
@@ -963,30 +891,106 @@ export const OnlyOnMovieSite = [
     {
       id: 2,
       name: "Season 2",
-      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
+      image: CroodsS1,
       description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – Ouroboros",
-          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
+          image: CroodsS5,
           description: "Loki time-slips and seeks help from TVA technician OB.",
           duration: "51 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – Breaking Brad",
-          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
+          image: CroodsS6,
           description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
           duration: "47 minutes"
         },
+        
+      ]
+    }
+  ]
+  },
+  {
+    id: 2,
+    image: Aot10,
+    name: "Attack On titan",
+    description: "A romantic drama about heartbreak and hope.",
+    year: "2012 - 2023",
+    Duration: "–", 
+    rate: "–",
+    Cast: ["Ahaan Panday", "Aneet Padda", "Geeta Agarwal Sharma", "Varun Badola"],
+    genres: ["Drama", "Romance" , "Emotions"],
+    seasons: [
+    {
+      id: 1,
+      name: "Season 1",
+      image: Aot1,
+      description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Glorious Purpose",
+          image: Aot2,
+          description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
+          duration: "52 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – The Variant",
+          image: Aot3,
+          description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
+          duration: "54 minutes"
+        },
         {
           id: 3,
-          name: "Episode 3 – 1893",
-          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
-          description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
-          duration: "49 minutes"
+          name: "Episode 3 – Lamentis",
+          image: Aot4,
+          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
+          duration: "42 minutes"
         }
+      ]
+    },
+    {
+      id: 2,
+      name: "Season 2",
+      image: Aot5,
+      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Ouroboros",
+          image: Aot6,
+          description: "Loki time-slips and seeks help from TVA technician OB.",
+          duration: "51 minutes"
+        },
+        {
+          id: 2,
+          name: "Episode 2 – Breaking Brad",
+          image: Aot7,
+          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
+          duration: "47 minutes"
+        },
+        
+      ]
+    },
+    {
+      id: 3,
+      name: "Season 3",
+      image: Aot9,
+      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Ouroboros",
+          image: Aot8,
+          description: "Loki time-slips and seeks help from TVA technician OB.",
+          duration: "51 minutes"
+        },
+       
+       
       ]
     }
   ]
