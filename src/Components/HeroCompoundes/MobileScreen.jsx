@@ -49,9 +49,8 @@ const MobileScreen = () => {
   const currentMovie = movies[current];
 
   return (
-    <div className="relative w-full h-[650px] bg-black overflow-hidden">
-      {/* Top Buttons */}
-      <div className="absolute top-4 left-4 z-30 flex items-center gap-3 overflow-x-auto">
+    <div className='relative bg-black/95'>
+       <div className="absolute top-4 left-4 z-30 flex items-center gap-3 overflow-x-auto">
         <button className="flex-shrink-0 flex items-center gap-2 border border-white/30 hover:bg-white/20 px-4 py-1.5 rounded-full text-white text-sm font-medium transition">
           TV Shows
         </button>
@@ -65,7 +64,7 @@ const MobileScreen = () => {
 
       {/* Modal */}
       {showModal && (
-        <div className="fixed inset-0 z-[999] bg-black flex flex-col">
+        <div className="fixed inset-0 z-[999] bg-black flex flex-col ">
           <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10">
             <button
               onClick={() => setShowModal(false)}
@@ -89,6 +88,10 @@ const MobileScreen = () => {
           </div>
         </div>
       )}
+      <div className='p-5'> 
+      <div className="relative  h-[650px] bg-black overflow-hidden border-4 rounded mt-12 ">
+      {/* Top Buttons */}
+     
 
       {/* Background Image */}
       {currentMovie && (
@@ -103,35 +106,36 @@ const MobileScreen = () => {
       <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-black/90 to-transparent z-20" />
 
       {/* Bottom Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent z-10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent z-10 " />
 
       {/* Content */}
       {currentMovie && (
-        <div className="absolute bottom-6 left-0 right-0 z-30 px-5 sm:px-6 flex flex-col items-center text-white text-center">
-          <h2 className="text-lg sm:text-2xl font-bold mb-1 line-clamp-2 drop-shadow-lg">
-            {currentMovie.title}
-          </h2>
-          <p className="text-xs sm:text-sm text-white/70 mb-4 drop-shadow-md">
-            {getGenreNames(currentMovie.genre_ids)}
-          </p>
+       
+<div className="absolute bottom-6 left-0 right-0 z-30 px-4 flex flex-col items-center text-white text-center">
+  <h2 className="text-base sm:text-lg font-semibold mb-1 tracking-wide drop-shadow-md">
+    {currentMovie.title}
+  </h2>
+  <p className="text-[11px] sm:text-xs text-white/60 mb-4">
+    {getGenreNames(currentMovie.genre_ids)}
+  </p>
 
-          {/* Buttons */}
-          <div className="flex gap-3 flex-wrap justify-center w-full max-w-xs">
-            <Link
-                          key={currentMovie.id}
-                          to={`/details/${currentMovie.id}`}
-                          
-                        >
-            <button className="flex items-center justify-center gap-2 bg-white text-black px-5 py-2 rounded-full font-semibold text-xs sm:text-sm hover:bg-gray-300 transition">
-              <FaPlay className="text-sm" /> Play
-            </button>
-            </Link>
-            <button className="flex items-center justify-center gap-2 bg-white/20 text-white px-5 py-2 rounded-full font-semibold text-xs sm:text-sm border border-white hover:bg-white/30 transition">
-              <FaPlus className="text-sm" /> My List
-            </button>
-          </div>
-        </div>
+  {/* Buttons */}
+  <div className="flex gap-3 flex-wrap justify-center w-full max-w-xs">
+    <Link to={`/details/${currentMovie.id}`}>
+      <button className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-md text-xs font-medium hover:bg-gray-300 transition duration-200">
+        <FaPlay className="text-sm" /> Play
+      </button>
+    </Link>
+
+    <button className="flex items-center gap-2 border border-white text-white px-4 py-2 rounded-md text-xs font-medium bg-transparent hover:bg-white/20 transition duration-200">
+      <FaPlus className="text-sm" /> My List
+    </button>
+  </div>
+</div>
+
       )}
+    </div>
+    </div>
     </div>
   );
 };

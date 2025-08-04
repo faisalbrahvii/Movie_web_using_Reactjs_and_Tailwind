@@ -11,7 +11,7 @@ const MobileScreenNav = () => {
   return (
     <>
      
-      <div className='fixed w-full z-50 bg-black/95 backdrop-blur-sm  p-4     top-0 left-0'>
+      <div className=' w-full z-50 bg-black/95 backdrop-blur-sm  p-4     top-0 left-0'>
         <div className='flex items-center justify-between'>
           <img
             src={userLogo}
