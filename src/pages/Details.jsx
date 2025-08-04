@@ -119,7 +119,7 @@ const Details = () => {
           <div className="bg-white rounded-lg overflow-hidden w-full max-w-2xl relative">
             <button
               onClick={() => setShowModal(false)}
-              className="absolute top-2 right-3 text-black font-bold text-2xl z-10"
+              className="absolute top-44 right-3 text-white font-bold text-4xl z-10   "
             >
               &times;
             </button>
