@@ -6,6 +6,7 @@ import { IoMdMenu, IoMdClose } from "react-icons/io";
 import { RiMenu3Fill } from "react-icons/ri";
 import userLogo from '../../assests/logo/userlogo.jpeg';
 import { useNavigate } from 'react-router-dom';
+import { MdDownloadDone, MdSearch } from "react-icons/md";
 
 const categories = [
   "Action", "Comedy", "Drama", "Sci-Fi", "Horror",
@@ -88,8 +89,8 @@ const Navbar = () => {
               onClick={() => setShowSearch(!showSearch)}
               className="cursor-pointer hover:text-red-500 transition"
             />
-            <IoIosNotifications size={20} className="cursor-pointer hover:text-red-500 transition" />
-            <HiDownload size={20} className="cursor-pointer hover:text-red-500 transition" />
+            {/* <IoIosNotifications size={20} className="cursor-pointer hover:text-red-500 transition" /> */}
+            <MdDownloadDone size={20} className="cursor-pointer hover:text-red-500 transition" />
             <RiMenu3Fill
               size={22}
               onClick={() => setShowSidebar(true)}

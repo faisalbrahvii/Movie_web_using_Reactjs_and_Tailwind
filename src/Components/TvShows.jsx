@@ -49,6 +49,7 @@ const TvShows = () => {
             </div>
           ))}
         </div>
+        
       </div>
     </div>
   );

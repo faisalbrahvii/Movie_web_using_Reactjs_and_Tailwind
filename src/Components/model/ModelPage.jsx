@@ -1,13 +1,15 @@
  import React, { useRef, useState } from "react";
   import { useNavigate, useLocation } from "react-router-dom";
   import { IoClose } from "react-icons/io5";
-  import NLogo from '../../assests/models/N.png';
+  import NLogo from '../../assests/logo/logoos.png';
   import { FaPlay, FaPlus } from "react-icons/fa6";
   import { AiOutlineLike } from "react-icons/ai";
   import { BsBadgeHdFill } from "react-icons/bs";
   import { FaAd } from "react-icons/fa";
   import { MdMessage } from "react-icons/md";
   import { GoPlus } from "react-icons/go";
+  import { IoArrowBackSharp } from "react-icons/io5";
+
 const ModelPage = () => {
  
   
@@ -52,9 +54,9 @@ const ModelPage = () => {
           {/* Close Button */}
           <button
             onClick={closeModal}
-            className="absolute top-4 right-4 text-white text-3xl z-30 hover:text-red-500 transition"
+            className="absolute top-4 left-4 text-white text-3xl z-30 hover:text-red-500 transition  p-3"
           >
-            <IoClose />
+            <IoArrowBackSharp />
           </button>
   
           {/* Header */}

@@ -10,6 +10,8 @@ import OnlyOnMovie11 from '../assests/OnlyOn/down3.jpeg';
 import OnlyOnMovie12 from '../assests/OnlyOn/down4.jpeg';
 import OnlyOnMovie13 from '../assests/OnlyOn/down5.jpeg';
 
+//  Croods
+
 import CroodsS1 from '../assests/OnlyOn/OnlyMovieOne/Movie.jpeg';
 import CroodsS2 from '../assests/OnlyOn/OnlyMovieOne/Movie2.jpeg';
 import CroodsS3 from '../assests/OnlyOn/OnlyMovieOne/Movie3.jpeg';
@@ -30,432 +32,414 @@ import Aot8 from '../assests/OnlyOn/OnlyMovieTwo/Movie8.jpg';
 import Aot9 from '../assests/OnlyOn/OnlyMovieTwo/Movie9.jpg';
 import Aot10 from '../assests/OnlyOn/OnlyMovieTwo/Movie10.jpeg';
 
+// wednesday
+import wednesday1 from '../assests/OnlyOn/OnlyMovie3/Movie4.jpg';
+import wednesday2 from '../assests/OnlyOn/OnlyMovie3/Movie1.jpeg';
+import wednesday3 from '../assests/OnlyOn/OnlyMovie3/Movie2.jpeg';
+import wednesday4 from '../assests/OnlyOn/OnlyMovie3/Movie3.jpeg';
+import wednesday5 from '../assests/OnlyOn/OnlyMovie3/Movie5.jpg';
+import wednesday6 from '../assests/OnlyOn/OnlyMovie3/Movie6.jpg';
+import wednesday7 from '../assests/OnlyOn/OnlyMovie3/Movie7.jpg';
+import wednesday8 from '../assests/OnlyOn/OnlyMovie3/Movie8.jpg';
+
+//  Breaking Bad
+import Bb1 from '../assests/OnlyOn/OnlyMovie4/Movie1.jpg';
+import Bb2 from '../assests/OnlyOn/OnlyMovie4/Movie2.jpg';
+import Bb3 from '../assests/OnlyOn/OnlyMovie4/Movie3.jpeg';
+import Bb4 from '../assests/OnlyOn/OnlyMovie4/Movie4.jpg';
+import Bb5 from '../assests/OnlyOn/OnlyMovie4/Movie5.jpg';
+import Bb6 from '../assests/OnlyOn/OnlyMovie4/Movie1.jpg';
+import Bb7 from '../assests/OnlyOn/OnlyMovie4/Movie7.webp';
+
+// Vampire 
+import Vampire1 from '../assests/OnlyOn/OnlyMovie5/Movie7.jpg';
+import Vampire2 from '../assests/OnlyOn/OnlyMovie5/Movie1.jpg';
+import Vampire3 from '../assests/OnlyOn/OnlyMovie5/Movie2.jpg';
+import Vampire4 from '../assests/OnlyOn/OnlyMovie5/Movie3.jpg';
+import Vampire5 from '../assests/OnlyOn/OnlyMovie5/Movie4.jpg';
+import Vampire6 from '../assests/OnlyOn/OnlyMovie5/Movie5.jpg';
+import Vampire7 from '../assests/OnlyOn/OnlyMovie5/Movie6.jpg';
+
+
+// Dark
+import Dark1 from '../assests/OnlyOn/OnlyMovie6/Movie7.jpg';
+import Dark2 from '../assests/OnlyOn/OnlyMovie6/Movie1.jpg';
+import Dark3 from '../assests/OnlyOn/OnlyMovie6/Movie2.jpg';
+import Dark4 from '../assests/OnlyOn/OnlyMovie6/Movie3.jpg';
+import Dark5 from '../assests/OnlyOn/OnlyMovie6/Movie4.jpg';
+import Dark6 from '../assests/OnlyOn/OnlyMovie6/Movie5.jpg';
+import Dark7 from '../assests/OnlyOn/OnlyMovie6/Movie6.jpg';
+
+// Stranger Things
+import Stranger1 from '../assests/OnlyOn/OnlyMovie7/Movie1.jpg';
+import Stranger2 from '../assests/OnlyOn/OnlyMovie7/Movie2.jpeg';
+import Stranger3 from '../assests/OnlyOn/OnlyMovie7/Movie3.jpeg';
+import Stranger4 from '../assests/OnlyOn/OnlyMovie7/Movie4.jpg';
+import Stranger5 from '../assests/OnlyOn/OnlyMovie7/Movie5.jpg';
+import Stranger6 from '../assests/OnlyOn/OnlyMovie7/Movie6.jpg';
+import Stranger7 from '../assests/OnlyOn/OnlyMovie7/Movie7.jpg';
+import Stranger8 from '../assests/OnlyOn/OnlyMovie7/Movie8.jpg';
+
+// Game of thrones
+import Gott1 from '../assests/OnlyOn/OnlyMovie8/Movie1.jpg';
+import Gott2 from '../assests/OnlyOn/OnlyMovie8/Movie2.jpg';
+import Gott3 from '../assests/OnlyOn/OnlyMovie8/Movie3.jpg';
+import Gott4 from '../assests/OnlyOn/OnlyMovie8/Movie4.jpg';
+import Gott5 from '../assests/OnlyOn/OnlyMovie8/Movie5.jpg';
+import Gott6 from '../assests/OnlyOn/OnlyMovie8/Movie6.jpg';
+
+// Money heist
+import Mh1 from '../assests/OnlyOn/OnlyMovie9/Movie1.jpeg';
+import Mh2 from '../assests/OnlyOn/OnlyMovie9/Movie2.jpeg';
+import Mh3 from '../assests/OnlyOn/OnlyMovie9/Movie3.jpeg';
+import Mh4 from '../assests/OnlyOn/OnlyMovie9/Movie4.jpeg';
+import Mh5 from '../assests/OnlyOn/OnlyMovie9/Movie5.jpg';
+import Mh6 from '../assests/OnlyOn/OnlyMovie9/Movie6.jpg';
+import Mh7 from '../assests/OnlyOn/OnlyMovie9/Movie7.webp';
+import Mh8 from '../assests/OnlyOn/OnlyMovie9/Movie8.jpg';
+import Mh9 from '../assests/OnlyOn/OnlyMovie9/Movie9.jpg';
+
+
+// The Watcher
+import Watcher1 from '../assests/OnlyOn/OnlyMovie10/Movie1.jpeg';
+import Watcher2 from '../assests/OnlyOn/OnlyMovie10/Movie2.jpg';
+import Watcher3 from '../assests/OnlyOn/OnlyMovie10/Movie3.jpg';
+import Watcher4 from '../assests/OnlyOn/OnlyMovie10/Movie4.jpg';
+import Watcher5 from '../assests/OnlyOn/OnlyMovie10/Movie5.avif';
+import Watcher6 from '../assests/OnlyOn/OnlyMovie10/Movie6.jpg';
+import Watcher7 from '../assests/OnlyOn/OnlyMovie10/Movie7.jpg';
+import Watcher8 from '../assests/OnlyOn/OnlyMovie10/Movie8.jpg';
 
 export const series = [
+ {
+  id: 1,
+  name: "Stranger Things",
+  image: Stranger1,
+  backgroundimage: Stranger1,
+  description:
+    "In Hawkins, Indiana, a young boy vanishes, and a mysterious girl with supernatural powers appears.",
+  year: "Dec 2016 – Present",
+  Duration: "4 Seasons",
+  Cast: ["Millie Bobby Brown", "Finn Wolfhard", "David Harbour", "Winona Ryder"],
+  rate: "8.7",
+  genres: ["Drama", "Fantasy", "Horror"],
+  trailer: "https://www.youtube.com/embed/b9EkMc79ZSU",
+
+  seasons: [
+    {
+      id: 1,
+      name: "Season 1",
+      image: Stranger2,
+      description: "A young boy disappears. His friends uncover a girl with strange powers.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – The Vanishing of Will Byers",
+          image: Stranger3,
+          description: "Will vanishes mysteriously; friends meet a strange girl.",
+          duration: "49 minutes",
+        },
+        {
+          id: 2,
+          name: "Episode 2 – The Weirdo on Maple Street",
+          image: Stranger4,
+          description: "The kids hide Eleven while Joyce experiences strange signals.",
+          duration: "55 minutes",
+        },
+        {
+          id: 3,
+          name: "Episode 3 – Holly, Jolly",
+          image: Stranger5,
+          description: "Eleven’s memories reveal danger; Will's fate grows darker.",
+          duration: "51 minutes",
+        },
+      ],
+    },
+    {
+      id: 2,
+      name: "Season 2",
+      image: Stranger6,
+      description: "The gang faces new dangers as the Upside Down spreads.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – MADMAX",
+          image: Stranger7,
+          description: "Will is haunted by visions; Eleven hides from the world.",
+          duration: "49 minutes",
+        },
+        {
+          id: 2,
+          name: "Episode 2 – Trick or Treat, Freak",
+          image: Stranger8,
+          description: "Halloween brings new warnings and a new girl to the group.",
+          duration: "55 minutes",
+        },
+        {
+          id: 3,
+          name: "Episode 3 – The Pollywog",
+          image: "", // Add the missing image if you have it
+          description: "Dustin finds a strange creature; Eleven explores her past.",
+          duration: "56 minutes",
+        },
+      ],
+    },
+  ],
+},
   {
-    id: 1,
-    name: "Stranger Things",
-    image: "https://image.tmdb.org/t/p/w500/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg",
-    backgroundimage: "https://image.tmdb.org/t/p/original/56v2KjBlU4XaOv9rVYEQypROD7P.jpg",
-    description:
-      "In Hawkins, Indiana, a boy disappears and a mysterious girl appears with otherworldly powers.",
-    year: "2016–",
-    Duration: "4 Seasons",
-    Cast:["Ahaan Panday", "Aneet Padda", "Geeta Agarwal Sharma", "Varun Badola"],
-    rate: "8.7",
-    genres: ["Drama", "Fantasy", "Horror"],
-    trailer: "https://www.youtube.com/embed/b9EkMc79ZSU",
+  id: 2,
+  name: "Game of Thrones",
+  image: "https://image.tmdb.org/t/p/w500/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
+  backgroundimage: "https://image.tmdb.org/t/p/original/2OMB0ynKlyIenMJWI2Dy9IWT4c.jpg",
+  description:
+    "In the Seven Kingdoms of Westeros, noble families clash for control of the Iron Throne while an ancient enemy awakens in the North.",
+  year: "Apr 2011 – May 2019",
+  Duration: "8 Seasons",
+  rate: "9.4",
+  Cast: [" Bobby Brown", "Finn ", " Harbour", ],
+  genres: ["Action", "Adventure", "Drama"],
+  trailer: "https://www.youtube.com/embed/KPLWWIOCOOQ",
 
-    seasons: [
-      {
-        id: 1,
-        name: "Season 1",
-        image: "https://image.tmdb.org/t/p/w500/zwaj4egrhnXOBIit1tyb4Sbt3KP.jpg",
-        description: "Will goes missing and a young girl appeared from nowhere.",
-        episodes: [
-          {
-            id: 1,
-            name: "Episode 1 – The Vanishing of Will Byers",
-            image:
-              "https://image.tmdb.org/t/p/w500/56v2KjBlU4XaOv9rVYEQypROD7P.jpg",
-            description: "Will disappears; friends encounter a strange girl.",
-            duration: "49 minutes",
-          },
-          {
-            id: 2,
-            name: "Episode 2 – The Weirdo on Maple Street",
-            image:
-              "https://image.tmdb.org/t/p/w500/ft7bY5PSFEP6nPBZbm3AG06RXvy.jpg",
-            description: "The kids hide Eleven; Joyce uncovers strange signals.",
-            duration: "55 minutes",
-          },
-          {
-            id: 3,
-            name: "Episode 3 – Holly, Jolly",
-            image:
-              "https://image.tmdb.org/t/p/w500/6Fn7S1zDxWMbgLhmKiObGEqPM1.jpg",
-            description:
-              "Eleven’s flashbacks reveal horrors; Will’s fate becomes clearer.",
-            duration: "51 minutes",
-          },
-        ],
-      },
-      {
-        id: 2,
-        name: "Season 2",
-        image: "https://image.tmdb.org/t/p/w500/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg",
-        description: "The gang returns to confront new threats from the Upside Down.",
-        episodes: [
-          {
-            id: 1,
-            name: "Episode 1 – MADMAX",
-            image:
-              "https://image.tmdb.org/t/p/w500/8yuejVi8YGcMuCo7FYaGMr1N8r0.jpg",
-            description: "Will struggles with visions; Eleven adjusts to life outside.",
-            duration: "49 minutes",
-          },
-          {
-            id: 2,
-            name: "Episode 2 – Trick or Treat, Freak",
-            image:
-              "https://image.tmdb.org/t/p/w500/oVU8U6c4GWC5z3QP4QyqBToonYe.jpg",
-            description:
-              "Joyce receives a mysterious Halloween message; new threats emerge.",
-            duration: "55 minutes",
-          },
-          {
-            id: 3,
-            name: "Episode 3 – The Pollywog",
-            image:
-              "https://image.tmdb.org/t/p/w500/vEOtVKI2z1vF9z9xA10Fqzut6X.jpg",
-            description:
-              "Eleven and Max bond; Dustin finds a strange creature in the shed.",
-            duration: "56 minutes",
-          },
-        ],
-      },
-      {
-        id: 3,
-        name: "Season 3",
-        image: "https://image.tmdb.org/t/p/w500/56v2KjBlU4XaOv9rVYEQypROD7P.jpg",
-        description: "New mall opens; the Upside Down resurfaces.",
-        episodes: [
-          {
-            id: 1,
-            name: "Episode 1 – Suzie, Do You Copy?",
-            image:
-              "https://image.tmdb.org/t/p/w500/j1wvX43PaAgvogTkWqk5hH3c4Hw.jpg",
-            description:
-              "Robin intercepts a transmission; the group bonds over communications.",
-            duration: "50 minutes",
-          },
-          {
-            id: 2,
-            name: "Episode 2 – The Mall Rats",
-            image:
-              "https://image.tmdb.org/t/p/w500/3HIrJNCuXsyE5daBo4Fi1cM34lb.jpg",
-            description:
-              "The gang hangs out at the new mall; Billy causes trouble.",
-            duration: "53 minutes",
-          },
-          {
-            id: 3,
-            name: "Episode 3 – The Case of the Missing Lifeguard",
-            image:
-              "https://image.tmdb.org/t/p/w500/lXUH1sE2fRFfOvballIXPCsKQSe.jpg",
-            description:
-              "Strange events occur at the pool; Hopper investigates.",
-            duration: "55 minutes",
-          },
-        ],
-      },
-    ],
-  },
-   {
-    id: 2,
-    name: "Game of Thrones",
-    image: "https://image.tmdb.org/t/p/w500/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
-    backgroundimage: "https://image.tmdb.org/t/p/original/2OMB0ynKlyIenMJWI2Dy9IWT4c.jpg",
-    description: "Nine noble families wage war against each other to gain control over the mythical land of Westeros.",
-    year: "2011–2019",
-    Duration: "8 Seasons",
-    rate: "9.4",
-    genres: ["Action", "Adventure", "Drama"],
-    trailer: "https://www.youtube.com/embed/KPLWWIOCOOQ",
-
-    seasons: [
-      {
-        id: 1,
-        name: "Season 1",
-        image: "https://image.tmdb.org/t/p/w500/zwaj4egrhnXOBIit1tyb4Sbt3KP.jpg",
-        description: "The beginning of the battle for the Iron Throne.",
-        episodes: [
-          {
-            id: 1,
-            name: "Episode 1 – Winter Is Coming",
-            image: "https://image.tmdb.org/t/p/w500/xIfvIMfY3gS6cWbq2M4cWy6kzzO.jpg",
-            description: "Eddard Stark is torn between family loyalty and royal duty.",
-            duration: "62 minutes",
-          },
-          {
-            id: 2,
-            name: "Episode 2 – The Kingsroad",
-            image: "https://image.tmdb.org/t/p/w500/uxJ9YlThKqRWgxsN7RNXIdTzjqL.jpg",
-            description: "The Lannisters plot while Jon heads to the Wall.",
-            duration: "56 minutes",
-          },
-          {
-            id: 3,
-            name: "Episode 3 – Lord Snow",
-            image: "https://image.tmdb.org/t/p/w500/nqzXdViwe16jzDKDqgcvRB5x5pR.jpg",
-            description: "Jon Snow struggles to fit in at Castle Black.",
-            duration: "58 minutes",
-          }
-        ]
-      },
-      {
-        id: 2,
-        name: "Season 2",
-        image: "https://image.tmdb.org/t/p/w500/5tuhCkqPOT20XPwwi9NhFnC1g9R.jpg",
-        description: "The War of the Five Kings begins as rival factions vie for power.",
-        episodes: [
-          {
-            id: 1,
-            name: "Episode 1 – The North Remembers",
-            image: "https://image.tmdb.org/t/p/w500/aRxq3FwXoAXzL3hQXZ6zOYk5vXA.jpg",
-            description: "Tyrion arrives to serve as Hand; Stannis plans war.",
-            duration: "53 minutes",
-          },
-          {
-            id: 2,
-            name: "Episode 2 – The Night Lands",
-            image: "https://image.tmdb.org/t/p/w500/bikWzKJ9I97p3tcJWBsbGbVvZXi.jpg",
-            description: "Arya reveals a secret; Theon returns to his homeland.",
-            duration: "54 minutes",
-          },
-          {
-            id: 3,
-            name: "Episode 3 – What Is Dead May Never Die",
-            image: "https://image.tmdb.org/t/p/w500/tSEWQmrjr2ujflZX9txryr51lq4.jpg",
-            description: "Catelyn meets Renly; Tyrion schemes within the court.",
-            duration: "53 minutes",
-          }
-        ]
-      },
-      {
-        id: 3,
-        name: "Season 3",
-        image: "https://image.tmdb.org/t/p/w500/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
-        description: "The realm is plagued by war, betrayal, and dark magic.",
-        episodes: [
-          {
-            id: 1,
-            name: "Episode 1 – Valar Dohaeris",
-            image: "https://image.tmdb.org/t/p/w500/cAyfDR3nFHH0Pz7RfUjcJPoY14I.jpg",
-            description: "Jon meets the King-Beyond-the-Wall; Tyrion demands recognition.",
-            duration: "55 minutes",
-          },
-          {
-            id: 2,
-            name: "Episode 2 – Dark Wings, Dark Words",
-            image: "https://image.tmdb.org/t/p/w500/rQfK7GZsXLStlC1VgHUG5LKmGQm.jpg",
-            description: "Sansa meets Margaery; Arya encounters new allies.",
-            duration: "57 minutes",
-          },
-          {
-            id: 3,
-            name: "Episode 3 – Walk of Punishment",
-            image: "https://image.tmdb.org/t/p/w500/vszGr82Pf5sRNBVlxS9nDplJ0qp.jpg",
-            description: "Robb faces a setback; Jaime’s captivity takes a toll.",
-            duration: "54 minutes",
-          }
-        ]
-      }
-    ]
-  },
+  seasons: [
+    {
+      id: 1,
+      name: "Season 1",
+      image: "https://image.tmdb.org/t/p/w500/zwaj4egrhnXOBIit1tyb4Sbt3KP.jpg",
+      description: "The story begins as noble families maneuver for power and uncover deadly secrets.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Winter Is Coming",
+          image: Gott1,
+          description: "Eddard Stark receives an offer from King Robert and uncovers a secret.",
+          duration: "62 minutes",
+        },
+        {
+          id: 2,
+          name: "Episode 2 – The Kingsroad",
+          image: Gott2,
+          description: "Jon heads to the Wall, Arya faces danger, and tensions grow in the capital.",
+          duration: "56 minutes",
+        },
+        {
+          id: 3,
+          name: "Episode 3 – Lord Snow",
+          image: Gott3,
+          description: "Jon struggles at Castle Black; Ned begins his duties in King's Landing.",
+          duration: "58 minutes",
+        },
+      ],
+    },
+    {
+      id: 2,
+      name: "Season 2",
+      image: "https://image.tmdb.org/t/p/w500/5tuhCkqPOT20XPwwi9NhFnC1g9R.jpg",
+      description: "The War of the Five Kings erupts as alliances shift and chaos spreads.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – The North Remembers",
+          image: Gott4,
+          description: "Robb Stark sends peace terms; Stannis declares himself king.",
+          duration: "53 minutes",
+        },
+        {
+          id: 2,
+          name: "Episode 2 – The Night Lands",
+          image: Gott5,
+          description: "Tyrion faces new challenges; Arya hides her identity; Theon returns home.",
+          duration: "54 minutes",
+        },
+      ],
+    },
+    {
+      id: 3,
+      name: "Season 3",
+      image: "https://image.tmdb.org/t/p/w500/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
+      description: "The struggle for the Iron Throne intensifies as betrayals, battles, and magic shape the fate of Westeros.",
+      episodes: [
+        {
+          id: 1,
+          name: "Episode 1 – Valar Dohaeris",
+          image: Gott6,
+          description: "Jon meets Mance Rayder; Tyrion seeks his reward; Davos returns to Dragonstone.",
+          duration: "55 minutes",
+        },
+      ],
+    },
+  ],
+},
   {
   id: 3,
   name: "Money Heist",
   image: "https://image.tmdb.org/t/p/w500/MoEKaPFHABtA1xKoOteirGaHl1.jpg",
-  backgroundimage: "https://image.tmdb.org/t/p/original/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg",
-  description: "A criminal mastermind who goes by the 'Professor' recruits eight people to carry out an ambitious plan to rob the Royal Mint of Spain.",
-  year: "2017–2021",
+  backgroundimage: Mh6,
+  description:
+    "A criminal mastermind known as the 'Professor' recruits eight skilled criminals to execute a bold plan — robbing the Royal Mint of Spain.",
+  year: "May 2017 – Dec 2021",
   Duration: "5 Seasons",
   rate: "8.2",
   genres: ["Action", "Crime", "Drama"],
+  Cast: [" Bobby Brown", " Wolfhard", "David ", " Ryder"],
   trailer: "https://www.youtube.com/embed/_InqQJRqGW4",
 
   seasons: [
     {
       id: 1,
       name: "Season 1",
-      image: "https://image.tmdb.org/t/p/w500/fPtlCO1yQtnoLHOwKtWz7db6RGU.jpg",
-      description: "The Professor begins assembling a team for the Royal Mint heist.",
+      image: Mh1,
+      description: "The Professor assembles a team for a flawless heist on the Royal Mint.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – Efectuar lo acordado",
-          image: "https://image.tmdb.org/t/p/w500/z5dQ4xvMmBsBskz8KHAtEzyBbsY.jpg",
-          description: "The Professor recruits Tokyo, Rio, Berlin and others for the heist.",
+          image: Mh2,
+          description: "The Professor recruits Tokyo, Rio, Berlin, and others to begin the mission.",
           duration: "47 minutes",
         },
         {
           id: 2,
           name: "Episode 2 – Imprudencias letales",
-          image: "https://image.tmdb.org/t/p/w500/kA7pRHE8I45CkX0zNqz5R5WZLzr.jpg",
-          description: "Hostage negotiations begin as the gang executes their plan.",
+          image: Mh3,
+          description: "Hostage tensions rise as the gang moves forward with their plan.",
           duration: "50 minutes",
         },
         {
           id: 3,
           name: "Episode 3 – Errar al disparar",
-          image: "https://image.tmdb.org/t/p/w500/j6pYorGpzAHQIMUbIDjKhS6rbMw.jpg",
-          description: "Police strategize as tensions rise inside the Mint.",
+          image: Mh4,
+          description: "The police develop strategies; chaos brews inside the Mint.",
           duration: "46 minutes",
-        }
-      ]
+        },
+      ],
     },
     {
       id: 2,
       name: "Season 2",
-      image: "https://image.tmdb.org/t/p/w500/kHFc4zVGHPMn2P2PXwR8kHpi4lC.jpg",
-      description: "The heist intensifies and loyalty is tested among the crew.",
+      image: Mh5,
+      description: "The heist reaches critical stages as pressure mounts and betrayal lurks.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – ¿Qué hemos hecho?",
-          image: "https://image.tmdb.org/t/p/w500/tnWQ9hZ9vu1w7vzKLAs0l0u8QOZ.jpg",
-          description: "The police close in as the Professor plans a risky move.",
+          image: Mh7,
+          description: "The Professor considers a desperate move as police close in.",
           duration: "45 minutes",
         },
         {
           id: 2,
           name: "Episode 2 – A contrarreloj",
-          image: "https://image.tmdb.org/t/p/w500/sWjDwAbpTQkEq5y4y26P08R0woQ.jpg",
-          description: "A misstep puts one of the crew in serious danger.",
+          image: Mh8,
+          description: "One crew member is put at risk as plans start to unravel.",
           duration: "49 minutes",
         },
-        {
-          id: 3,
-          name: "Episode 3 – Cuestión de eficacia",
-          image: "https://image.tmdb.org/t/p/w500/c9xrgFayBqtAqzk7QcVRS93DM6S.jpg",
-          description: "With time running out, decisions must be made fast.",
-          duration: "47 minutes",
-        }
-      ]
+      ],
     },
     {
       id: 3,
       name: "Season 3",
-      image: "https://image.tmdb.org/t/p/w500/5gLDeADsFNm8gz4StgZp9Rrf5ZV.jpg",
-      description: "The gang reunites to rescue one of their own from the authorities.",
+      image: Mh9,
+      description: "The gang comes out of hiding to pull off an even bigger and riskier job.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – Hemos vuelto",
-          image: "https://image.tmdb.org/t/p/w500/7To0h0A7VEqCZtMoIrrAX2Yxziq.jpg",
-          description: "The Professor reunites the team for a new and daring heist.",
+          image: "", // Add if available
+          description: "The Professor regathers the team for a daring rescue mission.",
           duration: "49 minutes",
         },
         {
           id: 2,
           name: "Episode 2 – Aikido",
-          image: "https://image.tmdb.org/t/p/w500/mwsNhX9hYnbBQGE2sXnGJD2tpAW.jpg",
-          description: "The gang’s new plan starts taking shape with a bold step.",
+          image: "", // Add if available
+          description: "A new heist begins to unfold, testing their coordination and resolve.",
           duration: "51 minutes",
         },
         {
           id: 3,
           name: "Episode 3 – 48 metros bajo el suelo",
-          image: "https://image.tmdb.org/t/p/w500/mWJLME2Mo99qKTozaOBXUufmswV.jpg",
-          description: "They face resistance and technical challenges underground.",
+          image: "", // Add if available
+          description: "They face high risks beneath the ground with time ticking fast.",
           duration: "52 minutes",
-        }
-      ]
-    }
-  ]
+        },
+      ],
+    },
+  ],
 },
 {
   id: 5,
   name: "The Witcher",
-  image: "https://image.tmdb.org/t/p/w500/zrPpUlehQaBf8YX2NrVrKK8IEpf.jpg",
+  image: Watcher2,
   backgroundimage: "https://image.tmdb.org/t/p/original/s1xnjbOIQtwGObPnydTebp74G2c.jpg",
-  description: "Geralt of Rivia, a mutated monster hunter for hire, journeys toward his destiny in a turbulent world where people often prove more wicked than beasts.",
-  year: "2019–2023",
+  description:
+    "Geralt of Rivia, a mutated monster hunter, seeks his destiny in a dark and dangerous world where humans can be more wicked than monsters.",
+  year: "Dec 2019 – Jul 2023",
   Duration: "3 Seasons",
   rate: "8.2",
   genres: ["Action", "Adventure", "Fantasy"],
+  Cast: ["Mirown", "Fihard", "Daur", "WiRyder"],
   trailer: "https://www.youtube.com/embed/ndl1W4ltcmg",
 
   seasons: [
     {
       id: 1,
       name: "Season 1",
-      image: "https://image.tmdb.org/t/p/w500/mMZRKb3NVo5ZeSPEIaNW9buLWQ0.jpg",
-      description: "Geralt battles beasts and uncovers ancient prophecies.",
+      image: Watcher1,
+      description: "Geralt battles legendary beasts and fate draws him toward the powerful child Ciri.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – The End's Beginning",
-          image: "https://image.tmdb.org/t/p/w500/kFZfAqfLMk2lGcHGHsH7Xx1Hj6y.jpg",
-          description: "Geralt battles a cunning mage's monster to defend a cursed kingdom.",
-          duration: "61 minutes"
+          image: Watcher4,
+          description: "Geralt slays a cursed creature while fate begins to weave its threads.",
+          duration: "61 minutes",
         },
         {
           id: 2,
           name: "Episode 2 – Four Marks",
-          image: "https://image.tmdb.org/t/p/w500/xMe1w5oIJ9l9EHFOHqI3gXrPAwm.jpg",
-          description: "Yennefer's transformation begins. Geralt discovers dark truths.",
-          duration: "59 minutes"
+          image: Watcher5,
+          description: "Yennefer’s painful transformation begins; Geralt faces moral dilemmas.",
+          duration: "59 minutes",
         },
         {
           id: 3,
           name: "Episode 3 – Betrayer Moon",
-          image: "https://image.tmdb.org/t/p/w500/vb7QozhFQjXUFOqRbBa6YzvzOFL.jpg",
-          description: "Geralt hunts a deadly striga in a cursed royal court.",
-          duration: "67 minutes"
-        }
-      ]
+          image: Watcher6,
+          description: "Geralt battles a deadly striga, facing the curse of royal corruption.",
+          duration: "67 minutes",
+        },
+      ],
     },
     {
       id: 2,
       name: "Season 2",
-      image: "https://image.tmdb.org/t/p/w500/bnZQ28VKq5JNvDByuw3OvbemhW4.jpg",
-      description: "Geralt takes Ciri under his wing as war brews and monsters grow bolder.",
+      image: Watcher3,
+      description: "As war threatens the Continent, Geralt protects Ciri and faces new evils.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – A Grain of Truth",
-          image: "https://image.tmdb.org/t/p/w500/sCGouFQ2ISev4ZftA3zNGoAQvQF.jpg",
-          description: "Geralt reunites with an old friend in a haunted manor.",
-          duration: "61 minutes"
+          image: Watcher7,
+          description: "Geralt encounters a cursed nobleman hiding a dark secret.",
+          duration: "61 minutes",
         },
         {
           id: 2,
           name: "Episode 2 – Kaer Morhen",
-          image: "https://image.tmdb.org/t/p/w500/aB7mpD5JNyv9mhS2kDYf1bcP1Fj.jpg",
-          description: "Ciri trains at Kaer Morhen while Yennefer survives battle fallout.",
-          duration: "57 minutes"
+          image: Watcher8,
+          description: "Ciri begins her training at Kaer Morhen; Yennefer’s fate is unknown.",
+          duration: "57 minutes",
         },
         {
           id: 3,
           name: "Episode 3 – What Is Lost",
-          image: "https://image.tmdb.org/t/p/w500/5sESwCWpoBiVArYXUv0vM9gFztS.jpg",
-          description: "Tensions rise as elves, mages, and kingdoms prepare for war.",
-          duration: "63 minutes"
-        }
-      ]
+          image: "", // Add image if available
+          description: "Conflicts deepen as alliances fracture and destinies collide.",
+          duration: "63 minutes",
+        },
+      ],
     },
-    {
-      id: 3,
-      name: "Season 3",
-      image: "https://image.tmdb.org/t/p/w500/qZEGdISYbfkRXh1SRlmeuuoXf4P.jpg",
-      description: "Fate leads Geralt, Yennefer, and Ciri to the heart of conspiracies.",
-      episodes: [
-        {
-          id: 1,
-          name: "Episode 1 – Shaerrawedd",
-          image: "https://image.tmdb.org/t/p/w500/fpRkxI28ZRY9Fvi3FeJuZkZcNQK.jpg",
-          description: "A shocking ambush interrupts Ciri's training.",
-          duration: "62 minutes"
-        },
-        {
-          id: 2,
-          name: "Episode 2 – Unbound",
-          image: "https://image.tmdb.org/t/p/w500/kHVXLMcDY79M6EjTWzCxAkBFOt3.jpg",
-          description: "Geralt and Ciri flee while hunted by new enemies.",
-          duration: "59 minutes"
-        },
-        {
-          id: 3,
-          name: "Episode 3 – Reunion",
-          image: "https://image.tmdb.org/t/p/w500/b8cVtPYFjUp62vDQxLfO4YqFVEy.jpg",
-          description: "Yennefer reunites with her destiny as Ciri's protector.",
-          duration: "65 minutes"
-        }
-      ]
-    }
-  ]
+  ],
 },
 {
   id: 6,
@@ -473,27 +457,27 @@ export const series = [
     {
       id: 1,
       name: "Season 1",
-      image: "https://image.tmdb.org/t/p/w500/fgflVrzPLxOZgx7dtyuEbc8PPSb.jpg",
+      image: "",
       description: "The Shelby family's rise begins as they expand their influence in post-WWI Birmingham.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – A Dangerous Path",
-          image: "https://image.tmdb.org/t/p/w500/bxSBOAD8AuMHYMdW3jsoZcHGe9T.jpg",
+          image: "",
           description: "Thomas Shelby fixes a horse race, attracting police and rival gangs.",
           duration: "57 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – Business Expansion",
-          image: "https://image.tmdb.org/t/p/w500/eaq5ECr5h50IcM6RzmbfeRvFttf.jpg",
+          image: "",
           description: "Tommy finds himself at odds with Inspector Campbell.",
           duration: "58 minutes"
         },
         {
           id: 3,
           name: "Episode 3 – Rival Gangs",
-          image: "https://image.tmdb.org/t/p/w500/nQy06NYjQSCFvNzE2ZktwO7d83g.jpg",
+          image: "",
           description: "Tommy's ambitions grow, and tensions rise within the family.",
           duration: "56 minutes"
         }
@@ -502,61 +486,33 @@ export const series = [
     {
       id: 2,
       name: "Season 2",
-      image: "https://image.tmdb.org/t/p/w500/sZaxMFU2EEwmX5U1FbrRlndBJpJ.jpg",
+      image: "",
       description: "The Shelbys expand into London’s underworld, facing new enemies.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – A New War",
-          image: "https://image.tmdb.org/t/p/w500/i1WYwZJlFZoUdx08GkHfNNaJmAx.jpg",
+          image: "",
           description: "Tommy eyes London, but danger follows.",
           duration: "59 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – Deeper Ties",
-          image: "https://image.tmdb.org/t/p/w500/7Fy47z4oVWo6bl7nGLMuEEJl9UY.jpg",
+          image: "",
           description: "Tommy must deal with betrayal within the ranks.",
           duration: "57 minutes"
         },
         {
           id: 3,
           name: "Episode 3 – Dead Men Walking",
-          image: "https://image.tmdb.org/t/p/w500/9rZg1J6vMQoDVSgRyWcpJa8IAGy.jpg",
+          image: "",
           description: "As enemies gather, Tommy plans his next move.",
           duration: "58 minutes"
         }
       ]
     },
-    {
-      id: 3,
-      name: "Season 3",
-      image: "https://image.tmdb.org/t/p/w500/6s1TQd8PX2N5IDbfzC7LFy6aDG3.jpg",
-      description: "Tommy enters the world of international crime and espionage.",
-      episodes: [
-        {
-          id: 1,
-          name: "Episode 1 – International Ties",
-          image: "https://image.tmdb.org/t/p/w500/gsMKxBDyI4dSRyVpORx2vx4EXI5.jpg",
-          description: "Tommy faces threats from foreign agents and old enemies.",
-          duration: "60 minutes"
-        },
-        {
-          id: 2,
-          name: "Episode 2 – The Secret Deal",
-          image: "https://image.tmdb.org/t/p/w500/5D4ZdFxScYXUO6wPvRGWZc2F4ZF.jpg",
-          description: "Tommy makes risky deals to protect the family.",
-          duration: "58 minutes"
-        },
-        {
-          id: 3,
-          name: "Episode 3 – Blood and Power",
-          image: "https://image.tmdb.org/t/p/w500/vIF3lzpwAMCGFe3yBPmRvAGmU4V.jpg",
-          description: "Violence erupts as alliances shift.",
-          duration: "59 minutes"
-        }
-      ]
-    }
+   
   ]
 },
 {
@@ -575,27 +531,27 @@ export const series = [
     {
       id: 1,
       name: "Season 1",
-      image: "https://image.tmdb.org/t/p/w500/jT3xH6nCPEMF8amGgkqSz5a2p9x.jpg",
+      image: "",
       description: "The mystery begins with a child vanishing in Winden, exposing secrets across generations.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – Secrets",
-          image: "https://image.tmdb.org/t/p/w500/dxaj0bG6nX9NkqNdbWwscxFIVvY.jpg",
+          image: "",
           description: "When a child disappears, secrets begin to unravel in a small town.",
           duration: "51 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – Lies",
-          image: "https://image.tmdb.org/t/p/w500/lYwT7pZNa7sBcmFjZ8kGZ7bG3Jd.jpg",
+          image: "",
           description: "Ulrich looks into the past for clues while the families confront lies.",
           duration: "53 minutes"
         },
         {
           id: 3,
           name: "Episode 3 – Past and Present",
-          image: "https://image.tmdb.org/t/p/w500/8iL9L6DoxOMm6VnK6hMH53nhqFf.jpg",
+          image: "",
           description: "Mysterious connections emerge as people vanish across timelines.",
           duration: "51 minutes"
         }
@@ -604,27 +560,27 @@ export const series = [
     {
       id: 2,
       name: "Season 2",
-      image: "https://image.tmdb.org/t/p/w500/5vUux4APT8vXTrsJxW2nrzxWf2M.jpg",
+      image: "",
       description: "Jonas tries to prevent the apocalypse while uncovering his true identity.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – Beginnings and Endings",
-          image: "https://image.tmdb.org/t/p/w500/p9fhYx0fl7M3t7ZgLK91hTfhMbK.jpg",
+          image: "",
           description: "New alliances form as time travelers fight fate.",
           duration: "56 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – Dark Matter",
-          image: "https://image.tmdb.org/t/p/w500/cnVzh8YYefI8jZLkRbmHOJu9nPA.jpg",
+          image: "",
           description: "Jonas and Claudia work to control the time loop.",
           duration: "54 minutes"
         },
         {
           id: 3,
           name: "Episode 3 – Ghosts",
-          image: "https://image.tmdb.org/t/p/w500/3D5Af0hQbgP0wnfJUnlFQzF6TUE.jpg",
+          image: "",
           description: "Old faces return as new motives come to light.",
           duration: "52 minutes"
         }
@@ -633,27 +589,27 @@ export const series = [
     {
       id: 3,
       name: "Season 3",
-      image: "https://image.tmdb.org/t/p/w500/mGntZbOy5KkAfOT9y9E6R9Oobrx.jpg",
+      image: "",
       description: "In a new world, Jonas and Martha struggle to find hope in a tangled time paradox.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – Deja-vu",
-          image: "https://image.tmdb.org/t/p/w500/gfnps2kz7xThk6qx2gAUnz7dc6O.jpg",
+          image: "",
           description: "A new reality unfolds where everything is familiar… but different.",
           duration: "60 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – The Survivors",
-          image: "https://image.tmdb.org/t/p/w500/7LYWqFgSkXJGdw8YjRg7z6kypZf.jpg",
+          image: "",
           description: "As truths surface, the origin of the apocalypse nears.",
           duration: "58 minutes"
         },
         {
           id: 3,
           name: "Episode 3 – Adam and Eva",
-          image: "https://image.tmdb.org/t/p/w500/1uRUMHc3S0QGuj1TjhrJmAjWZoL.jpg",
+          image: "",
           description: "Jonas and Martha learn the true cost of saving the world.",
           duration: "60 minutes"
         }
@@ -677,27 +633,27 @@ export const series = [
     {
       id: 1,
       name: "Season 1",
-      image: "https://image.tmdb.org/t/p/w500/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg",
+      image: "",
       description: "The journey of Din Djarin, a Mandalorian bounty hunter in the New Republic era.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – Chapter 1: The Mandalorian",
-          image: "https://image.tmdb.org/t/p/w500/jeJXpXJdUAvvLz70l1FkqC3nlZy.jpg",
+          image: "",
           description: "The Mandalorian accepts a mysterious job from a client.",
           duration: "39 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – Chapter 2: The Child",
-          image: "https://image.tmdb.org/t/p/w500/x1XUq8Izz1Fv1tB74PZbvyV5I9N.jpg",
+          image: "",
           description: "The Mandalorian fends off enemies and discovers his bounty is more than he expected.",
           duration: "33 minutes"
         },
         {
           id: 3,
           name: "Episode 3 – Chapter 3: The Sin",
-          image: "https://image.tmdb.org/t/p/w500/2O7a6BrJkRzkof1vJDuqs1M8tZ9.jpg",
+          image: "",
           description: "He returns to collect the bounty but has second thoughts.",
           duration: "37 minutes"
         }
@@ -706,27 +662,27 @@ export const series = [
     {
       id: 2,
       name: "Season 2",
-      image: "https://image.tmdb.org/t/p/w500/yFWC3F6kS4zPZT7c0egTg8cK5nK.jpg",
+      image: "",
       description: "The Mandalorian continues his journey with the Child, encountering old allies and new enemies.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – The Marshal",
-          image: "https://image.tmdb.org/t/p/w500/qJbEYXWYzHLvHD97xA04UHYvzbL.jpg",
+          image: "",
           description: "He searches for more Mandalorians to help guide him.",
           duration: "54 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – The Passenger",
-          image: "https://image.tmdb.org/t/p/w500/dQWZVZzRo1y0VYt0NvE8Vj9PPDZ.jpg",
+          image: "",
           description: "A new mission to transport a passenger leads to a frozen disaster.",
           duration: "42 minutes"
         },
         {
           id: 3,
           name: "Episode 3 – The Heiress",
-          image: "https://image.tmdb.org/t/p/w500/2ZGjzKZ0YpK5vQWf29s3PU3hNUY.jpg",
+          image: "",
           description: "Bo-Katan Kryze lends a hand to Din Djarin.",
           duration: "35 minutes"
         }
@@ -735,27 +691,27 @@ export const series = [
     {
       id: 3,
       name: "Season 3",
-      image: "https://image.tmdb.org/t/p/w500/jkCAMvlJbQpIK2zkZ8zGLlwct1Q.jpg",
+      image: "",
       description: "Din Djarin reunites with old allies as he seeks redemption and a new path for Mandalore.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – The Apostate",
-          image: "https://image.tmdb.org/t/p/w500/7L19vRkTMRx4wPQZcGCHG5ZrDfb.jpg",
+          image: "",
           description: "Din embarks on a quest to restore his honor as a Mandalorian.",
           duration: "37 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – The Mines of Mandalore",
-          image: "https://image.tmdb.org/t/p/w500/lQ7JD3Q8tZ0Wlt3eA7UeO7tTqeR.jpg",
+          image: "",
           description: "Din and Grogu journey to the legendary mines under Mandalore.",
           duration: "41 minutes"
         },
         {
           id: 3,
           name: "Episode 3 – The Convert",
-          image: "https://image.tmdb.org/t/p/w500/aQ1eHUfbQAmmV5ffKsiV38IeRXd.jpg",
+          image: "",
           description: "The New Republic faces new threats as shadows from the Empire rise.",
           duration: "58 minutes"
         }
@@ -773,33 +729,33 @@ export const series = [
   Duration: "2 Seasons",
   rate: "8.2",
   genres: ["Sci-Fi", "Fantasy", "Action"],
-  trailer: "https://www.youtube.com/embed/nW948Va-l10",
+  trailer: "",
 
   seasons: [
     {
       id: 1,
       name: "Season 1",
-      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
+      image: "",
       description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – Glorious Purpose",
-          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
+          image: "",
           description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
           duration: "52 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – The Variant",
-          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
+          image: "",
           description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
           duration: "54 minutes"
         },
         {
           id: 3,
           name: "Episode 3 – Lamentis",
-          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
+          image: "",
           description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
           duration: "42 minutes"
         }
@@ -808,27 +764,27 @@ export const series = [
     {
       id: 2,
       name: "Season 2",
-      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
+      image: "",
       description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – Ouroboros",
-          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
+          image: "",
           description: "Loki time-slips and seeks help from TVA technician OB.",
           duration: "51 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – Breaking Brad",
-          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
+          image: "",
           description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
           duration: "47 minutes"
         },
         {
           id: 3,
           name: "Episode 3 – 1893",
-          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
+          image: "",
           description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
           duration: "49 minutes"
         }
@@ -838,118 +794,124 @@ export const series = [
 }
 
 
-
-
-
-
-
 ];
 
 
 export const OnlyOnMovieSite = [
   
-  {
-    id: 1,
-    image: CroodsS7,
-    name: "The Croods",
-    description: "A prehistoric family's journey in a changing world.",
-    year: "2013",
-    Duration: "98 minutes",
-    rate: "PG",
-    Cast: ["Nicolas Cage","Emma Stone","Ryan Reynolds","Catherine Keener","Cloris Leachman"],
-    genres: ["Animation","Adventure","Comedy"],
-    seasons: [
+{
+  id: 3,
+  image: wednesday1,
+  name: "Wednesday",
+  description: "A sleuthing, supernaturally infused mystery charting Wednesday Addams' years as a student at Nevermore Academy.",
+  year: "2022",
+  Duration: "total 5 episodes ",
+  rate: "TV-14",
+  Cast: [
+    "Jenna Ortega",
+    "Catherine Zeta-Jones",
+    "Luis Guzmán",
+    "Gwendoline Christie",
+    "Emma Myers"
+  ],
+  genres: ["Mystery", "Fantasy", "Comedy"],
+  seasons: [
     {
       id: 1,
       name: "Season 1",
-      image: OnlyOnMovie2,
-      description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
+      image: wednesday3,
+      description: "Wednesday joins Nevermore Academy and discovers a dark mystery involving her parents and a monster haunting the town.",
       episodes: [
         {
           id: 1,
-          name: "Episode 1 – Glorious Purpose",
-          image: CroodsS2,
-          description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
-          duration: "52 minutes"
+          name: "Episode 1 – Wednesday’s Child is Full of Woe",
+          image: wednesday2,
+          description: "After causing mischief at her previous school, Wednesday is sent to Nevermore Academy, where strange events begin to unfold.",
+          duration: "48 minutes"
         },
         {
           id: 2,
-          name: "Episode 2 – The Variant",
-          image: CroodsS3,
-          description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
-          duration: "54 minutes"
+          name: "Episode 2 – Woe is the Loneliest Number",
+          image: wednesday4,
+          description: "Wednesday begins to investigate a series of murders and starts experiencing psychic visions.",
+          duration: "45 minutes"
         },
         {
           id: 3,
-          name: "Episode 3 – Lamentis",
-          image: CroodsS4,
-          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
-          duration: "42 minutes"
+          name: "Episode 3 – Friend or Woe",
+          image: wednesday5,
+          description: "Wednesday attends a town event and uncovers secrets that connect to her family's past.",
+          duration: "47 minutes"
         }
       ]
     },
     {
       id: 2,
       name: "Season 2",
-      image: CroodsS1,
-      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
+      image: wednesday8,
+      description: "Wednesday continues her second year at Nevermore while investigating a new threat looming over the academy.",
       episodes: [
         {
           id: 1,
-          name: "Episode 1 – Ouroboros",
-          image: CroodsS5,
-          description: "Loki time-slips and seeks help from TVA technician OB.",
-          duration: "51 minutes"
+          name: "Episode 1 – New Term, New Threat",
+          image: wednesday7,
+          description: "A mysterious figure arrives at Nevermore as Wednesday tries to protect her friends and uncover the truth.",
+          duration: "49 minutes"
         },
         {
           id: 2,
-          name: "Episode 2 – Breaking Brad",
-          image: CroodsS6,
-          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
-          duration: "47 minutes"
-        },
-        
+          name: "Episode 2 – The Shadow in the Glass",
+          image: wednesday6,
+          description: "Wednesday explores secret passageways and encounters visions of an ancient curse.",
+          duration: "46 minutes"
+        }
       ]
     }
   ]
-  },
-  {
-    id: 2,
-    image: Aot10,
-    name: "Attack On titan",
-    description: "A romantic drama about heartbreak and hope.",
-    year: "2012 - 2023",
-    Duration: "–", 
-    rate: "–",
-    Cast: ["Ahaan Panday", "Aneet Padda", "Geeta Agarwal Sharma", "Varun Badola"],
-    genres: ["Drama", "Romance" , "Emotions"],
-    seasons: [
+},
+{
+  id: 2,
+  image: Aot10,
+  name: "Attack on Titan",
+  description: "In a world where humanity resides within enormous walled cities to protect themselves from gigantic man-eating humanoids known as Titans, one boy's journey changes everything.",
+  year: "2013 – 2023",
+  Duration: "87 episodes total",
+  rate: "TV-MA",
+  Cast: [
+    "Yuki Kaji",
+    "Yui Ishikawa",
+    "Marina Inoue",
+    "Hiroshi Kamiya",
+    "Daisuke Ono"
+  ],
+  genres: ["Action", "Drama", "Fantasy"],
+  seasons: [
     {
       id: 1,
       name: "Season 1",
       image: Aot1,
-      description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
+      description: "Eren Yeager joins the Scout Regiment to fight the Titans after witnessing the destruction of his hometown.",
       episodes: [
         {
           id: 1,
-          name: "Episode 1 – Glorious Purpose",
+          name: "Episode 1 – To You, in 2000 Years",
           image: Aot2,
-          description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
-          duration: "52 minutes"
+          description: "After a century of peace, the Titans breach the wall and bring chaos to Eren's life.",
+          duration: "24 minutes"
         },
         {
           id: 2,
-          name: "Episode 2 – The Variant",
+          name: "Episode 2 – That Day: The Fall of Shiganshina",
           image: Aot3,
-          description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
-          duration: "54 minutes"
+          description: "Eren, Mikasa, and Armin face devastating loss and make a promise to destroy all Titans.",
+          duration: "24 minutes"
         },
         {
           id: 3,
-          name: "Episode 3 – Lamentis",
+          name: "Episode 3 – A Dim Light Amid Despair",
           image: Aot4,
-          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
-          duration: "42 minutes"
+          description: "Training begins as the cadets learn what it takes to be a soldier within the walls.",
+          duration: "24 minutes"
         }
       ]
     },
@@ -957,328 +919,295 @@ export const OnlyOnMovieSite = [
       id: 2,
       name: "Season 2",
       image: Aot5,
-      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
+      description: "Secrets unfold as the origins of the Titans become more mysterious and horrifying.",
       episodes: [
         {
           id: 1,
-          name: "Episode 1 – Ouroboros",
+          name: "Episode 1 – Beast Titan",
           image: Aot6,
-          description: "Loki time-slips and seeks help from TVA technician OB.",
-          duration: "51 minutes"
+          description: "A new and intelligent Titan appears while others breach Wall Rose.",
+          duration: "24 minutes"
         },
         {
           id: 2,
-          name: "Episode 2 – Breaking Brad",
+          name: "Episode 2 – I'm Home",
           image: Aot7,
-          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
-          duration: "47 minutes"
-        },
-        
+          description: "Connie returns to his village only to find a disturbing clue about the Titans' nature.",
+          duration: "24 minutes"
+        }
       ]
     },
     {
       id: 3,
       name: "Season 3",
       image: Aot9,
-      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
+      description: "The Scouts uncover government corruption while preparing for a final assault on the Titans.",
       episodes: [
         {
           id: 1,
-          name: "Episode 1 – Ouroboros",
+          name: "Episode 1 – Smoke Signal",
           image: Aot8,
-          description: "Loki time-slips and seeks help from TVA technician OB.",
-          duration: "51 minutes"
-        },
-       
-       
+          description: "Levi and his team go on the run after uncovering a sinister plot within the capital.",
+          duration: "24 minutes"
+        }
       ]
     }
   ]
-  },
-  {
-    id: 3,
-    image: OnlyOnMovie3,
-    name: "The Mask",
-    description: "A timid bank clerk transforms into a green‑faced hero.",
-    year: "1994",
-    Duration: "101 minutes",
-    rate: "PG‑13",
-    Cast: ["Jim Carrey","Cameron Diaz"],
-    genres: ["Action","Comedy","Fantasy"],
-    seasons: [
+},
+{
+  id: 4,
+  image: Bb7,
+  name: "Breaking Bad",
+  description: "A high school chemistry teacher turns to making methamphetamine after being diagnosed with terminal cancer, partnering with a former student.",
+  year: "2008 – 2013",
+  Duration: "62 episodes (5 seasons)",
+  rate: "TV-MA",
+  Cast: [
+    "Bryan Cranston",
+    "Aaron Paul",
+    "Anna Gunn",
+    "Dean Norris",
+    "Bob Odenkirk"
+  ],
+  genres: ["Crime", "Drama", "Thriller"],
+  seasons: [
     {
       id: 1,
       name: "Season 1",
-      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
-      description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
+      image: Bb1,
+      description: "Walter White, a chemistry teacher, begins cooking meth to secure his family's future after being diagnosed with terminal lung cancer.",
       episodes: [
         {
           id: 1,
-          name: "Episode 1 – Glorious Purpose",
-          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
-          description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
-          duration: "52 minutes"
+          name: "Episode 1 – Pilot",
+          image: Bb3,
+          description: "Walt discovers his cancer and partners with Jesse to start cooking meth in an RV.",
+          duration: "58 minutes"
         },
         {
           id: 2,
-          name: "Episode 2 – The Variant",
-          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
-          description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
-          duration: "54 minutes"
+          name: "Episode 2 – Cat's in the Bag...",
+          image: Bb3,
+          description: "Walt and Jesse deal with the aftermath of their first drug deal gone wrong.",
+          duration: "48 minutes"
         },
         {
           id: 3,
-          name: "Episode 3 – Lamentis",
-          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
-          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
-          duration: "42 minutes"
+          name: "Episode 3 – ...And the Bag's in the River",
+          image: Bb4,
+          description: "Walt faces a moral decision about their captive, Krazy-8.",
+          duration: "47 minutes"
         }
       ]
     },
     {
       id: 2,
       name: "Season 2",
-      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
-      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
+      image: Bb2,
+      description: "Walt and Jesse expand their drug business, but their actions bring deadly consequences.",
       episodes: [
         {
           id: 1,
-          name: "Episode 1 – Ouroboros",
-          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
-          description: "Loki time-slips and seeks help from TVA technician OB.",
-          duration: "51 minutes"
-        },
-        {
-          id: 2,
-          name: "Episode 2 – Breaking Brad",
-          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
-          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
+          name: "Episode 1 – Seven Thirty-Seven",
+          image: Bb5,
+          description: "Walt calculates how much money he needs for his family, while Tuco becomes dangerously unstable.",
           duration: "47 minutes"
         },
         {
-          id: 3,
-          name: "Episode 3 – 1893",
-          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
-          description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
-          duration: "49 minutes"
+          id: 2,
+          name: "Episode 2 – Grilled",
+          image: Bb6,
+          description: "Walt and Jesse are held hostage by Tuco in a remote desert house.",
+          duration: "48 minutes"
         }
       ]
     }
   ]
-  },
-  {
-    id: 4,
-    image: OnlyOnMovie4,
-    name: "Pete’s Dragon",
-    description: "An orphan boy befriends a magical dragon.",
-    year: "1977 / Remake 2016",
-    Duration: "118 minutes (2016)",
-    rate: "G",
-    Cast: ["Helen Reddy","Jim Dale","Bryce Dallas Howard","Oakes Fegley"],
-    genres: ["Family","Fantasy","Adventure"],
-    seasons: [
+},
+{
+  id: 5,
+  image: Vampire3,
+  name: "The Vampire Diaries",
+  description: "Two vampire brothers, one good and one evil, are at war for the soul of Elena, a young woman, her friends, and her family.",
+  year: "2009 – 2017",
+  Duration: "8 seasons (171 episodes)",
+  rate: "TV-14",
+  Cast: ["Nina Dobrev", "Ian Somerhalder", "Paul Wesley", "Kat Graham", "Candice King"],
+  genres: ["Drama", "Fantasy", "Horror"],
+  seasons: [
     {
       id: 1,
       name: "Season 1",
-      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
-      description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
+      image: Vampire4,
+      description: "Elena meets Stefan and Damon Salvatore, two vampire brothers who return to Mystic Falls with dark secrets.",
       episodes: [
         {
           id: 1,
-          name: "Episode 1 – Glorious Purpose",
-          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
-          description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
-          duration: "52 minutes"
+          name: "Episode 1 – Pilot",
+          image: Vampire2,
+          description: "Elena starts her senior year, unaware of the new danger that just arrived in town.",
+          duration: "42 minutes"
         },
         {
           id: 2,
-          name: "Episode 2 – The Variant",
-          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
-          description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
-          duration: "54 minutes"
+          name: "Episode 2 – The Night of the Comet",
+          image: Vampire1,
+          description: "Damon reveals more of his true nature while Stefan tries to win Elena’s trust.",
+          duration: "43 minutes"
         },
         {
           id: 3,
-          name: "Episode 3 – Lamentis",
-          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
-          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
-          duration: "42 minutes"
+          name: "Episode 3 – Friday Night Bites",
+          image: Vampire5,
+          description: "Elena invites Stefan to dinner; Damon begins to feed again.",
+          duration: "44 minutes"
         }
       ]
     },
     {
       id: 2,
       name: "Season 2",
-      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
-      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
+      image: Vampire7,
+      description: "Katherine returns to Mystic Falls causing chaos, while new supernatural threats arise.",
       episodes: [
         {
           id: 1,
-          name: "Episode 1 – Ouroboros",
-          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
-          description: "Loki time-slips and seeks help from TVA technician OB.",
-          duration: "51 minutes"
-        },
-        {
-          id: 2,
-          name: "Episode 2 – Breaking Brad",
-          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
-          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
-          duration: "47 minutes"
-        },
-        {
-          id: 3,
-          name: "Episode 3 – 1893",
-          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
-          description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
-          duration: "49 minutes"
+          name: "Episode 1 – The Return",
+          image: Vampire6,
+          description: "Katherine’s return throws everyone into chaos as secrets unfold.",
+          duration: "45 minutes"
         }
       ]
     }
   ]
-  },
-  {
-    id: 5,
-    image: OnlyOnMovie5,
-    name: "Mary Poppins",
-    description: "A magical nanny transforms a family in London.",
-    year: "1964",
-    Duration: "139 minutes",
-    rate: "U / PG",
-    Cast: ["Julie Andrews","Dick Van Dyke"],
-    genres: ["Musical","Fantasy","Comedy"],
-    seasons: [
+},
+{
+  id: 6,
+  image: Dark4,
+  name: "Dark",
+  description: "A family saga with a supernatural twist, set in a German town where the disappearance of two children exposes hidden secrets across different time periods.",
+  year: "2017 – 2020",
+  Duration: "3 seasons (26 episodes)",
+  rate: "TV-MA",
+  Cast: ["Louis Hofmann", "Lisa Vicari", "Andreas Pietschmann", "Maja Schöne", "Oliver Masucci"],
+  genres: ["Sci-Fi", "Thriller", "Mystery"],
+  seasons: [
     {
       id: 1,
       name: "Season 1",
-      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
-      description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
+      image: Dark1,
+      description: "When a child goes missing in Winden, secrets begin to unravel across generations and timelines.",
       episodes: [
         {
           id: 1,
-          name: "Episode 1 – Glorious Purpose",
-          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
-          description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
+          name: "Episode 1 – Secrets",
+          image: Dark2,
+          description: "In 2019, a local boy's disappearance stirs memories of a similar case from 33 years ago.",
           duration: "52 minutes"
         },
         {
           id: 2,
-          name: "Episode 2 – The Variant",
-          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
-          description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
+          name: "Episode 2 – Lies",
+          image: Dark3,
+          description: "Ulrich looks for answers as strange events occur; Jonas finds a mysterious map.",
           duration: "54 minutes"
-        },
-        {
-          id: 3,
-          name: "Episode 3 – Lamentis",
-          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
-          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
-          duration: "42 minutes"
         }
       ]
     },
     {
       id: 2,
       name: "Season 2",
-      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
-      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
+      image: Dark7,
+      description: "The apocalypse is coming, and Jonas must navigate time to prevent it from destroying Winden.",
       episodes: [
         {
           id: 1,
-          name: "Episode 1 – Ouroboros",
-          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
-          description: "Loki time-slips and seeks help from TVA technician OB.",
+          name: "Episode 1 – Beginnings and Endings",
+          image: Dark6,
+          description: "Six months after the disappearances, Winden faces growing tension as new truths surface.",
           duration: "51 minutes"
         },
         {
           id: 2,
-          name: "Episode 2 – Breaking Brad",
-          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
-          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
+          name: "Episode 2 – Dark Matter",
+          image: Dark5,
+          description: "Jonas explores the future, while older versions of characters try to change their fate.",
           duration: "47 minutes"
-        },
-        {
-          id: 3,
-          name: "Episode 3 – 1893",
-          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
-          description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
-          duration: "49 minutes"
         }
       ]
     }
   ]
-  },
-  {
-    id: 6,
-    image: OnlyOnMovie6,
-    name: "Mrs. Doubtfire",
-    description: "A father disguises himself as a nanny to be near his kids.",
-    year: "1993",
-    Duration: "125 minutes",
-    rate: "PG‑13",
-    Cast: ["Robin Williams","Sally Field","Pierce Brosnan"],
-    genres: ["Comedy","Drama","Family"],
-    seasons: [
+},
+{
+  id: 1,
+  image: CroodsS7,
+  name: "The Croods",
+  description: "A prehistoric family embarks on a thrilling adventure through an unfamiliar world as they search for a new home, encountering fantastic creatures and overcoming challenges along the way.",
+  year: "2013",
+  Duration: "98 minutes",
+  rate: "PG",
+  Cast: [
+    "Nicolas Cage",
+    "Emma Stone",
+    "Ryan Reynolds",
+    "Catherine Keener",
+    "Cloris Leachman"
+  ],
+  genres: ["Animation", "Adventure", "Comedy"],
+  seasons: [
     {
       id: 1,
       name: "Season 1",
-      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
-      description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
+      image: OnlyOnMovie2,
+      description: "Follow the Croods as they face wild creatures, ancient technologies, and new neighbors in their quirky and colorful prehistoric world.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – Glorious Purpose",
-          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
-          description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
-          duration: "52 minutes"
+          image: CroodsS2,
+          description: "Grug tries to build a bigger wall to protect the family, but Eep wants to explore outside, leading to unexpected trouble.",
+          duration: "24 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – The Variant",
-          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
-          description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
-          duration: "54 minutes"
+          image: CroodsS3,
+          description: "The family stumbles upon a hidden cave with glowing plants that may hold secrets of their ancestors.",
+          duration: "26 minutes"
         },
         {
           id: 3,
           name: "Episode 3 – Lamentis",
-          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
-          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
-          duration: "42 minutes"
+          image: CroodsS4,
+          description: "A mysterious creature steals their food, forcing the Croods to team up with their rivals to survive.",
+          duration: "23 minutes"
         }
       ]
     },
     {
       id: 2,
       name: "Season 2",
-      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
-      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
+      image: CroodsS1,
+      description: "The Croods settle in a new valley but face challenges from nature, other clans, and their own wild imaginations.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – Ouroboros",
-          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
-          description: "Loki time-slips and seeks help from TVA technician OB.",
-          duration: "51 minutes"
+          image: CroodsS5,
+          description: "When a storm floods their cave, the Croods must build a floating shelter using ancient tools and teamwork.",
+          duration: "25 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – Breaking Brad",
-          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
-          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
-          duration: "47 minutes"
-        },
-        {
-          id: 3,
-          name: "Episode 3 – 1893",
-          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
-          description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
-          duration: "49 minutes"
+          image: CroodsS6,
+          description: "Thunk makes a new friend who turns out to be a wild animal in disguise, causing chaos in the village.",
+          duration: "22 minutes"
         }
       ]
     }
   ]
-  },
+},
   {
     id: 7,
     image: OnlyOnMovie7,
@@ -1293,61 +1222,33 @@ export const OnlyOnMovieSite = [
     {
       id: 1,
       name: "Season 1",
-      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
+      image: "",
       description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – Glorious Purpose",
-          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
+          image: "",
           description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
           duration: "52 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – The Variant",
-          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
+          image: "",
           description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
           duration: "54 minutes"
         },
         {
           id: 3,
           name: "Episode 3 – Lamentis",
-          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
+          image: "",
           description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
           duration: "42 minutes"
         }
       ]
     },
-    {
-      id: 2,
-      name: "Season 2",
-      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
-      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
-      episodes: [
-        {
-          id: 1,
-          name: "Episode 1 – Ouroboros",
-          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
-          description: "Loki time-slips and seeks help from TVA technician OB.",
-          duration: "51 minutes"
-        },
-        {
-          id: 2,
-          name: "Episode 2 – Breaking Brad",
-          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
-          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
-          duration: "47 minutes"
-        },
-        {
-          id: 3,
-          name: "Episode 3 – 1893",
-          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
-          description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
-          duration: "49 minutes"
-        }
-      ]
-    }
+    
   ]
   },
   {
@@ -1364,61 +1265,28 @@ export const OnlyOnMovieSite = [
     {
       id: 1,
       name: "Season 1",
-      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
+      image: "",
       description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – Glorious Purpose",
-          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
+          image: "",
           description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
           duration: "52 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – The Variant",
-          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
+          image: "",
           description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
           duration: "54 minutes"
         },
-        {
-          id: 3,
-          name: "Episode 3 – Lamentis",
-          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
-          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
-          duration: "42 minutes"
-        }
+       
+        
       ]
     },
-    {
-      id: 2,
-      name: "Season 2",
-      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
-      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
-      episodes: [
-        {
-          id: 1,
-          name: "Episode 1 – Ouroboros",
-          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
-          description: "Loki time-slips and seeks help from TVA technician OB.",
-          duration: "51 minutes"
-        },
-        {
-          id: 2,
-          name: "Episode 2 – Breaking Brad",
-          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
-          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
-          duration: "47 minutes"
-        },
-        {
-          id: 3,
-          name: "Episode 3 – 1893",
-          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
-          description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
-          duration: "49 minutes"
-        }
-      ]
-    }
+  
   ]
   },
   {
@@ -1435,61 +1303,27 @@ export const OnlyOnMovieSite = [
     {
       id: 1,
       name: "Season 1",
-      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
+      image: "",
       description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – Glorious Purpose",
-          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
+          image: "",
           description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
           duration: "52 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – The Variant",
-          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
+          image: "",
           description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
           duration: "54 minutes"
         },
-        {
-          id: 3,
-          name: "Episode 3 – Lamentis",
-          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
-          description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
-          duration: "42 minutes"
-        }
+        
       ]
     },
-    {
-      id: 2,
-      name: "Season 2",
-      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
-      description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
-      episodes: [
-        {
-          id: 1,
-          name: "Episode 1 – Ouroboros",
-          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
-          description: "Loki time-slips and seeks help from TVA technician OB.",
-          duration: "51 minutes"
-        },
-        {
-          id: 2,
-          name: "Episode 2 – Breaking Brad",
-          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
-          description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
-          duration: "47 minutes"
-        },
-        {
-          id: 3,
-          name: "Episode 3 – 1893",
-          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
-          description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
-          duration: "49 minutes"
-        }
-      ]
-    }
+   
   ]
   },
   {
@@ -1506,27 +1340,27 @@ export const OnlyOnMovieSite = [
     {
       id: 1,
       name: "Season 1",
-      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
+      image: "",
       description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – Glorious Purpose",
-          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
+          image: "",
           description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
           duration: "52 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – The Variant",
-          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
+          image: "",
           description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
           duration: "54 minutes"
         },
         {
           id: 3,
           name: "Episode 3 – Lamentis",
-          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
+          image: "",
           description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
           duration: "42 minutes"
         }
@@ -1535,27 +1369,27 @@ export const OnlyOnMovieSite = [
     {
       id: 2,
       name: "Season 2",
-      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
+      image: "",
       description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – Ouroboros",
-          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
+          image: "",
           description: "Loki time-slips and seeks help from TVA technician OB.",
           duration: "51 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – Breaking Brad",
-          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
+          image: "",
           description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
           duration: "47 minutes"
         },
         {
           id: 3,
           name: "Episode 3 – 1893",
-          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
+          image: "",
           description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
           duration: "49 minutes"
         }
@@ -1577,27 +1411,27 @@ export const OnlyOnMovieSite = [
     {
       id: 1,
       name: "Season 1",
-      image: "https://image.tmdb.org/t/p/w500/A2AV9oTjNH1NjBQU1zRz0ZWBdVJ.jpg",
+      image: "",
       description: "Loki works with the TVA to stop a variant threatening the sacred timeline.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – Glorious Purpose",
-          image: "https://image.tmdb.org/t/p/w500/6WlX9GD6ES4w6qAN8QxaA8r5h0i.jpg",
+          image: "",
           description: "Loki lands in the hands of the TVA after escaping with the Tesseract.",
           duration: "52 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – The Variant",
-          image: "https://image.tmdb.org/t/p/w500/91eZTxCyfxG0rRqqtt0sUED3sVX.jpg",
+          image: "",
           description: "Mobius puts Loki to work, but not everyone at the TVA trusts him.",
           duration: "54 minutes"
         },
         {
           id: 3,
           name: "Episode 3 – Lamentis",
-          image: "https://image.tmdb.org/t/p/w500/y2zt3S8mcF9nTjLbz8W8UoE2IDU.jpg",
+          image: "",
           description: "Loki and Sylvie are stranded on a doomed moon — and must survive.",
           duration: "42 minutes"
         }
@@ -1606,27 +1440,27 @@ export const OnlyOnMovieSite = [
     {
       id: 2,
       name: "Season 2",
-      image: "https://image.tmdb.org/t/p/w500/bKxiLRPVWe2nZXCzt6JPr5HNWYm.jpg",
+      image: "",
       description: "Loki continues his mission to preserve the multiverse and uncover the TVA’s secrets.",
       episodes: [
         {
           id: 1,
           name: "Episode 1 – Ouroboros",
-          image: "https://image.tmdb.org/t/p/w500/zMyfQ1XC3vbtvC9pmbN6ZV0t8BY.jpg",
+          image: "",
           description: "Loki time-slips and seeks help from TVA technician OB.",
           duration: "51 minutes"
         },
         {
           id: 2,
           name: "Episode 2 – Breaking Brad",
-          image: "https://image.tmdb.org/t/p/w500/eC2xDkKhZ3nIAsrM3SMzBFU4l1K.jpg",
+          image: "",
           description: "The team tracks down rogue agent X-5, now a movie star named Brad Wolfe.",
           duration: "47 minutes"
         },
         {
           id: 3,
           name: "Episode 3 – 1893",
-          image: "https://image.tmdb.org/t/p/w500/1TWQTwqLrUC4ZtD0BtuTS06dtfI.jpg",
+          image: "",
           description: "Loki and Mobius chase Ravonna and Miss Minutes to 1893 Chicago.",
           duration: "49 minutes"
         }
