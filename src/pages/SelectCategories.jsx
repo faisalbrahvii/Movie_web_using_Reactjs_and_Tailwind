@@ -69,7 +69,7 @@ const SelectCategories = () => {
             {/* Home Button */}
             <button
               onClick={() => navigate('/')}
-              className="bg-slate-200 text-black px-4 py-1 rounded-md text-sm font-medium transition"
+              className="bg-slate-200 text-black px-3 py-1 rounded-md text-sm font-medium transition"
             >
               Home
             </button>
