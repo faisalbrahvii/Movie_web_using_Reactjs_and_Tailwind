@@ -824,21 +824,21 @@ export const OnlyOnMovieSite = [
       episodes: [
         {
           id: 1,
-          name: "Episode 1 – Wednesday’s Child is Full of Woe",
+          name: "Episode 1 – Child ",
           image: wednesday2,
           description: "After causing mischief at her previous school, Wednesday is sent to Nevermore Academy, where strange events begin to unfold.",
           duration: "48 minutes"
         },
         {
           id: 2,
-          name: "Episode 2 – Woe is the Loneliest Number",
+          name: "Episode 2 – Loneliest ",
           image: wednesday4,
           description: "Wednesday begins to investigate a series of murders and starts experiencing psychic visions.",
           duration: "45 minutes"
         },
         {
           id: 3,
-          name: "Episode 3 – Friend or Woe",
+          name: "Episode 3 – Frien",
           image: wednesday5,
           description: "Wednesday attends a town event and uncovers secrets that connect to her family's past.",
           duration: "47 minutes"
@@ -853,14 +853,14 @@ export const OnlyOnMovieSite = [
       episodes: [
         {
           id: 1,
-          name: "Episode 1 – New Term, New Threat",
+          name: "Episode 1 – Threat",
           image: wednesday7,
           description: "A mysterious figure arrives at Nevermore as Wednesday tries to protect her friends and uncover the truth.",
           duration: "49 minutes"
         },
         {
           id: 2,
-          name: "Episode 2 – The Shadow in the Glass",
+          name: "Episode 2 –  Shadow ",
           image: wednesday6,
           description: "Wednesday explores secret passageways and encounters visions of an ancient curse.",
           duration: "46 minutes"
