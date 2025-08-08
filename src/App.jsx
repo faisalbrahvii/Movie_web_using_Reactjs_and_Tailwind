@@ -51,12 +51,12 @@ function MainLayout() {
             element={
               <>
                 
-                <div className="block md:hidden">
+                <div className="block md:block">
                   <MobileScreen />
                 </div>
 
                 
-                <div className="hidden md:block">
+                <div className="hidden md:hidden">
                   <Hero />
                 </div>
 

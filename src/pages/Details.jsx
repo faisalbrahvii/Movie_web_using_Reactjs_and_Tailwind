@@ -29,10 +29,48 @@ const Details = () => {
     };
     fetchMovie();
   }, [id]);
+  // Add this inside Details component, above your `if (!movie)` condition
+const SkeletonLoader = () => (
+  <div className="bg-black text-white px-4 sm:px-6 pt-16 pb-10 min-h-screen">
+    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 animate-pulse">
+      
+      {/* Poster Skeleton */}
+      <div className="bg-gray-800 rounded-xl w-full h-[350px] sm:h-[450px] md:h-[500px]"></div>
+
+      {/* Info Skeleton */}
+      <div className="flex flex-col justify-start gap-4">
+        <div className="bg-gray-800 h-8 w-3/4 rounded"></div>
+        <div className="bg-gray-700 h-4 w-1/2 rounded"></div>
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-3">
+          <div className="bg-gray-700 h-4 w-16 rounded"></div>
+          <div className="bg-gray-700 h-4 w-16 rounded"></div>
+          <div className="bg-gray-700 h-4 w-16 rounded"></div>
+        </div>
+
+        {/* Description */}
+        <div className="bg-gray-700 h-20 w-full rounded"></div>
+
+        {/* Button */}
+        <div className="bg-gray-800 h-10 w-32 sm:w-40 rounded"></div>
+
+        {/* Icons */}
+        <div className="flex gap-3">
+          <div className="bg-gray-800 h-10 w-10 rounded-full"></div>
+          <div className="bg-gray-800 h-10 w-10 rounded-full"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+
 
   if (!movie) {
-    return <div className="text-white text-center mt-20">Loading movie...</div>;
-  }
+  return <SkeletonLoader />;
+}
+
 
   return (
     <div className="bg-black text-white px-4 sm:px-6 pt-16 pb-10 min-h-screen">
