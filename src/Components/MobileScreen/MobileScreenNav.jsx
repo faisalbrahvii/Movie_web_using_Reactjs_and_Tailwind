@@ -19,7 +19,7 @@ const MobileScreenNav = () => {
             alt="User"
           />
           <div className='flex items-center gap-4 text-white text-2xl'>
-            <MdDownloadDone className="cursor-pointer" />
+            <MdDownloadDone onClick={() => navigate("/MyList")} className="cursor-pointer" />
             <MdSearch className="cursor-pointer" onClick={() => navigate("/search")} />
           </div>
         </div>
