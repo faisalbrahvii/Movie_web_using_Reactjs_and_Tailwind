@@ -17,6 +17,7 @@ import Search_movie from "./Components/Search_movie";
 import TvShows from "./Components/TvShows";
 import OnlyOnModel from "./Components/model/OnlyOnModel";
 import SelectCategories from "./pages/SelectCategories";
+import MyList from "./pages/MyList";
 
 function App() {
   return (
@@ -74,6 +75,7 @@ function MainLayout() {
           <Route path="/details/:id" element={<Details />} />
           <Route path="/search" element={<Search_movie />} />
           <Route path="/SelectCategories" element={<SelectCategories />} />
+          <Route path="/MyList" element={<MyList />} />
         </Routes>
       </main>
 

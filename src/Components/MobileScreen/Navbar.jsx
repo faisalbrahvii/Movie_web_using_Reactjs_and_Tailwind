@@ -30,14 +30,15 @@ const Navbar = () => {
 
           {/* Left: Logo & Categories */}
           <div className="flex items-center gap-4 md:gap-8">
-            <h1 className="text-[10px] sm:text-xs font-extrabold text-red-600 tracking-wide">still in operation not finished yet</h1>
+            <h1 className="text-[15px] sm:text-sm font-extrabold text-white tracking-wide">Night Scene</h1>
 
             <div className="relative hidden md:block">
               <button
-                onClick={() => setShowCategories((prev) => !prev)}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full text-white text-sm font-semibold"
+                // onClick={() => setShowCategories((prev) => !prev)}
+                // onMouseEnter={() => setIsHovered(true)}
+                // onMouseLeave={() => setIsHovered(false)}
+                onFocus={() => navigate('/SelectCategories')}
+                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-7 py-2 rounded-full text-white text-sm font-semibold"
               >
                 All Categories <IoMdMenu size={18} />
               </button>
