@@ -22,11 +22,24 @@ const MobileScreenNav = () => {
           />
 
           <div className="flex items-center gap-4 text-white text-2xl">
-            {/* My List with Badge */}
-            <div className="relative cursor-pointer" onClick={() => navigate("/MyList")}>
+            {/* My List with Responsive Badge */}
+            <div
+              className="relative cursor-pointer"
+              onClick={() => navigate("/MyList")}
+            >
               <MdDownloadDone className="hover:text-red-500 transition" />
               {myListCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold rounded-full px-1.5 py-0.5">
+                <span
+                  className="
+                    absolute -top-2 -right-2 
+                    bg-red-500 text-white 
+                    text-[10px] sm:text-[11px] md:text-[12px] 
+                    font-bold rounded-full 
+                    px-[5px] py-[1px] sm:px-[6px] sm:py-[2px]
+                    flex items-center justify-center
+                    min-w-[16px] sm:min-w-[18px]
+                  "
+                >
                   {myListCount}
                 </span>
               )}
