@@ -2,14 +2,16 @@ import React, { useRef, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import NLogo from '../../assests/logo/logoos.png';
-import { FaPlay, FaPlus } from "react-icons/fa6";
+import { FaPlay } from "react-icons/fa6";
 import { AiOutlineLike } from "react-icons/ai";
 import { BsBadgeHdFill } from "react-icons/bs";
 import { FaAd } from "react-icons/fa";
 import { MdMessage } from "react-icons/md";
 import { GoPlus } from "react-icons/go";
 import { IoArrowBackSharp } from "react-icons/io5";
-
+import { useDispatch, useSelector } from "react-redux";
+import { addToList, removeFromList } from "../../redux/myListSlice";
+import { FaCheck, FaPlus } from "react-icons/fa";
 const OnlyOnModel = () => {
   const sectionRef = useRef(null);
   const navigate = useNavigate();
@@ -18,6 +20,9 @@ const OnlyOnModel = () => {
   const initialData = location.state?.selectSession;
   const [currentData] = useState(initialData);
   const [selectedSeason, setSelectedSeason] = useState(currentData?.seasons?.[0]);
+  const dispatch = useDispatch();
+const myList = useSelector(state => state.myList);
+const isInList = myList.some(item => item.id === currentData.id);
 
   if (!currentData) {
     return (
@@ -34,6 +39,15 @@ const OnlyOnModel = () => {
       </div>
     );
   }
+ const handleToggleList = () => {
+  if (isInList) {
+    dispatch(removeFromList(currentData.id));
+  } else {
+    dispatch(addToList({ ...currentData, type: "series" }));
+
+  } 
+};
+
 
   const closeModal = () => navigate(-1);
   const scrollToSection = () => {
@@ -77,12 +91,14 @@ const OnlyOnModel = () => {
               >
                 <FaPlay /> Play
               </button>
-              <button className="border border-white text-white px-3 py-2 rounded-full hover:bg-white hover:text-black transition">
-                <FaPlus />
-              </button>
-              <button className="border border-white text-white px-3 py-2 rounded-full hover:bg-white hover:text-black transition">
-                <AiOutlineLike />
-              </button>
+              <button
+              onClick={handleToggleList}
+              className="border border-white text-white px-3 py-2 rounded-full hover:bg-white hover:text-black transition"
+            >
+              {isInList ? <FaCheck /> : <FaPlus />}
+            </button>
+
+              
             </div>
           </div>
         </div>

@@ -4,10 +4,15 @@ import { FaSearch, FaStar, FaHeart, FaEye, FaCheck, FaChevronDown } from "react-
 import { FaArrowTrendUp, FaPlus, FaFire } from "react-icons/fa6";
 import { RiMovie2Line } from "react-icons/ri";
 import { BiSolidMoviePlay } from "react-icons/bi";
+import { useDispatch, useSelector } from "react-redux";
+import { addToList, removeFromList } from "../redux/myListSlice";
 
 const Movies = () => {
   const [movieList, setMovieList] = useState([]);
   const [selectedYear, setSelectedYear] = useState(null);
+
+  const dispatch = useDispatch();
+  const myList = useSelector(state => state.myList);
 
   useEffect(() => {
     getMovies();
@@ -160,19 +165,38 @@ const Movies = () => {
         {/* Movie Grid */}
         <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4'>
           {Array.isArray(movieList) && movieList.length > 0 ? (
-            movieList.slice(0, 18).map((movie, index) => (
-              movie.poster_path && (
-                <Link
-                  to={`/details/${movie.id}`}
+            movieList.slice(0, 18).map((movie, index) => {
+              if (!movie.poster_path) return null;
+
+              const isAdded = myList.some(item => item.id === movie.id);
+
+              return (
+                <div
                   key={index}
                   className="bg-gray-900 p-2 rounded-lg hover:scale-105 transition-transform duration-300"
                 >
-                  <img
-                    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                    alt={movie.title}
-                    className="rounded-md w-full object-cover h-60 sm:h-64"
-                  />
-                  <p className="text-white mt-2 text-xs sm:text-sm font-semibold truncate">{movie.title}</p>
+                  <Link to={`/details/${movie.id}`}>
+                    <img
+                      src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                      alt={movie.title}
+                      className="rounded-md w-full object-cover h-60 sm:h-64"
+                    />
+                  </Link>
+                  <div className="flex justify-between items-center mt-2">
+                    <p className="text-white text-xs sm:text-sm font-semibold truncate">{movie.title}</p>
+                    <button
+                      onClick={() => {
+                        if (isAdded) {
+                          dispatch(removeFromList(movie.id));
+                        } else {
+                          dispatch(addToList(movie));
+                        }
+                      }}
+                      className="text-white text-lg"
+                    >
+                      {isAdded ? <FaCheck className="text-green-400" /> : <FaPlus />}
+                    </button>
+                  </div>
                   <div className="flex justify-between items-center text-slate-300 text-[10px] sm:text-xs mt-1">
                     <span>{movie.release_date}</span>
                     <div className="flex items-center gap-1">
@@ -182,9 +206,9 @@ const Movies = () => {
                       <span>{movie.vote_average}</span>
                     </div>
                   </div>
-                </Link>
-              )
-            ))
+                </div>
+              );
+            })
           ) : (
             <div className='text-white text-center col-span-full mt-10'>
               No movies found. Try again.

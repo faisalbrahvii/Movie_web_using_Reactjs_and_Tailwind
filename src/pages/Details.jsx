@@ -5,22 +5,31 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 import { FaRegCirclePlay } from "react-icons/fa6";
 import { BsTrophy } from "react-icons/bs";
 import { GoDot, GoDotFill } from "react-icons/go";
+import { useDispatch, useSelector } from "react-redux";
+import { addToList, removeFromList } from "../redux/myListSlice";
+import { FaPlus ,FaCheck} from "react-icons/fa6";
 
 const Details = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
   const [trailerKey, setTrailerKey] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const dispatch = useDispatch();
+
+  const myList = useSelector((state) => state.myList);
+  const isAdded = myList.some((item) => item.id === movie?.id);
 
   useEffect(() => {
     const fetchMovie = async () => {
       try {
-        const res = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=afcaa692aad9ee3412271fa7b8d4fba1&language=en-US&append_to_response=videos`);
+        const res = await fetch(
+          `https://api.themoviedb.org/3/movie/${id}?api_key=afcaa692aad9ee3412271fa7b8d4fba1&language=en-US&append_to_response=videos`
+        );
         const data = await res.json();
         setMovie(data);
 
         const trailer = data.videos?.results.find(
-          vid => vid.type === "Trailer" && vid.site === "YouTube"
+          (vid) => vid.type === "Trailer" && vid.site === "YouTube"
         );
         setTrailerKey(trailer?.key || null);
       } catch (err) {
@@ -29,53 +38,46 @@ const Details = () => {
     };
     fetchMovie();
   }, [id]);
-  // Add this inside Details component, above your `if (!movie)` condition
-const SkeletonLoader = () => (
-  <div className="bg-black text-white px-4 sm:px-6 pt-16 pb-10 min-h-screen">
-    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 animate-pulse">
-      
-      {/* Poster Skeleton */}
-      <div className="bg-gray-800 rounded-xl w-full h-[350px] sm:h-[450px] md:h-[500px]"></div>
 
-      {/* Info Skeleton */}
-      <div className="flex flex-col justify-start gap-4">
-        <div className="bg-gray-800 h-8 w-3/4 rounded"></div>
-        <div className="bg-gray-700 h-4 w-1/2 rounded"></div>
+  const handleMyListClick = () => {
+  if (!movie) return;
+  if (isAdded) {
+    dispatch(removeFromList(movie.id));
+  } else {
+    dispatch(addToList({ ...movie, type: "movie" }));
+ // <-- added type
+  }
+};
 
-        {/* Tags */}
-        <div className="flex flex-wrap gap-3">
-          <div className="bg-gray-700 h-4 w-16 rounded"></div>
-          <div className="bg-gray-700 h-4 w-16 rounded"></div>
-          <div className="bg-gray-700 h-4 w-16 rounded"></div>
-        </div>
 
-        {/* Description */}
-        <div className="bg-gray-700 h-20 w-full rounded"></div>
-
-        {/* Button */}
-        <div className="bg-gray-800 h-10 w-32 sm:w-40 rounded"></div>
-
-        {/* Icons */}
-        <div className="flex gap-3">
-          <div className="bg-gray-800 h-10 w-10 rounded-full"></div>
-          <div className="bg-gray-800 h-10 w-10 rounded-full"></div>
+  const SkeletonLoader = () => (
+    <div className="bg-black text-white px-4 sm:px-6 pt-16 pb-10 min-h-screen">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 animate-pulse">
+        <div className="bg-gray-800 rounded-xl w-full h-[350px] sm:h-[450px] md:h-[500px]"></div>
+        <div className="flex flex-col justify-start gap-4">
+          <div className="bg-gray-800 h-8 w-3/4 rounded"></div>
+          <div className="bg-gray-700 h-4 w-1/2 rounded"></div>
+          <div className="flex flex-wrap gap-3">
+            <div className="bg-gray-700 h-4 w-16 rounded"></div>
+            <div className="bg-gray-700 h-4 w-16 rounded"></div>
+            <div className="bg-gray-700 h-4 w-16 rounded"></div>
+          </div>
+          <div className="bg-gray-700 h-20 w-full rounded"></div>
+          <div className="bg-gray-800 h-10 w-32 sm:w-40 rounded"></div>
+          <div className="flex gap-3">
+            <div className="bg-gray-800 h-10 w-10 rounded-full"></div>
+            <div className="bg-gray-800 h-10 w-10 rounded-full"></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
 
-
-
-  if (!movie) {
-  return <SkeletonLoader />;
-}
-
+  if (!movie) return <SkeletonLoader />;
 
   return (
     <div className="bg-black text-white px-4 sm:px-6 pt-16 pb-10 min-h-screen">
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-
         {/* Poster */}
         <div className="relative">
           <img
@@ -96,27 +98,20 @@ const SkeletonLoader = () => (
         {/* Info */}
         <div className="flex flex-col justify-start">
           <h1 className="text-2xl sm:text-3xl font-bold mb-3">{movie.title}</h1>
-
-          {/* Genres */}
           <div className="flex flex-wrap gap-2 text-gray-400 text-sm mb-2">
             {movie.genres?.map((genre) => (
               <span key={genre.id}>{genre.name}</span>
             ))}
           </div>
-
-          {/* Metadata */}
           <div className="flex gap-4 flex-wrap text-gray-400 text-sm mb-4">
             <p>{movie.release_date?.slice(0, 4)}</p>
             <p>{movie.vote_average}⭐</p>
             <p>{movie.runtime} min</p>
           </div>
-
-          {/* Overview */}
           <p className="text-gray-300 mb-5 text-sm leading-relaxed sm:text-base">
             {movie.overview}
           </p>
 
-          {/* TMDB Rating Info */}
           <div className="flex items-center gap-3 bg-gray-800 p-3 rounded-md mb-5">
             <BsTrophy size={22} className="text-yellow-400" />
             <p className="text-sm text-gray-300">
@@ -134,8 +129,16 @@ const SkeletonLoader = () => (
                 <FaRegCirclePlay size={16} /> Trailer
               </button>
             )}
-            <button className="flex items-center gap-2 border border-gray-600 hover:bg-gray-800 px-4 py-2 rounded-md text-sm">
-              <FaArrowAltCircleRight size={16} /> Add to List
+            <button
+              onClick={handleMyListClick}
+              className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm transition ${
+                isAdded
+                  ? "bg-gray-500 text-black hover:bg-gray-400"
+                  : "border border-gray-600 bg-transparent text-white hover:bg-gray-800"
+              }`}
+            >
+              {isAdded ? <FaCheck size={16} /> : <FaPlus size={16} />}
+              {isAdded ? "Added" : "Add to List"}
             </button>
           </div>
 
@@ -157,7 +160,7 @@ const SkeletonLoader = () => (
           <div className="bg-white rounded-lg overflow-hidden w-full max-w-2xl relative">
             <button
               onClick={() => setShowModal(false)}
-              className="absolute top-44 right-3 text-white font-bold text-4xl z-10   "
+              className="absolute top-44 right-3 text-white font-bold text-4xl z-10"
             >
               &times;
             </button>
@@ -182,7 +185,7 @@ const SkeletonLoader = () => (
         </div>
       )}
 
-      {/* Optional Dot Indicator */}
+      {/* Dot Indicator */}
       <div className="mt-10 flex justify-center gap-2 text-gray-600">
         <GoDotFill className="text-white" />
         <GoDot />

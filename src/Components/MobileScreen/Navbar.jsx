@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { FaSearch } from "react-icons/fa";
-import { IoIosNotifications } from "react-icons/io";
-import { HiDownload } from "react-icons/hi";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import { RiMenu3Fill } from "react-icons/ri";
-import userLogo from '../../assests/logo/userlogo.jpeg';
 import { useNavigate } from 'react-router-dom';
-import { MdDownloadDone, MdSearch } from "react-icons/md";
+import { MdDownloadDone } from "react-icons/md";
+import { useSelector } from 'react-redux';
+import userLogo from '../../assests/logo/userlogo.jpeg';
 
 const categories = [
   "Action", "Comedy", "Drama", "Sci-Fi", "Horror",
@@ -18,10 +17,15 @@ const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const navigate = useNavigate();
+
+  // Get MyList count from Redux
+  const myList = useSelector((state) => state.myList);
+  const myListCount = myList.length;
 
   const shouldShowCategories = showCategories || isHovered;
-  const [searchQuery, setSearchQuery] = useState('');
-  const navigate = useNavigate();
 
   return (
     <>
@@ -30,13 +34,12 @@ const Navbar = () => {
 
           {/* Left: Logo & Categories */}
           <div className="flex items-center gap-4 md:gap-8">
-            <h1 className="text-[15px] sm:text-sm font-extrabold text-white tracking-wide">Night Scene</h1>
+            <h1 className="text-[15px] sm:text-sm font-extrabold text-white tracking-wide">
+              Night Scene
+            </h1>
 
             <div className="relative hidden md:block">
               <button
-                // onClick={() => setShowCategories((prev) => !prev)}
-                // onMouseEnter={() => setIsHovered(true)}
-                // onMouseLeave={() => setIsHovered(false)}
                 onFocus={() => navigate('/SelectCategories')}
                 className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-7 py-2 rounded-full text-white text-sm font-semibold"
               >
@@ -70,17 +73,15 @@ const Navbar = () => {
           {/* Middle: Search */}
           <div className="relative flex-1 mx-4 md:mx-8 max-w-xs hidden md:block">
             <input
-  type="text"
-  placeholder="Search movies..."
-  value={searchQuery}
-  onChange={(e) => setSearchQuery(e.target.value)}
-  onFocus={() => navigate("/search")}
-  className={`w-full px-5 py-2 rounded-full text-white placeholder-white/70 bg-white/10 backdrop-blur-lg border border-white/10 shadow-md focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300 ${
-    showSearch ? 'opacity-100' : 'opacity-0 scale-95 pointer-events-none'
-  }`}
-/>
-
-
+              type="text"
+              placeholder="Search movies..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onFocus={() => navigate("/search")}
+              className={`w-full px-5 py-2 rounded-full text-white placeholder-white/70 bg-white/10 backdrop-blur-lg border border-white/10 shadow-md focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300 ${
+                showSearch ? 'opacity-100' : 'opacity-0 scale-95 pointer-events-none'
+              }`}
+            />
           </div>
 
           {/* Right Icons */}
@@ -90,8 +91,17 @@ const Navbar = () => {
               onClick={() => setShowSearch(!showSearch)}
               className="cursor-pointer hover:text-red-500 transition"
             />
-            {/* <IoIosNotifications size={20} className="cursor-pointer hover:text-red-500 transition" /> */}
-            <MdDownloadDone size={20} className="cursor-pointer hover:text-red-500 transition" />
+
+            {/* My List Icon with Count */}
+            <div className="relative cursor-pointer" onClick={() => navigate("/MyList")}>
+              <MdDownloadDone size={20} className="hover:text-red-500 transition" />
+              {myListCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold rounded-full px-1.5 py-0.5">
+                  {myListCount}
+                </span>
+              )}
+            </div>
+
             <RiMenu3Fill
               size={22}
               onClick={() => setShowSidebar(true)}
@@ -146,7 +156,7 @@ const Navbar = () => {
           <hr className="border-white/10" />
           <li className="hover:text-red-500 cursor-pointer">Help Center</li>
           <hr className="border-white/10" />
-          <li className="hover:text-red-500 cursor-pointer">Login </li>
+          <li className="hover:text-red-500 cursor-pointer">Login</li>
         </ul>
       </div>
     </>

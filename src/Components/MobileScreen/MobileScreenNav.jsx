@@ -1,34 +1,45 @@
-import React, { useState } from 'react';
+import React from 'react';
 import userLogo from '../../assests/logo/logoos.png';
 import { MdDownloadDone, MdSearch } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
-
-
+import { useSelector } from 'react-redux';
 
 const MobileScreenNav = () => { 
   const navigate = useNavigate();
-  
+
+  // Get MyList count from Redux
+  const myList = useSelector((state) => state.myList);
+  const myListCount = myList.length;
+
   return (
     <>
-     
-      <div className=' w-full z-50 bg-black/95 backdrop-blur-sm  p-4     top-0 left-0'>
-        <div className='flex items-center justify-between'>
+      <div className="w-full z-50 bg-black/95 backdrop-blur-sm p-4 top-0 left-0">
+        <div className="flex items-center justify-between">
           <img
             src={userLogo}
             className="w-10 h-10 rounded-full border border-white/20 shadow-md object-cover"
             alt="User"
           />
-          <div className='flex items-center gap-4 text-white text-2xl'>
-            <MdDownloadDone onClick={() => navigate("/MyList")} className="cursor-pointer" />
-            <MdSearch className="cursor-pointer" onClick={() => navigate("/search")} />
+
+          <div className="flex items-center gap-4 text-white text-2xl">
+            {/* My List with Badge */}
+            <div className="relative cursor-pointer" onClick={() => navigate("/MyList")}>
+              <MdDownloadDone className="hover:text-red-500 transition" />
+              {myListCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold rounded-full px-1.5 py-0.5">
+                  {myListCount}
+                </span>
+              )}
+            </div>
+
+            {/* Search Icon */}
+            <MdSearch
+              className="cursor-pointer hover:text-red-500 transition"
+              onClick={() => navigate("/search")}
+            />
           </div>
         </div>
-        </div>
-
-        
-      
-
-     
+      </div>
     </>
   );
 };
