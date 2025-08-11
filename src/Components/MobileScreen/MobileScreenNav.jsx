@@ -35,9 +35,9 @@ const MobileScreenNav = () => {
                     bg-red-500 text-white 
                     text-[8px] sm:text-[8px] md:text-[8px] 
                     font-bold rounded-full 
-                    px-[5px] py-[1px] sm:px-[6px] sm:py-[2px]
+                    px-[3px] py-[1px] sm:px-[6px] sm:py-[1px]
                     flex items-center justify-center
-                    min-w-[16px] sm:min-w-[18px]
+                    min-w-[10px] sm:min-w-[10px]
                   "
                 >
                   {myListCount}
