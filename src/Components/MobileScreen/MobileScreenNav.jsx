@@ -29,19 +29,21 @@ const MobileScreenNav = () => {
             >
               <MdDownloadDone className="hover:text-red-500 transition" />
               {myListCount > 0 && (
-                <span
-                  className="
-                    absolute -top-2 -right-2 
-                    bg-red-500 text-white 
-                    text-[8px] sm:text-[8px] md:text-[8px] 
-                    font-bold rounded-full 
-                    px-[3px] py-[1px] sm:px-[6px] sm:py-[1px]
-                    flex items-center justify-center
-                    min-w-[10px] sm:min-w-[10px]
-                  "
-                >
-                  {myListCount}
-                </span>
+                  <span
+  className="
+    absolute -top-1.5 -right-1.5
+    bg-red-500 text-white
+    text-[10px] sm:text-[10px]
+    font-bold rounded-full
+    px-[4px] py-[1px]
+    flex items-center justify-center
+    min-w-[16px] min-h-[16px]
+    leading-none
+  "
+>
+  {myListCount}
+</span>
+
               )}
             </div>
 
