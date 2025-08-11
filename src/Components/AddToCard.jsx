@@ -1,8 +1,36 @@
 import React from 'react';
 import { FaCalendarAlt, FaPlus } from "react-icons/fa";
-import { display } from '../Data/Data.js';
 
 const AddToCard = () => {
+  // 5 hardcoded upcoming movie entries
+  const movies = [
+    {
+      title: "Deadpool & Wolverine",
+      release_date: "2025-08-15",
+      image: "https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg"
+    },
+    {
+      title: "Avengers: Secret Wars",
+      release_date: "2025-11-07",
+      image: "https://image.tmdb.org/t/p/w500/5VJSIAhSn4qUsg5nUgpKJZ5HOpB.jpg"
+    },
+    {
+      title: "Inside Out 2",
+      release_date: "2025-06-13",
+      image: "https://image.tmdb.org/t/p/w500/huVbssCoh2jH5SWYTvg1u00vLcO.jpg"
+    },
+    {
+      title: "Frozen III",
+      release_date: "2025-12-20",
+      image: "https://image.tmdb.org/t/p/w500/2vFuG6bWGyQUzYS9d69E5l85nIz.jpg"
+    },
+    {
+      title: "The Batman Part II",
+      release_date: "2025-10-03",
+      image: "https://image.tmdb.org/t/p/w500/6DqfZJg1tRjbl0H2zFh2C6i9YhK.jpg"
+    }
+  ];
+
   return (
     <div className='bg-black py-10 px-4 sm:px-6 lg:px-20'>
       {/* Section Heading */}
@@ -15,14 +43,18 @@ const AddToCard = () => {
 
       {/* Movie Grid */}
       <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6'>
-        {display.map((item, index) => (
+        {movies.map((movie, index) => (
           <div key={index} className='bg-[#111] rounded-lg overflow-hidden shadow-md hover:scale-105 duration-300'>
-            <img src={item.image} alt={item.name} className='w-full h-40 object-cover' />
+            <img 
+              src={movie.image} 
+              alt={movie.title} 
+              className='w-full h-40 object-cover' 
+            />
             <div className='p-3'>
-              <h3 className='text-white font-semibold text-base sm:text-lg mb-1 truncate'>{item.name}</h3>
+              <h3 className='text-white font-semibold text-base sm:text-lg mb-1 truncate'>{movie.title}</h3>
               <div className='flex items-center gap-2 text-gray-400 text-sm'>
                 <FaCalendarAlt />
-                <p>{item.year}</p>
+                <p>{movie.release_date}</p>
               </div>
             </div>
           </div>

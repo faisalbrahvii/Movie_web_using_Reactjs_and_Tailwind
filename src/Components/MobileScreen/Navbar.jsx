@@ -107,7 +107,7 @@ const Navbar = () => {
       className="
         absolute -top-2 -right-2 
         bg-red-500 text-white 
-        text-[10px] sm:text-[11px] md:text-[12px] 
+        text-[8px] sm:text-[8px] md:text-[8px] 
         font-bold rounded-full 
         px-[5px] py-[1px] sm:px-[6px] sm:py-[2px]
         flex items-center justify-center

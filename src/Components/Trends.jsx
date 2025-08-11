@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import {
-  FaArrowTrendUp, FaStar, FaLessThan, FaGreaterThan
-} from "react-icons/fa6";
+import { FaArrowTrendUp, FaStar } from "react-icons/fa6";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const Trends = () => {
   const [movieList, setMovieList] = useState([]);
+  const [loading, setLoading] = useState(true);
   const scrollRef = useRef(null);
 
   const genres = [
@@ -26,6 +26,8 @@ const Trends = () => {
 
   useEffect(() => {
     getMovies();
+    const timer = setTimeout(() => setLoading(false), 2000); // show skeleton for 2s
+    return () => clearTimeout(timer);
   }, []);
 
   const getMovies = () => {
@@ -37,17 +39,21 @@ const Trends = () => {
   };
 
   const random_movies = (genreId) => {
+    setLoading(true);
     fetch(`https://api.themoviedb.org/3/discover/movie?api_key=afcaa692aad9ee3412271fa7b8d4fba1&with_genres=${genreId}`)
       .then(res => res.json())
-      .then(json => setMovieList(json.results || []));
+      .then(json => {
+        setMovieList(json.results || []);
+        setTimeout(() => setLoading(false), 1500);
+      });
   };
 
   const scrollLeft = () => {
-    scrollRef.current?.scrollBy({ left: -400, behavior: 'smooth' });
+    scrollRef.current?.scrollBy({ left: -300, behavior: 'smooth' });
   };
 
   const scrollRight = () => {
-    scrollRef.current?.scrollBy({ left: 400, behavior: 'smooth' });
+    scrollRef.current?.scrollBy({ left: 300, behavior: 'smooth' });
   };
 
   const handleGenreChange = (e) => {
@@ -55,77 +61,87 @@ const Trends = () => {
     if (genreId) random_movies(genreId);
   };
 
+  const SkeletonLoader = () => (
+    <div className="flex gap-4 overflow-x-auto scrollbar-hidden">
+      {Array.from({ length: 10 }).map((_, index) => (
+        <div
+          key={index}
+          className="min-w-[130px] sm:min-w-[150px] md:min-w-[180px] lg:min-w-[200px] h-72 rounded-md bg-gray-700 animate-pulse"
+        ></div>
+      ))}
+    </div>
+  );
+
   return (
     <div className="bg-black py-8 sm:py-10 px-4 sm:px-6 md:px-10">
-      {/* Header Section */}
+      {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-5 gap-3">
         <div className="flex items-center gap-2">
-          <FaArrowTrendUp className="text-white text-base sm:text-lg" />
-          <p className="text-white text-base sm:text-lg font-semibold">Trending Movies</p>
+          <FaArrowTrendUp className="text-white text-lg" />
+          <p className="text-white text-lg font-semibold">Trending Movies</p>
         </div>
-
-        {/* Genre Dropdown */}
         <select
           onChange={handleGenreChange}
           className="bg-gray-700 text-white px-3 py-2 rounded-md text-sm focus:outline-none hover:bg-gray-600 w-full sm:w-auto"
         >
           <option value="">Select Category</option>
           {genres.map((genre) => (
-            <option key={genre.id} value={genre.id}>{genre.label}</option>
+            <option key={genre.id} value={genre.id}>
+              {genre.label}
+            </option>
           ))}
         </select>
       </div>
 
-      {/* Movie Scroll Area */}
+      {/* Scroll Section */}
       <div className="relative">
-        {/* Left Arrow (only on md+) */}
+        {/* Left Arrow (Desktop) */}
         <div
           onClick={scrollLeft}
-          className="hidden md:flex absolute h-full items-center left-0 top-1/2 transform -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 p-2 cursor-pointer"
+          className="hidden md:flex absolute h-full items-center left-0 top-1/2 -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 p-2 cursor-pointer"
         >
-          <FaLessThan className="text-white text-lg" />
+          <FaChevronLeft className="text-white text-lg" />
         </div>
 
-        {/* Movie Cards Scroll */}
-        <div
-          ref={scrollRef}
-          className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-thin scrollbar-hidden scrollbar-thumb-gray-700 scrollbar-track-black"
-        >
-          {movieList.length > 0 ? movieList.slice(0, 14).map((movie) => (
-            <Link
-              key={movie.id}
-              to={`/details/${movie.id}`}
-              className="min-w-[130px] sm:min-w-[150px] md:min-w-[180px] lg:min-w-[200px] flex-shrink-0"
-            >
-              <img
-                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                alt={movie.title}
-                className="rounded-md w-full h-56 sm:h-64 md:h-72 object-cover"
-              />
-              <p className="text-white font-semibold mt-2 text-xs sm:text-sm truncate">
-                {movie.title.length > 25 ? `${movie.title.slice(0, 25)}...` : movie.title}
-              </p>
-              <div className="flex justify-between items-center text-white text-xs mt-1">
-                <span className="truncate">{movie.release_date}</span>
-                <span className="flex items-center gap-1">
-                  <FaStar className="text-yellow-400" />
-                  {movie.vote_average.toFixed(1)}
-                </span>
-              </div>
-            </Link>
-          )) : (
-            <div className="text-white text-center py-10 w-full">
-              Loading movies...
+        {/* Movies or Skeleton */}
+        <div ref={scrollRef}>
+          {loading ? (
+            <SkeletonLoader />
+          ) : (
+            <div className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hidden">
+              {movieList.slice(0, 14).map((movie) => (
+                <Link
+                  key={movie.id}
+                  to={`/details/${movie.id}`}
+                  className="min-w-[130px] sm:min-w-[150px] md:min-w-[180px] lg:min-w-[200px] flex-shrink-0"
+                >
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                    alt={movie.title}
+                    className="rounded-md w-full h-56 sm:h-64 md:h-72 object-cover"
+                  />
+                  <p className="text-white font-semibold mt-2 text-xs sm:text-sm truncate">
+                    {movie.title.length > 25 ? `${movie.title.slice(0, 25)}...` : movie.title}
+                  </p>
+                  <div className="flex justify-between items-center text-white text-xs mt-1">
+                    <span className="truncate">{movie.release_date}</span>
+                    <span className="flex items-center gap-1">
+                      <FaStar className="text-yellow-400" />
+                      {movie.vote_average?.toFixed(1)}
+                    </span>
+                  </div>
+                </Link>
+              ))}
             </div>
           )}
         </div>
 
-        {/* Right Arrow (only on md+) */}
+        {/* Right Arrow (Desktop) */}
         <div
           onClick={scrollRight}
-          className="hidden md:flex absolute h-full items-center right-0 top-1/2 transform -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 p-2 cursor-pointer"
+          className="hidden md:flex absolute h-full items-center right-0 top-1/2 -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 p-2 cursor-pointer"
         >
-          <FaGreaterThan className="text-white text-lg" />
+          <FaChevronRight className="text-white text-lg" />
         </div>
       </div>
     </div>

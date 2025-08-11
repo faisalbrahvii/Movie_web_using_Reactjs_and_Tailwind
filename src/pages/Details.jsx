@@ -122,12 +122,12 @@ const Details = () => {
           {/* Buttons */}
           <div className="flex flex-wrap gap-3 mb-6">
             {trailerKey && (
-              <button
+              <buttons  
                 onClick={() => setShowModal(true)}
                 className="flex items-center gap-2 bg-red-600 hover:bg-red-700 px-4 py-2 rounded-md text-sm"
               >
                 <FaRegCirclePlay size={16} /> Trailer
-              </button>
+              </buttons>
             )}
             <button
               onClick={handleMyListClick}

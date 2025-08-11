@@ -1,9 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import { GoDot, GoDotFill } from "react-icons/go";
-import { news } from '../Data/Data';
 
 const News = () => {
+  const [loading, setLoading] = useState(true);
+
+  // Example online images (5 only)
+  const news = [
+    { image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e", des: "Breaking news from the seaside." },
+    { image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb", des: "City lights inspire new trends." },
+    { image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee", des: "Tech innovations changing the world." },
+    { image: "https://images.unsplash.com/photo-1506765515384-028b60a970df", des: "Sports updates from around the globe." },
+    { image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d", des: "Travel destinations gaining popularity." }
+  ];
+
+  // Simulate loading for 2 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Skeleton loader
+  const SkeletonCard = () => (
+    <div className="bg-gray-800 rounded-lg overflow-hidden animate-pulse">
+      <div className="h-40 bg-gray-700"></div>
+      <div className="p-4">
+        <div className="h-4 bg-gray-700 rounded w-3/4 mb-2"></div>
+        <div className="h-4 bg-gray-700 rounded w-1/2"></div>
+      </div>
+    </div>
+  );
+
   return (
     <div className="bg-black w-full py-12">
       <div className="container mx-auto px-4 md:px-10 lg:px-16">
@@ -11,14 +38,17 @@ const News = () => {
         <h1 className="text-white text-center lg:text-left text-3xl md:text-4xl font-bold mb-10">Latest News</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-          {news.map((item, index) => (
-            <div key={index} className="bg-gray-900 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-              <img src={item.image} alt="" className="w-full h-40 object-cover" />
-              <div className="p-4">
-                <p className="text-white text-sm">{item.des}</p>
-              </div>
-            </div>
-          ))}
+          {loading
+            ? Array.from({ length: 5 }).map((_, i) => <SkeletonCard key={i} />)
+            : news.map((item, index) => (
+                <div key={index} className="bg-gray-900 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                  <img src={item.image} alt="" className="w-full h-40 object-cover" />
+                  <div className="p-4">
+                    <p className="text-white text-sm">{item.des}</p>
+                  </div>
+                </div>
+              ))
+          }
         </div>
 
         <div className="flex items-center justify-between mt-12 px-6 md:px-0">
@@ -39,3 +69,4 @@ const News = () => {
 };
 
 export default News;
+  
