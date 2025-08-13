@@ -52,7 +52,7 @@ const Details = () => {
 
   const SkeletonLoader = () => (
     <div className="bg-black text-white px-4 sm:px-6 pt-16 pb-10 min-h-screen">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 animate-pulse">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 animate-pulse mt-6">
         <div className="bg-gray-800 rounded-xl w-full h-[350px] sm:h-[450px] md:h-[500px]"></div>
         <div className="flex flex-col justify-start gap-4">
           <div className="bg-gray-800 h-8 w-3/4 rounded"></div>
@@ -76,8 +76,8 @@ const Details = () => {
   if (!movie) return <SkeletonLoader />;
 
   return (
-    <div className="bg-black text-white px-4 sm:px-6 pt-16 pb-10 min-h-screen">
-      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="bg-black text-white px-4 sm:px-6 pt-16 pb-10 min-h-screen ">
+      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
         {/* Poster */}
         <div className="relative">
           <img

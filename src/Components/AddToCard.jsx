@@ -12,12 +12,12 @@ const AddToCard = () => {
     {
       title: "Avengers: Secret Wars",
       release_date: "2025-11-07",
-      image: "https://image.tmdb.org/t/p/w500/5VJSIAhSn4qUsg5nUgpKJZ5HOpB.jpg"
+      image: "https://deadline.com/wp-content/uploads/2025/06/SPRMAN_Character_Art_Lex_Instavert_1638x2048_DOM.jpg?w=800"
     },
     {
       title: "Inside Out 2",
       release_date: "2025-06-13",
-      image: "https://image.tmdb.org/t/p/w500/huVbssCoh2jH5SWYTvg1u00vLcO.jpg"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSnJzzHvuO7LxUnAp0Q70w_PpFYp3hq7_rlA&s"
     },
     {
       title: "Frozen III",
@@ -27,7 +27,7 @@ const AddToCard = () => {
     {
       title: "The Batman Part II",
       release_date: "2025-10-03",
-      image: "https://image.tmdb.org/t/p/w500/6DqfZJg1tRjbl0H2zFh2C6i9YhK.jpg"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQECtw_44AO6uzul5Cjt2TqQhEk0ivZKZnz1w&s"
     }
   ];
 
@@ -63,9 +63,9 @@ const AddToCard = () => {
 
       {/* Load More Button */}
       <div className='flex justify-center mt-12'>
-        <button className='flex items-center gap-2 text-white bg-gray-800 hover:bg-gray-700 px-6 py-3 rounded-full transition-all duration-300'>
-          <FaPlus className='text-lg' />
-          <span className='text-sm sm:text-base font-medium'>Load More</span>
+        <button className='flex items-center gap-2 text-white  hover:bg-gray-700 px-6 py-1 rounded-sm  transition-all duration-300'>
+          
+          <span className='text-sm sm:text-base font-medium'>More Coming</span>
         </button>
       </div>
     </div>

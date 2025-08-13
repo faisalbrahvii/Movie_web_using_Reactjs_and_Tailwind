@@ -5,19 +5,28 @@ import { GoDot, GoDotFill } from "react-icons/go";
 const News = () => {
   const [loading, setLoading] = useState(true);
 
-  // Example online images (5 only)
+  // Example optimized images from Unsplash (resized for faster load)
   const news = [
-    { image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e", des: "Breaking news from the seaside." },
-    { image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb", des: "City lights inspire new trends." },
-    { image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee", des: "Tech innovations changing the world." },
-    { image: "https://images.unsplash.com/photo-1506765515384-028b60a970df", des: "Sports updates from around the globe." },
-    { image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d", des: "Travel destinations gaining popularity." }
+    { image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&auto=format&fit=crop", des: "Breaking news from the seaside." },
+    { image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&auto=format&fit=crop", des: "City lights inspire new trends." },
+    { image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=400&auto=format&fit=crop", des: "Tech innovations changing the world." },
+    { image: "https://images.unsplash.com/photo-1506765515384-028b60a970df?w=400&auto=format&fit=crop", des: "Sports updates from around the globe." },
+    { image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&auto=format&fit=crop", des: "Travel destinations gaining popularity." }
   ];
 
-  // Simulate loading for 2 seconds
+  // Preload images and show skeletons until they finish loading
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2000);
-    return () => clearTimeout(timer);
+    let loadedCount = 0;
+    news.forEach((item) => {
+      const img = new Image();
+      img.src = item.image;
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === news.length) {
+          setLoading(false);
+        }
+      };
+    });
   }, []);
 
   // Skeleton loader
@@ -41,8 +50,16 @@ const News = () => {
           {loading
             ? Array.from({ length: 5 }).map((_, i) => <SkeletonCard key={i} />)
             : news.map((item, index) => (
-                <div key={index} className="bg-gray-900 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-                  <img src={item.image} alt="" className="w-full h-40 object-cover" />
+                <div
+                  key={index}
+                  className="bg-gray-900 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+                >
+                  <img
+                    src={item.image}
+                    alt=""
+                    className="w-full h-40 object-cover"
+                    loading="lazy"
+                  />
                   <div className="p-4">
                     <p className="text-white text-sm">{item.des}</p>
                   </div>
@@ -69,4 +86,3 @@ const News = () => {
 };
 
 export default News;
-  

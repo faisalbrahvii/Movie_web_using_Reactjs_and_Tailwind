@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../assests/logo/netflix.png';
+import Logo from '../assests/logo/logooss.png';
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
           <p className='text-gray-400 text-sm text-center md:text-right'>
             📞 0322 7075828 <br />
-            ✉️ faysalbrahvii43@gmail.com
+            ✉️ faisalherei43@gmail.com
           </p>
         </div>
       </div>

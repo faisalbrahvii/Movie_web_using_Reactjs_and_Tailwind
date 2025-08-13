@@ -39,38 +39,39 @@ const Hero = () => {
     };
 
     scrollNext();
-    const interval = setInterval(scrollNext, 3000);
+    const interval = setInterval(scrollNext, 3500);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div
-      className="h-screen w-full text-white overflow-hidden transition-all duration-700 ease-in-out"
+      className="min-h-screen w-full text-white overflow-hidden transition-all duration-700 ease-in-out pt-16"
       style={{
         backgroundImage: `url(${currentItem.backgroundimage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <div className="relative z-20 flex flex-col md:flex-row items-center justify-between h-full p-6 mt-24">
+      <div className="relative z-20 flex flex-col lg:flex-row items-center justify-between h-full px-4 sm:px-8 lg:px-16 py-8 lg:py-20 mt-24">
+        
         {/* Left Side */}
-        <div className="max-w-xl space-y-4 mt-20 md:mt-0 animate-fadeInLeft">
+        <div className="max-w-xl xl:max-w-3xl space-y-4 mt-20 md:mt-0 animate-fadeInLeft">
           <p className="text-slate-300 text-sm sm:text-base">
             ⏱ Duration:{" "}
             <span className="font-semibold">{currentItem.Duration}</span>
           </p>
 
-          <div className="flex gap-2 text-sm sm:text-base text-slate-300">
+          <div className="flex gap-2 text-sm sm:text-base text-slate-300 flex-wrap">
             <p className="font-semibold text-white">🎭 Genre:</p>
             <p>{currentItem.genres}</p>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold font-serif drop-shadow-lg mt-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold font-serif drop-shadow-lg mt-4 leading-tight">
             {currentItem.name}
           </h1>
 
-          <p className="text-base sm:text-lg text-slate-200 leading-relaxed mt-2">
+          <p className="text-base sm:text-lg lg:text-xl text-slate-200 leading-relaxed mt-2">
             Dive into the gripping world of{" "}
             <span className="font-semibold">{currentItem.name}</span>. Explore,
             experience and enjoy cinematic storytelling like never before.
@@ -80,9 +81,9 @@ const Hero = () => {
           <div className="flex gap-4 mt-6">
             <button
               onClick={() => openModal(currentItem)}
-              className="flex w-full max-w-[220px] items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white text-sm px-5 py-2 rounded-full backdrop-blur-sm transition duration-300 ease-in-out"
+              className="flex w-full max-w-[220px] items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white text-sm sm:text-base px-5 py-2 rounded-full backdrop-blur-sm transition duration-300 ease-in-out"
             >
-              <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 fill-white" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z" />
               </svg>
               Play Now
@@ -90,6 +91,7 @@ const Hero = () => {
           </div>
         </div>
 
+        {/* Right Side Scroll Section */}
         <div
           ref={scrollRef}
           className="mt-12 md:mt-0 flex gap-6 items-end overflow-x-auto w-full scroll-smooth snap-x snap-mandatory px-2 scrollbar-hidden"
@@ -97,11 +99,11 @@ const Hero = () => {
           {series.map((webseries) => (
             <div
               key={webseries.id}
-              className="relative w-40 sm:w-48 md:w-52 flex-shrink-0 group transition-transform duration-500 hover:scale-105 rounded-xl overflow-hidden shadow-xl snap-start border border-white/10 hover:border-white/20"
+              className="relative w-36 sm:w-44 md:w-48 lg:w-56 xl:w-64 flex-shrink-0 group transition-transform duration-500 hover:scale-105 rounded-xl overflow-hidden shadow-xl snap-start border border-white/10 hover:border-white/20"
             >
               <img
                 src={webseries.image}
-                className="w-full h-64 object-cover rounded-xl"
+                className="w-full h-52 sm:h-60 md:h-64 lg:h-72 xl:h-80 object-cover rounded-xl"
                 alt={webseries.name}
               />
 
@@ -115,12 +117,12 @@ const Hero = () => {
                   <div className="flex justify-center w-full px-3">
                     <button
                       onClick={() => openModal(webseries)}
-                      className="flex w-full max-w-[220px] items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white text-sm px-5 py-2 rounded-full backdrop-blur-sm transition duration-300 ease-in-out"
+                      className="flex w-full max-w-[220px] items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white text-sm sm:text-base px-5 py-2 rounded-full backdrop-blur-sm transition duration-300 ease-in-out"
                     >
-                      <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 sm:w-5 sm:h-5 fill-white" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z" />
                       </svg>
-                      Play 
+                      Play
                     </button>
                   </div>
                 </div>
