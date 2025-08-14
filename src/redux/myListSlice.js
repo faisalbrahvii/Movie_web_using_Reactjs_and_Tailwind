@@ -26,7 +26,6 @@ const myListSlice = createSlice({
   }
 });
 
-// ✅ This export must exist
 export const { addToList, removeFromList } = myListSlice.actions;
 
 export default myListSlice.reducer;

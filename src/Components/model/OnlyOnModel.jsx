@@ -64,7 +64,6 @@ const isInList = myList.some(item => item.id === currentData.id);
 
       <div className="w-full max-w-4xl mx-auto max-h-[90vh] overflow-y-auto rounded-2xl z-20 relative bg-black shadow-2xl no-scrollbar">
         
-        {/* Close Button */}
         <button
           onClick={closeModal}
           className="absolute top-3 left-4 text-white text-3xl z-30 hover:text-red-500 transition  p-3"
@@ -72,7 +71,6 @@ const isInList = myList.some(item => item.id === currentData.id);
           <IoArrowBackSharp />
         </button>
 
-        {/* Header */}
         <div
           className="relative bg-cover bg-center h-[350px] sm:h-[450px] rounded-t-2xl"
           style={{ backgroundImage: `url(${currentData.image})` }}
@@ -129,7 +127,6 @@ const isInList = myList.some(item => item.id === currentData.id);
             </div>
           </div>
 
-          {/* Description */}
           <div className="text-white">
             <p className="text-sm text-gray-300">{currentData.description}</p>
             <h1 className="text-sm font-bold text-gray-400 mt-2">
@@ -140,7 +137,6 @@ const isInList = myList.some(item => item.id === currentData.id);
 
         <hr className="border-gray-700" />
 
-        {/* Seasons or Episodes Section */}
         {!selectedSeason || !showEpisodes ? (
           <section className="p-4 sm:p-5" ref={sectionRef}>
             <div className="flex justify-between items-center mb-5">

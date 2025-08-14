@@ -27,7 +27,6 @@ const Search_movie = () => {
 
   return (
     <div className="min-h-screen bg-black text-white px-4 pt-6 pb-10">
-      {/* Search Input */}
       <div className="flex justify-center items-center mb-6">
         <div className=" flex relative w-full max-w-md">
             <button onClick={() => navigate(-1)}
@@ -47,7 +46,6 @@ s                          className="text-white text-2xl p-2 rounded-full hover
         </div>
       </div>
 
-      {/* Movie List */}
       
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {filteredMovies.length > 0 ? (
@@ -76,7 +74,6 @@ s                          className="text-white text-2xl p-2 rounded-full hover
       </div>
        
 
-      {/* Hide scrollbar */}
       <style>{`
         ::-webkit-scrollbar {
           display: none;

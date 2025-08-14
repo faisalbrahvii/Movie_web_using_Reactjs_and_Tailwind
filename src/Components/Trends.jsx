@@ -74,7 +74,6 @@ const Trends = () => {
 
   return (
     <div className="bg-black py-8 sm:py-10 px-4 sm:px-6 md:px-10">
-      {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-5 gap-3">
         <div className="flex items-center gap-2">
           <FaArrowTrendUp className="text-white text-lg" />
@@ -93,9 +92,7 @@ const Trends = () => {
         </select>
       </div>
 
-      {/* Scroll Section */}
       <div className="relative">
-        {/* Left Arrow (Desktop) */}
         <div
           onClick={scrollLeft}
           className="hidden md:flex absolute h-full items-center left-0 top-1/2 -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 p-2 cursor-pointer"
@@ -103,7 +100,6 @@ const Trends = () => {
           <FaChevronLeft className="text-white text-lg" />
         </div>
 
-        {/* Movies or Skeleton */}
         {loading ? (
           <SkeletonLoader />
         ) : (
@@ -137,7 +133,6 @@ const Trends = () => {
           </div>
         )}
 
-        {/* Right Arrow (Desktop) */}
         <div
           onClick={scrollRight}
           className="hidden md:flex absolute h-full items-center right-0 top-1/2 -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 p-2 cursor-pointer"

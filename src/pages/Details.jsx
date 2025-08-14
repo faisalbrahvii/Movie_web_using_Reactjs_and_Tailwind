@@ -45,7 +45,6 @@ const Details = () => {
     dispatch(removeFromList(movie.id));
   } else {
     dispatch(addToList({ ...movie, type: "movie" }));
- // <-- added type
   }
 };
 
@@ -78,7 +77,6 @@ const Details = () => {
   return (
     <div className="bg-black text-white px-4 sm:px-6 pt-16 pb-10 min-h-screen ">
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
-        {/* Poster */}
         <div className="relative">
           <img
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -95,7 +93,6 @@ const Details = () => {
           )}
         </div>
 
-        {/* Info */}
         <div className="flex flex-col justify-start">
           <h1 className="text-2xl sm:text-3xl font-bold mb-3">{movie.title}</h1>
           <div className="flex flex-wrap gap-2 text-gray-400 text-sm mb-2">
@@ -119,7 +116,6 @@ const Details = () => {
             </p>
           </div>
 
-          {/* Buttons */}
           <div className="flex flex-wrap gap-3 mb-6">
             {trailerKey && (
               <buttons  
@@ -142,7 +138,6 @@ const Details = () => {
             </button>
           </div>
 
-          {/* Like/Dislike */}
           <div className="flex gap-4">
             <button className="w-10 h-10 rounded-full flex items-center justify-center border border-green-500 hover:bg-green-600 transition">
               <AiFillLike size={20} />
@@ -154,7 +149,6 @@ const Details = () => {
         </div>
       </div>
 
-      {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 px-3">
           <div className="bg-white rounded-lg overflow-hidden w-full max-w-2xl relative">
@@ -185,7 +179,6 @@ const Details = () => {
         </div>
       )}
 
-      {/* Dot Indicator */}
       <div className="mt-10 flex justify-center gap-2 text-gray-600">
         <GoDotFill className="text-white" />
         <GoDot />

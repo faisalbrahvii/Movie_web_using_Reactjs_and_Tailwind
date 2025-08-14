@@ -21,7 +21,6 @@ const Navbar = () => {
 
   const navigate = useNavigate();
 
-  // Redux state for MyList
   const myList = useSelector((state) => state.myList);
   const myListCount = myList.length;
 
@@ -32,13 +31,11 @@ const Navbar = () => {
       <div className="fixed w-full z-50 bg-black/70 backdrop-blur-md shadow-md border-b border-white/10">
         <div className="flex items-center justify-between px-4 sm:px-6 lg:px-12 xl:px-20 py-3">
 
-          {/* Left: Logo & Categories */}
           <div className="flex items-center gap-4 md:gap-8">
             <button onClick={() => navigate("/")} className="text-[15px] sm:text-lg lg:text-xl font-extrabold text-white tracking-wide whitespace-nowrap">
               Night Scene
             </button>
 
-            {/* Categories Button */}
             <div className="relative hidden md:block">
               <button
                 onClick={() => navigate('/SelectCategories')}
@@ -74,7 +71,6 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Middle: Search */}
           <div className="relative flex-1 mx-4 md:mx-8 max-w-xs lg:max-w-md hidden md:block">
             <input
               type="text"
@@ -88,7 +84,6 @@ const Navbar = () => {
             />
           </div>
 
-          {/* Right: Icons */}
           <div className="flex items-center gap-4 md:gap-6 text-white">
             <FaSearch
               size={18}
@@ -96,7 +91,6 @@ const Navbar = () => {
               className="cursor-pointer hover:text-red-500 transition"
             />
 
-            {/* My List Icon */}
             <div
               className="relative cursor-pointer"
               onClick={() => navigate("/MyList")}
@@ -111,7 +105,6 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* Sidebar Menu Icon */}
             <RiMenu3Fill
               size={22}
               onClick={() => setShowSidebar(true)}
@@ -120,7 +113,6 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Search Input */}
         {showSearch && (
           <div className="block md:hidden px-4 pb-3">
             <input
@@ -132,7 +124,6 @@ const Navbar = () => {
         )}
       </div>
 
-      {/* Sidebar */}
       <div
         className={`fixed top-0 right-0 h-full w-64 sm:w-72 bg-gradient-to-b from-black to-gray-900 text-white z-[9999] shadow-2xl transition-transform duration-300 ${
           showSidebar ? 'translate-x-0' : 'translate-x-full'

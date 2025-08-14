@@ -33,7 +33,6 @@ function MainLayout() {
 
   return (
     <div>
-      {/* ✅ Show Navbar only if not on search page */}
       {!isSearchPage && (
         <>
           <div className="block md:hidden">
@@ -79,7 +78,6 @@ function MainLayout() {
         </Routes>
       </main>
 
-      {/* ✅ Show footer only if not on search page */}
       {!isSearchPage && <Footer />}
     </div>
   );

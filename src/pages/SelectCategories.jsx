@@ -46,7 +46,6 @@ const SelectCategories = () => {
     <div>
       {showModal && (
         <div className="fixed inset-0 z-[999] bg-black flex flex-col">
-          {/* Top Bar */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-white/10 bg-black">
             <button
               onClick={() => {
@@ -66,7 +65,6 @@ const SelectCategories = () => {
               {selectedCategory ? selectedCategory : "All Categories"}
             </span>
 
-            {/* Home Button */}
             <button
               onClick={() => navigate('/')}
               className="bg-slate-200 text-black px-3 py-1 rounded-md text-sm font-medium transition"
@@ -75,10 +73,8 @@ const SelectCategories = () => {
             </button>
           </div>
 
-          {/* Content */}
           <div className="flex-1 overflow-y-auto no-scrollbar px-4 py-6">
             {!selectedCategory ? (
-              // Categories View
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                 {categories.map((category, index) => (
                   <div
@@ -94,12 +90,10 @@ const SelectCategories = () => {
                 ))}
               </div>
             ) : loading ? (
-              // Loading State
               <div className="flex items-center justify-center h-full">
                 <p className="text-white text-lg animate-pulse">Loading movies...</p>
               </div>
             ) : (
-              // Movies View
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                 {movies.length > 0 ? (
                   movies.map((movie) => (
@@ -113,7 +107,6 @@ const SelectCategories = () => {
                         alt={movie.title}
                         className="w-full h-[250px] sm:h-[300px] object-cover"
                       />
-                      {/* Title Overlay on Hover */}
                       <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                         <p className="text-white text-center text-sm px-2">{movie.title}</p>
                       </div>

@@ -7,7 +7,6 @@ import { useSelector } from 'react-redux';
 const MobileScreenNav = () => { 
   const navigate = useNavigate();
 
-  // Get MyList count from Redux
   const myList = useSelector((state) => state.myList);
   const myListCount = myList.length;
 
@@ -15,7 +14,6 @@ const MobileScreenNav = () => {
     <div className="w-full z-50 bg-black/95 backdrop-blur-sm p-4 top-0 left-0">
       <div className="flex items-center justify-between">
         
-        {/* Logo */}
         <img
         onClick={() => navigate("/")}
           src={userLogo}
@@ -23,10 +21,8 @@ const MobileScreenNav = () => {
           alt="User"
         />
 
-        {/* Icons */}
         <div className="flex items-center gap-4 text-white text-2xl">
 
-          {/* My List with Badge */}
           <div
             className="relative cursor-pointer"
             onClick={() => navigate("/MyList")}
@@ -50,7 +46,6 @@ const MobileScreenNav = () => {
             )}
           </div>
 
-          {/* Search Icon */}
           <MdSearch
             className="cursor-pointer hover:text-red-500 transition"
             onClick={() => navigate("/search")}

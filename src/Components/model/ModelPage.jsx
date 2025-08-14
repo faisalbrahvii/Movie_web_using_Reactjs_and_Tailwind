@@ -51,7 +51,6 @@ const ModelPage = () => {
         <div className="absolute inset-0 bg-black/70 z-10"></div>
   
         <div className="w-11/12 lg:w-4/5 max-h-[90vh] overflow-y-auto no-scrollbar rounded-2xl z-20 relative bg-black shadow-2xl">
-          {/* Close Button */}
           <button
             onClick={closeModal}
             className="absolute top-4 left-4 text-white text-3xl z-30 hover:text-red-500 transition  p-3"
@@ -59,7 +58,6 @@ const ModelPage = () => {
             <IoArrowBackSharp />
           </button>
   
-          {/* Header */}
           <div
             className="relative bg-cover bg-center h-[500px] rounded-t-2xl"
             style={{ backgroundImage: `url(${currentData.backgroundimage})` }}
@@ -88,7 +86,6 @@ const ModelPage = () => {
             </div>
           </div>
   
-          {/* Info Section */}
           <div className="p-5 space-y-6">
             <div className="grid md:grid-cols-3 gap-6">
               <div className="md:col-span-2 space-y-3">
@@ -115,7 +112,6 @@ const ModelPage = () => {
               </div>
             </div>
   
-            {/* Description */}
             <div className="text-white">
               <h1 className="text-base font-bold text-gray-400">Total: <span className="text-white">{currentData.Duration}</span></h1>
               <p className="mt-2 text-sm text-gray-300">{currentData.description}</p>
@@ -124,7 +120,6 @@ const ModelPage = () => {
   
           <hr className="border-gray-600" />
   
-          {/* Seasons / Episodes */}
           {!selectedSeason || !showEpisodes ? (
             <section className="p-5" ref={sectionRef}>
               <div className="flex justify-between items-center mb-5">

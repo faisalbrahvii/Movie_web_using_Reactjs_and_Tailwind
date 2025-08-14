@@ -37,7 +37,6 @@ const Live = () => {
     <div className="bg-black text-white px-4 py-6 md:py-8">
       <div className="max-w-6xl mx-auto">
 
-        {/* Video Player Section */}
         <div className="relative rounded-xl overflow-hidden">
           {/* Add your video src here */}
           {/* <video
@@ -47,7 +46,6 @@ const Live = () => {
             controls={false}
           /> */}
 
-          {/* Overlay Content */}
           <div className="absolute inset-0 flex flex-col justify-between p-4 bg-gradient-to-t from-black via-black/70 to-transparent z-10">
             <div className="flex justify-between items-start">
               <div>
@@ -62,7 +60,6 @@ const Live = () => {
               </div>
             </div>
 
-            {/* Video Controls */}
             <div className="flex flex-wrap items-center justify-between gap-3 bg-black/70 p-3 rounded-xl mt-4 text-sm md:text-base">
               <div className="flex gap-4 items-center text-lg">
                 {isPlaying ? (
@@ -91,14 +88,11 @@ const Live = () => {
             </div>
           </div>
 
-          {/* Placeholder Box for Video (remove this when you use actual video tag) */}
           <div className="h-[220px] sm:h-[300px] md:h-[400px] bg-gray-800 rounded-xl flex items-center justify-center text-gray-500 text-lg">
-            {/* Replace this with your <video> tag */}
             internal Issue !!
           </div>
         </div>
 
-        {/* YouTube Trailer Section */}
         {/* <div className="mt-8">
           <h2 className="text-lg sm:text-xl font-semibold mb-2">Watch Trailer</h2>
           <div className="w-full aspect-video rounded-xl overflow-hidden shadow-lg">

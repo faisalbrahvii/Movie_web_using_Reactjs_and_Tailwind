@@ -47,7 +47,7 @@ const Movies = () => {
   const fetchWithDelay = (fetchFn) => {
     setLoading(true);
     fetchFn().finally(() => {
-      setTimeout(() => setLoading(false), 2000); // 2s skeleton
+      setTimeout(() => setLoading(false), 2000); 
     });
   };
 
@@ -124,7 +124,6 @@ const Movies = () => {
   return (
     <div className="bg-black min-h-screen">
       <div className="max-w-screen-xl mx-auto px-4">
-        {/* Top Navigation */}
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 py-6 text-center">
           <div className="flex justify-center items-center gap-2">
             <BiSolidMoviePlay className="text-white text-xl" />
@@ -146,7 +145,6 @@ const Movies = () => {
 
         <hr className="border-gray-700 mb-6" />
 
-        {/* Genre Buttons */}
         <div className="flex overflow-x-auto gap-3 pb-4 scrollbar-hidden no-scrollbar">
           {genreButtons.map((genre, idx) => (
             <button
@@ -163,7 +161,6 @@ const Movies = () => {
           ))}
         </div>
 
-        {/* Sort Buttons */}
         <div className="flex flex-wrap gap-3 items-center mt-6 mb-10 text-xs sm:text-sm">
           <p className="text-slate-400">Sort by:</p>
           <button
@@ -190,7 +187,6 @@ const Movies = () => {
           </div>
         </div>
 
-        {/* Movie Grid */}
         {loading ? (
           <SkeletonLoader />
         ) : (

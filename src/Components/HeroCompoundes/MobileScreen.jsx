@@ -5,7 +5,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { addToList, removeFromList } from "../../redux/myListSlice";
 
-// Skeleton Loader
 const SkeletonLoader = () => (
   <div className="bg-black text-white px-4 sm:px-6 pt-16 pb-10 min-h-screen">
     <div className="max-w-4xl mx-auto grid grid-cols-1 gap-8 animate-pulse">
@@ -90,7 +89,6 @@ const MobileScreen = () => {
 
   return (
     <div className='relative bg-black/95'>
-      {/* Top Buttons */}
       <div className="absolute top-4 left-4 z-30 flex items-center gap-3 overflow-x-auto">
         <button className="flex-shrink-0 flex items-center gap-2 border border-white/30 hover:bg-white/20 px-4 py-1.5 rounded-full text-white text-sm font-medium transition">
           TV Shows
@@ -103,7 +101,6 @@ const MobileScreen = () => {
         </button>
       </div>
 
-      {/* Movie Display */}
       <div className='p-5'>
         <div className="relative h-[650px] bg-black overflow-hidden border-4 rounded mt-12">
           {currentMovie && (

@@ -5,7 +5,6 @@ import { GoDot, GoDotFill } from "react-icons/go";
 const News = () => {
   const [loading, setLoading] = useState(true);
 
-  // Example optimized images from Unsplash (resized for faster load)
   const news = [
     { image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&auto=format&fit=crop", des: "Breaking news from the seaside." },
     { image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&auto=format&fit=crop", des: "City lights inspire new trends." },
@@ -14,7 +13,6 @@ const News = () => {
     { image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&auto=format&fit=crop", des: "Travel destinations gaining popularity." }
   ];
 
-  // Preload images and show skeletons until they finish loading
   useEffect(() => {
     let loadedCount = 0;
     news.forEach((item) => {
@@ -29,7 +27,6 @@ const News = () => {
     });
   }, []);
 
-  // Skeleton loader
   const SkeletonCard = () => (
     <div className="bg-gray-800 rounded-lg overflow-hidden animate-pulse">
       <div className="h-40 bg-gray-700"></div>

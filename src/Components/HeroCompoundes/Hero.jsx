@@ -55,7 +55,6 @@ const Hero = () => {
     >
       <div className="relative z-20 flex flex-col lg:flex-row items-center justify-between h-full px-4 sm:px-8 lg:px-16 py-8 lg:py-20 mt-24">
         
-        {/* Left Side */}
         <div className="max-w-xl xl:max-w-3xl space-y-4 mt-20 md:mt-0 animate-fadeInLeft">
           <p className="text-slate-300 text-sm sm:text-base">
             ⏱ Duration:{" "}
@@ -77,7 +76,6 @@ const Hero = () => {
             experience and enjoy cinematic storytelling like never before.
           </p>
 
-          {/* ✅ Play here button */}
           <div className="flex gap-4 mt-6">
             <button
               onClick={() => openModal(currentItem)}
@@ -91,7 +89,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Right Side Scroll Section */}
         <div
           ref={scrollRef}
           className="mt-12 md:mt-0 flex gap-6 items-end overflow-x-auto w-full scroll-smooth snap-x snap-mandatory px-2 scrollbar-hidden"
@@ -107,7 +104,6 @@ const Hero = () => {
                 alt={webseries.name}
               />
 
-              {/* Hover Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
                 <div className="text-center w-full">
                   <div className="text-white font-semibold text-sm md:text-base mb-3">
