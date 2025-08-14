@@ -39,7 +39,7 @@ const Hero = () => {
     };
 
     scrollNext();
-    const interval = setInterval(scrollNext, 3500);
+    const interval = setInterval(scrollNext, 4000);
 
     return () => clearInterval(interval);
   }, []);

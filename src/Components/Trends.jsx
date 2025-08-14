@@ -26,7 +26,7 @@ const Trends = () => {
 
   useEffect(() => {
     getMovies();
-    const timer = setTimeout(() => setLoading(false), 2000); // show skeleton for 2s
+    const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -62,7 +62,7 @@ const Trends = () => {
   };
 
   const SkeletonLoader = () => (
-    <div className="flex gap-4 overflow-x-auto scrollbar-hidden">
+    <div ref={scrollRef} className="flex gap-4 overflow-x-auto scrollbar-hidden">
       {Array.from({ length: 10 }).map((_, index) => (
         <div
           key={index}
@@ -104,37 +104,38 @@ const Trends = () => {
         </div>
 
         {/* Movies or Skeleton */}
-        <div ref={scrollRef}>
-          {loading ? (
-            <SkeletonLoader />
-          ) : (
-            <div className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hidden">
-              {movieList.slice(0, 14).map((movie) => (
-                <Link
-                  key={movie.id}
-                  to={`/details/${movie.id}`}
-                  className="min-w-[130px] sm:min-w-[150px] md:min-w-[180px] lg:min-w-[200px] flex-shrink-0"
-                >
-                  <img
-                    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                    alt={movie.title}
-                    className="rounded-md w-full h-56 sm:h-64 md:h-72 object-cover"
-                  />
-                  <p className="text-white font-semibold mt-2 text-xs sm:text-sm truncate">
-                    {movie.title.length > 25 ? `${movie.title.slice(0, 25)}...` : movie.title}
-                  </p>
-                  <div className="flex justify-between items-center text-white text-xs mt-1">
-                    <span className="truncate">{movie.release_date}</span>
-                    <span className="flex items-center gap-1">
-                      <FaStar className="text-yellow-400" />
-                      {movie.vote_average?.toFixed(1)}
-                    </span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          )}
-        </div>
+        {loading ? (
+          <SkeletonLoader />
+        ) : (
+          <div
+            ref={scrollRef}
+            className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hidden"
+          >
+            {movieList.slice(0, 14).map((movie) => (
+              <Link
+                key={movie.id}
+                to={`/details/${movie.id}`}
+                className="min-w-[130px] sm:min-w-[150px] md:min-w-[180px] lg:min-w-[200px] flex-shrink-0"
+              >
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                  alt={movie.title}
+                  className="rounded-md w-full h-56 sm:h-64 md:h-72 object-cover"
+                />
+                <p className="text-white font-semibold mt-2 text-xs sm:text-sm truncate">
+                  {movie.title.length > 25 ? `${movie.title.slice(0, 25)}...` : movie.title}
+                </p>
+                <div className="flex justify-between items-center text-white text-xs mt-1">
+                  <span className="truncate">{movie.release_date}</span>
+                  <span className="flex items-center gap-1">
+                    <FaStar className="text-yellow-400" />
+                    {movie.vote_average?.toFixed(1)}
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
 
         {/* Right Arrow (Desktop) */}
         <div

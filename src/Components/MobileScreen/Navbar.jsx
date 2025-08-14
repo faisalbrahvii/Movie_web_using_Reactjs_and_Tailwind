@@ -5,7 +5,7 @@ import { RiMenu3Fill } from "react-icons/ri";
 import { useNavigate } from 'react-router-dom';
 import { MdDownloadDone } from "react-icons/md";
 import { useSelector } from 'react-redux';
-import userLogo from '../../assests/logo/userlogo.jpeg';
+import userLogo from '../../assests/logo/fb.jpg';
 
 const categories = [
   "Action", "Comedy", "Drama", "Sci-Fi", "Horror",
@@ -146,8 +146,8 @@ const Navbar = () => {
               className="w-11 h-11 lg:w-12 lg:h-12 rounded-full border border-white/20 shadow-md"
             />
             <div>
-              <h1 className="text-base lg:text-lg font-semibold">Faisal</h1>
-              <p className="text-xs lg:text-sm text-white/60">Premium Member</p>
+              <h1 className="text-base lg:text-lg font-semibold">Faysal</h1>
+              <p className="text-xs lg:text-sm text-white/60">faisalhere43@gmail.com</p>
             </div>
           </div>
           <IoMdClose
